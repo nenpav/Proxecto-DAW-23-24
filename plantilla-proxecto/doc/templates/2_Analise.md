@@ -67,7 +67,7 @@ La siguiente tabla muestra todas las funcionalidades de las que dispone la aplic
 | Cerrar la sesión                | Cerrar la sesión en la aplicación                      | Todos menos los bloqueados     |
 | Crear un nuevo diseño           | Crear diseños con las herramientas de dibujo           | Todos menos los bloqueados     |
 | Borrar un diseño                | Eliminar un diseño                                     | Propietario y administrador    |
-| Editar un diseño                | Eliminar un diseño                                     | Propietario y administrador    |
+| Editar un diseño                | Editar   un diseño                                     | Propietario y administrador    |
 | Publicar un nuevo diseño        | Hacer que el diseño sea visible para la comunidad      | Todos menos los bloqueados     |
 | Enviar un diseño al periférico  | Enviar un diseño para ser proyectado por el periférico | Todos menos los bloqueados     |
 | Ver los diseños propios         | Listar los diseños del propio usuario                  | Todos menos los bloqueados     |
@@ -79,7 +79,7 @@ La siguiente tabla muestra todas las funcionalidades de las que dispone la aplic
 | Arreglo de incidencias          | Arreglo de las incidencias de los usuarios             | Administrador                  |
 | Añadir funcionalidad            | Añadir funcionalidades nuevas a la app                 | Administrador                  |
 | Comprar el periférico POV       | Comprar el periférico desde la aplicación              | Todos menos los bloqueados     |
-| Ver contenido extra             | Ver el contenido adicional de pago                     | VIP y creadores                |
+| Ver contenido extra             | Ver el contenido adicional de pago                     | Suscriptores y creadores       |
 
 
 ## 3- Tipos de usuarios
