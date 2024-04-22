@@ -30,8 +30,8 @@ El proyecto Roled ofrece una aplicación de dibujo que permite diseñar y enviar
 
 > _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
 
-|Producto           | dispositivo POV |
-|Producto aumentado | aplicación web  |
+|Producto           || dispositivo POV |
+|Producto aumentado || aplicación web  |
 
 Las aplicaciones de Roled son variadas pudiendo tener cabida en el mundo de los videojuegos y los creadores de contenido y el ámbito de la publicidad y el marketing.
 
@@ -53,6 +53,9 @@ Las aplicaciones de Roled son variadas pudiendo tener cabida en el mundo de los 
 El objetivo que se espera conseguir con el desarrollo de Roled es aumentar la oferta de aplicaciones que fomentan la creatividad, creando una aplicación que no solo aporte al usuario entretenimiento saludable y estimulante, sino que le permita formar parte de una comunidad de usuarios amigable y tolerante, aspectos muy difíciles de encontrar en Internet en la actualidad. Además, servirá de plataforma para que muchos artistas tengan visibilidad, pudiendo compartir sus proyectos de una forma muy atractiva y visual. 
 
 Los dispositivos POV son bastante populares en algunos países asiáticos como China, Japón o Corea, pero sus prototipos son de grandes dimensiones, convirtiéndolos en un producto muy costoso y poco práctico. Desde Roled, se pretende marcar la diferencia mediante un prototipo de "bolsillo", de pequeñas dimensiones y de un precio asequible que cualquiera pueda tener en su mesita de noche. Además, este va asociado a una aplicación web donde todos los usuarios pueden subir, crear y compartir sus diseños, pudiendo servir de plataforma para muchos artistas digitales que quieran dar a conocer su trabajo, a la vez que consigue que la experiencia del usuario sea más completa y creativa. 
+
+![Analisis DAFO](../img/grafico_dafo.png)
+
 
 ### 2.3- Segmento de clientes
 
@@ -92,21 +95,18 @@ Se pedirá una subvención que ofrece el IGAPE con un importe de 7500€, el pri
 En este apartado se analiza cuál es el mejor modelo de negocio para el proyecto Roled teniendo en cuenta diferentes aspectos como la compentecia, los proveedores, la viabilidad, los canales de distribución, las debilidades, las oportunidades, etc.
 Para determinar las estrategias futuras del proyecto se realiza un análisis DAFO que permite detectar los factores internos y externos que pueden afectar al proyecto, como muestra la siguiente imagen.  
 
-![Analisis DAFO](../img/grafico_dafo.png)
 
-También se realizó el análisis CANVAS para determinar la propuesta de valor, los clientes, las fuentes de gastos y de ingresos, los proveedores, etc; es decir, todos aquellos factores que permitirán determinar si el proyecto se puede comercializar y de qué forma.
 
-![Análisis CANVAS](../img/canvas.png)
+
 
 Teniendo en cuenta estos factores anteriormente citados, además, de los que se exponen en los siguientes puntos del apartado 5, explicados detalladamente, se opta por un modelo de negocio mixto, ya que las fuentes de ingreso son mixtas:
-- Es un modelo de pago ya que el perifético POV es de pago y una de las principales fuentes de ingreso. 
-- Aunque la aplicación web es gratuita, existe contenido exclusivo en la aplicación que es de pago, que aiunque no es una fuente de ingresos significativamente alta, ayuda durante las primeras fases a rentabilizar el proyecto. 
+- Es un modelo de pago ya que el perifético POV es de pago y una de las principales fuentes de ingresos. 
+- Aunque la aplicación web es gratuita, existe contenido exclusivo en la aplicación que es de pago, que ayuda durante las primeras fases a rentabilizar el proyecto. 
 - Una de las fuentes de ingresos, con un peso importante, es la publicidad de terceros en la aplicación, por lo que también presenta elementos de un modelo de negocio por publicidad. 
 
 El hecho de que el modelo de negocio sea mixto y no esté tan enfocado a una fuente de ingresos concreta, reduce el riesgo al no ser tan dependiende de esa fuente de ingresos. Además, la adaptabilidad a los cambios del proyecto es mayor, siendo este un beneficio muy importante en un ámbito tan cambiante e imprevisible como lo es el mundo tecnológico. 
 
-
-#### 2.5.1- Viabilidade
+#### 2.5.1- Viabilidad
 
 ##### 2.5.1.1- Viabilidade técnica
 
@@ -125,7 +125,7 @@ Desde un punto de vista técnico, el proyecto Roled es altamente viable, ya que 
 
 En cuanto a los recursos humanos, se necesitará poco personal para el mantenimiento del software, aunque también se espera que este vaya aumentando a medida que vaya adquiriendo una comunidad mayor de usuarios y, por lo tanto, mayores necesidades de soporte.  Durante las primeras fases, no se espera que sea necesario aumentar los trabajadores de la empresa, quedando todo el trabajo relegado a una sola persona, reduciendo de esta forma los gastos de salarios.
 
-En cuanto a las instalaciones, no se necesita un taller excesivamente grande, aunque sí es necesario disponer de espacio suficiente y adecuado para alojar la impresora (o impresoras) 3D. También se debe disponer de espacio de almacenaje suficiente así como disponer de una mesa de trabajo para poder realizar el montaje del periférico. Para la elaboración del software se necesita un ordenador sobremesa, por lo menos de gama media, que permita el desarrollo y el mantenimiendo del software de Roled. Para minimizar gastos, durante el primer año se usará el domicilio como taller y almacén y se solicitará el uso del "Viveiro de empresas" del centro educativo IES Armando Cotarelo Valledo para reuniones con clientes, con proveedores, etc. 
+En cuanto a las instalaciones, no se necesita un taller excesivamente grande, aunque sí es necesario disponer de espacio suficiente y adecuado para alojar la impresora (o impresoras) 3D. También se debe disponer de espacio de almacenaje suficiente así como disponer de una mesa de trabajo para poder realizar el montaje del periférico. Para la elaboración del software se necesita un ordenador sobremesa, por lo menos de gama media, que permita el desarrollo y el mantenimiendo del software de Roled. Para minimizar gastos, durante el primer año se usará el domicilio como taller y almacén y se solicitará el uso del "Viveiro de empresas" del centro educativo IES Armando Cotarelo Valledor para reuniones con clientes, con proveedores, etc. 
 
 El despliegue de la aplicación web se hará usando servicios de hosting. 
 
@@ -135,12 +135,12 @@ El mayor impedimento técnico que existe en el proyecto puede surgir cuando el v
 
 **Inversiones**
 
-Hace referencia a las inversiones de activo necesarios (intnagible, material y circulante).
+Hace referencia a las inversiones de activo necesarios (intangible, material y circulante).
 - Intangible: se produce un gasto de 875€/año por el pago de la patente con una vida útil de 10 años. 
 - Material: 
-  - Maquinaria: hace referencia a las impresoras 3D necesarias para la realización del periférico, así como otras herramientas necesarias para su elaboración. Se estima un gasto inicial de 400€ ya que no es necesario un impresora de alta gama ni de grandes proporciones. Se necesita también un soldador (20€) y un polímetro (25€). Para el año 2024 y 2025 se estima una inversión de 60€ para el mantenimiento de estas herramientas y de las impresoras. Para el año 2026 se vuelve a invertir una suma de 600€ con el fin de mejorar las herramientas ya existentes, así como adquirir una nueva impresora 3D. La vida útil está establecida en 10 años.
+  - Maquinaria: impresoras 3D necesarias para la realización del periférico, así como otras herramientas necesarias para su elaboración. Se estima un gasto inicial de 400€ ya que no es necesario un impresora de alta gama ni de grandes proporciones. Se necesita también un soldador (20€) y un polímetro (25€). Para el año 2024 y 2025 se estima una inversión de 60€ para el mantenimiento de estas herramientas y de las impresoras. Para el año 2026 se vuelve a invertir una suma de 600€ con el fin de mejorar las herramientas ya existentes, así como adquirir una nueva impresora 3D. La vida útil está establecida en 10 años.
   - Mobiliario de oficina: no se alquilará una oficina como tal con el fin de reducir gastos, pero será necesario adquirir mobiliario de almacenaje, estanterías, una silla de oficina, escritorio, una mesa de trabajo, etc, por una suma de 1000€. Este tiene una vida útil de 10 años. Para los cuatro años posteriores se invertirán pequeñas cantidades para el mantenimiento de ese mobiliario, desde los 100€ hasta los 350€ en 2028.
-  - Equipamientos informáticos: este es uno de los gastos materiales más altos ya que es necesario tener un equipo con a suficiente potencia para poder desarrollar y probar el software adecuadamente. Se estima que el gasto inicial para el ordenador de sobremesa es de 2000€, incluyendo la pantalla y otros periféricos. Este tendrá una vida útil de 4 años, teniendo que aportar pequeñas cantidades para su mantenimiento. En el año 2028, se renovará este equipo por otro de características semejantes con un gasto de 2500€ teniendo en cuenta la subida de los precios que sufre la tecnología.
+  - Equipamientos informáticos: este es uno de los gastos materiales más altos. Se estima un gasto inicial de 2000€, incluyendo la pantalla y otros periféricos. Este tendrá una vida útil de 4 años, teniendo que aportar pequeñas cantidades para su mantenimiento. En el año 2028, se renovará este equipo por otro de características semejantes con un gasto de 2500€ teniendo en cuenta la subida de los precios que sufre la tecnología.
   - Se destinarán 120€ en material de oficina. 
 - Financiero: no se considera necesario pedir financiación externa como préstamos a corto o largo plazo. 
 - Corriente: hace referencia a las mercancías necesarias para realizar el periférico, las cuales se calcula que suponen un gasto inicial de 600€ incluyendo los motores (0€ ya que se cogerán en el punto limpio para reciclarlos), los controladores de los motores (5€), los microcontroladores(6€), el fin de carrera (0.5€) y la alimentación (10€). También hace referencia a las materias primas necesarias como el filamento de plástico (15€) o el estaño (10€), suponiento un gasto inicial de 200€. 
@@ -188,17 +188,17 @@ Teniendo en cuenta los datos anteriores, se concluye que el proyecto es viable, 
 
 **Beneficios**
 
-El beneficio neto en el año 2024 es negativo de (288)€, lo cual es esperable ya que la inversión inicial es importante y el proyecto todavía no es conodido y no se ha afianzado en el mercado. No obstante, esa situación se recupera en el año 2025 y continúa en aumento, llegando a una cifra de 15.311€ de beneficio en el año 2028. Además, el flujo de efectivo presenta un valor de 821€ en 2024, llegando a 17.954€ en 2028, reflejando unos datos positivos que permiten la continuidad del proyecto. 
+El beneficio neto en el año 2024 es negativo de (288)€, lo cual es esperable ya que la inversión inicial es importante y el proyecto todavía no es conodido y no se ha afianzado en el mercado. No obstante, esa situación se recupera en el año 2025 y continúa en aumento, llegando a una cifra de 15.311€ de beneficios en el año 2028. Además, el flujo de efectivo presenta un valor de 821€ en 2024, llegando a 17.954€ en 2028, reflejando unos datos positivos que permiten la continuidad del proyecto. 
 
 **Punto de equilibrio**
 
- En el año 2024, el punto de equilibrio se estima en 6.511€ quedando a una distancia negativa de este de (411)€. No obstante, esta situación se corrige en los años posteriores llegando a un valor de punto de equilibrio de 9.182€ y una distancia de este de 28.263€.
+En el año 2024, el punto de equilibrio se estima en 6.511€ quedando a una distancia negativa de este de (411)€. No obstante, esta situación se corrige en los años posteriores llegando a un valor de punto de equilibrio de 9.182€ y una distancia de este de 28.263€.
 
- ![Punto de equilibrio](../img/equilibrio.PNG)
+![Punto de equilibrio](../img/equilibrio.PNG)
 
 **Balance**
 
-Teniendo en cuenta el total de activo, pasivo, se calcula el fondo de Maniobra obteniendo los siguientes resultados:
+Teniendo en cuenta el total de activo y pasivo circulante, se calcula el fondo de Maniobra obteniendo los siguientes resultados:
 
 - 2024: 4.550€
 - 2025: 6.026€
@@ -219,7 +219,6 @@ Estos datos indican que la situación financiera del proyecto Roled es estable, 
 
 Los ratios demuestran que existe un mayor margen para aumentar la deuda, por ejemplo con un préstamo a largo plazo que permita mejorar la infraestructura y la maquinaria, ya que no se están destinando correctamente los recursos de la empresa produciendo estos valores tan altos en algunos de los ratios como el de liquidez o el de tesorería.
 
-
 ### 2.6- Competencia
 
 Para poder analizar la competencia del mercado y el impacto que puede tener en el desarrollo del proyecto, se realizó una búsqueda exhaustiva de los productos que pudiesen ser semejantes al proyeto Roled. Se encontraron, como se esperaba, productos muy parecidos al periférico sobre todo procedentes del mercado chino en grandes plataformas online como Aliexpress. También existen ofertas de software para realizar creaciones y dibujos personalizados. No obstante, no existe ningún producto que fusione las dos funcionalidades, lo cual hace de Roled un producto único en el mercado, sobre todo a nivel nacional. 
@@ -234,13 +233,10 @@ Tras el análisis de la competencia y dado que la fuente de ingresos principal d
 - 2. Permitir que las imágenes que se cargen en el periférico tengan que ser tratadas previamente en la aplicación web y viceversa, es decir, que solamente se podran proyectar esas imágenes holográficas en el periférico oficial de Roled.
 Por las dificultades técnicas que puede presentar la realización de la segunda medida, que a priori parece la que más se ajusta a los intereses del proyecto, no será incluida en este primer prototipo pero se estudiará su aplicación en el futuro como mejora del proyecto.  
 
-Por último, para ver cómo se diferencia Roled de los productos semejantes ya existentes se creó una curva de valor.
 
-![Curva de valor](../img/curva_valor.PNG)
 
-Como se puede apreciar en el gráfico anterior, Roled apuesta por un producto de menor tamaño y menor precio, con un software de calidad asociado. Además, se usarán materiales reciclados como el plástico y los motores como medida de responsabilidad civil, apostando por un producto más respetuoso con el medio ambiente. 
-Además, Roled apuesta por un producto altamente personalizable ya que permite crear los propios diseños para ser proyectados en la pantalla POV.
-Estas son las características que diferencian a Roled del producto tradicional. 
+
+
 
 
 ### 2.7- Promoción
@@ -254,12 +250,17 @@ Tras analizar que los jóvenes y aquellos usuarios del ámbito de las redes soci
 
 ### 2.8- Proposta de valor
 
-> _EXPLICACIÓN_: **Apartado fundamental.**
->
-> - En que se diferencia fronte os competidores.
-> - Que melloras terá fronte os competidores.
-> - Que valor aporta ao mercado.
-> - ¿Porqué mercarán/contratarán este producto/servizo/idea fronte o resto?
+En la siguiente imagen se muestra el análisis Canvas de Roled donde se muestra la propuesta de valor y se esquematizan algunos puntos importantes como la competencia, las asociaciones clave, etc.
+
+![Análisis CANVAS](../img/canvas.png)
+
+Para representar en qué se diferencia el producto que ofrece Roled de otros productos tradicionales en la competencia se realizó la siguiente curva de valor.
+
+![Curva de valor](../img/curva_valor.PNG)
+
+Roled apuesta por un producto de menor tamaño y menor precio, con un software de dibujo asociado que mejora la experiencia del usuario. Además, se usarán materiales reciclados como el plástico y los motores como medida de responsabilidad civil, apostando por un producto más respetuoso con el medio ambiente. Roled apuesta por la personalización personalizable permitiendo crear los propios diseños para ser proyectados en la pantalla POV.
+
+Por lo tanto, Roled se diferencia de la competencia ofreciendo una experiencia holográfica completa y personalizada, que va desde el diseño de los dibujos en la aplicación hasta la proyección de estos diseños en el dispositivo. 
 
 ### 2.9- Forma xurídica
 
