@@ -1,26 +1,26 @@
-# Anteproxecto fin de ciclo
+# Anteproyecto fin de ciclo
 
-- [Anteproxecto fin de ciclo](#anteproxecto-fin-de-ciclo)
-  - [1- Descrición do proxecto](#1--descrición-do-proxecto)
+- [Anteproyecto fin de ciclo](#anteproyecto-fin-de-ciclo)
+  - [1- Descripción del proyecto](#1--descripción-del-proyecto)
   - [2- Empresa](#2--empresa)
     - [2.1- Idea de negocio](#21--idea-de-negocio)
-    - [2.2- Xustificación da idea](#22--xustificación-da-idea)
+    - [2.2- Justificación de la idea](#22--justificación-de la-idea)
     - [2.3- Segmento de clientes](#23--segmento-de-clientes)
-    - [2.4- Axudas e financiación](#24--axudas-e-financiación)
+    - [2.4- Ayudas y financiación](#24--ayudas-y-financiación)
     - [2.5- Modelo de negocio](#25--modelo-de-negocio)
-      - [2.5.1- Viabilidade](#251--viabilidade)
-        - [2.5.1.1- Viabilidade técnica](#2511--viabilidade-técnica)
-        - [2.5.1.2- Viabilidade económica](#2512--viabilidade-económica)
+      - [2.5.1- Viabilidad](#251--viabilidad)
+        - [2.5.1.1- Viabilidad técnica](#2511--viabilidad-técnica)
+        - [2.5.1.2- Viabilidad económica](#2512--viabilidad-económica)
       - [2.5.1.3- Conclusión](#2513--conclusión)
     - [2.6- Competencia](#26--competencia)
     - [2.7- Promoción](#27--promoción)
-    - [2.8- Proposta de valor](#28--proposta-de-valor)
-    - [2.9- Forma xurídica](#29--forma-xurídica)
+    - [2.8- Propuesta de valor](#28--propuesta-de-valor)
+    - [2.9- Forma jurídica](#29--forma-jurídica)
     - [2.10- Prevención de riesgos laborales](#210--prevención-de-riesgos-laborales)
-  - [3- Requirimentos técnicos](#3--requirimentos-técnicos)
+  - [3- Requerimentos técnicos](#3--requerimentos-técnicos)
   - [4- Planificación](#4--planificación)
 
-## 1- Descrición do proxecto
+## 1- Descripción del proyecto
 
 El proyecto Roled ofrece una aplicación de dibujo que permite diseñar y enviar los diseños a un dispositivo POV ("Persistence of vision") que permite reproducir esos dibujos de forma holográfica. También permite la creación de animaciones basadas en fotogramas. 
 
@@ -36,7 +36,7 @@ El proyecto Roled ofrece una aplicación de dibujo que permite diseñar y enviar
 Las aplicaciones de Roled son variadas pudiendo tener cabida en el mundo de los videojuegos y los creadores de contenido y el ámbito de la publicidad y el marketing.
 
 
-### 2.2- Xustificación da idea
+### 2.2- Justificación de la idea
 
 > _EXPLICACIÓN_: Neste apartado incluirase a información necesaria para xustificar a realización do proxecto. Debe indicarse como xurdiu a idea do proxecto, que obxectivo se persegue coa súa posta en marcha e/ou que problema vai resolver.
 >
@@ -56,7 +56,6 @@ Los dispositivos POV son bastante populares en algunos países asiáticos como C
 
 ![Analisis DAFO](../img/grafico_dafo.png)
 
-
 ### 2.3- Segmento de clientes
 
 > _EXPLICACIÓN_: Neste apartado debes indicar a quen irá dirixido o negocio, os potenciales clientes, respostando as seguinte pregunta: ¿A quen está dirixido?
@@ -66,7 +65,11 @@ Los dispositivos POV son bastante populares en algunos países asiáticos como C
 > - Indicar o segmento ou segmentos cos rasgos principais e cuantificar o mercado.
 > - E se é o caso, diferenciar entre usuario e cliente.
 
-El target de usuarios a los que va destinado Roled es aquel público relacionado con las redes sociales y las plataformas de stream, tanto del ámbito de los videojuegos como de contenido más artístico, por lo que se espera que sean principalmente el público más joven el que se vea atraído por este producto.
+El target de usuarios a los que va destinado Roled es aquel público relacionado con las redes sociales y las plataformas de stream, tanto del ámbito de los videojuegos como de contenido más artístico, por lo que se espera que sea principalmente el público más joven el que se vea atraído por este producto. Además, se pretende explotar la facilidad con la que se crean tendencias y modas en redes sociales como TikTok para extender el producto entre el público más joven, mediante campañas de marketing. 
+
+Debido a la edad del segmento de usuarios, se espera que en muchas ocasiones los usuarios no sean los mismos que los clientes, siendo el segmento de clientes adultos con un mayor poder adquisitivo que los usuarios. 
+
+Una de las mejoras futuras de Roled consiste en ofrecer un dispositivo POV completamente personalizable y adaptado a las necesidades del usuario, con lo que se pretende aumentar el segmento de clientes extendiéndose al ámbito empresarial, con una mayor capacidad económica que permitirá aumentar los precios derivados de esta personalización.
 
 ### 2.4- Axudas e financiación
 
@@ -75,34 +78,12 @@ Se pedirá una subvención que ofrece el IGAPE con un importe de 7500€, el pri
 
 ### 2.5- Modelo de negocio
 
-> _EXPLICACIÓN_: Elección do modelo de negocio explicando a súa xustificación.
->
-> **Xustifica a elección.**
->
-> 1. Xustificación das necesidades detectadas que cubre o sistema a desenvolver.
-> 2. Posibilidades de comercialización do sistema (viabilidade, competidores, ...).
-> 3. Ideas para a súa comercialización.
-
-> Ejemplos de modelo de negocio:
->
-> - Modelo de pago.
-> - Freemium: é de balde pero as funcionalidades extras son de pago.
-> - In house: desenvolvementos a medida para contornos empresariais.
-> - De subscrición.
-> - Por publicidade.
-> - Outros.
-
-En este apartado se analiza cuál es el mejor modelo de negocio para el proyecto Roled teniendo en cuenta diferentes aspectos como la compentecia, los proveedores, la viabilidad, los canales de distribución, las debilidades, las oportunidades, etc.
-Para determinar las estrategias futuras del proyecto se realiza un análisis DAFO que permite detectar los factores internos y externos que pueden afectar al proyecto, como muestra la siguiente imagen.  
-
-
-
-
-
-Teniendo en cuenta estos factores anteriormente citados, además, de los que se exponen en los siguientes puntos del apartado 5, explicados detalladamente, se opta por un modelo de negocio mixto, ya que las fuentes de ingreso son mixtas:
+Se opta por un modelo de negocio mixto, ya que no existe una única fuente de ingresos:
 - Es un modelo de pago ya que el perifético POV es de pago y una de las principales fuentes de ingresos. 
-- Aunque la aplicación web es gratuita, existe contenido exclusivo en la aplicación que es de pago, que ayuda durante las primeras fases a rentabilizar el proyecto. 
+- Aunque la aplicación web es gratuita, existe contenido exclusivo en la aplicación que es de pago, que ayuda durante las primeras fases a rentabilizar el proyecto, por lo que también presenta partes de un modelo de negocio de suscripción. 
 - Una de las fuentes de ingresos, con un peso importante, es la publicidad de terceros en la aplicación, por lo que también presenta elementos de un modelo de negocio por publicidad. 
+
+No se opta por un modelo de pago tradicional ya que como existen otros productos semejantes en la competencia, enfocarse únicamente en la venta del periférico puede ser un riesgo para el futuro del proyecto. Tampoco se opta por un modelo de negocio íntegramente por suscripción ya que se considera que si la aplicación es de pago, mermará la cantidad de usuarios que realizan diseños y el valor de la aplicación y la comunidad disminuirá siendo menos atractiva.
 
 El hecho de que el modelo de negocio sea mixto y no esté tan enfocado a una fuente de ingresos concreta, reduce el riesgo al no ser tan dependiende de esa fuente de ingresos. Además, la adaptabilidad a los cambios del proyecto es mayor, siendo este un beneficio muy importante en un ámbito tan cambiante e imprevisible como lo es el mundo tecnológico. 
 
@@ -110,22 +91,11 @@ El hecho de que el modelo de negocio sea mixto y no esté tan enfocado a una fue
 
 ##### 2.5.1.1- Viabilidade técnica
 
-> _EXPLICACIÓN_: Neste subapartado deberás defender con datos, a viabilidade da realización do proyecto.
->
-> - Será posible dispoñer dos recursos humanos e medios de produción necesarios (materias primas, maquinaria, instalacións, etc.)?
-> - Existe algún impedimento técnico que dificulte o proceso produtivo?
-
-Desde un punto de vista técnico, el proyecto Roled es altamente viable, ya que los requerimientos materiales para su puesta en marcha son muy sencillos. La parte del proyecto que puede suponer un mayor problema es la realización del periférico, ya que se trata de un dispositivo físico. No obstante, su elaboración en cuanto a materias primas es asequible:
-- El material básico con el que está fabricado es el plástico, por lo que todas las piezas de soporte y su estructura se realizan mediante una impresora 3D. Se usará filamento de plástico reciclado.
-- Las tiras Led son muy económicas y fáciles de conseguir tanto en el mercado local como por Internet. 
-- Los motores, como medida de resposabilidad civil corporativa, reciclarán de los discos HDD que van quedando obsoletos, disminuyendo los desechos informáticos y reduciendo el coste de elaboración del dispositivo.
-- El microcontrolador que gestiona los Leds tampoco es difícil de conseguir y tiene un precio bastante económico ya que no se requiere de un dispositivo con alta potencia.
-- Al ser un motor reciclado de otro dispositivo, no se puede reutilizar su controlador, por lo que es necesario comprar un controlador ESC económico.
-- Para poder alimentar el microcontrolador, debido a las dificultades que ocasiona la conexión mediante cables al ser un dispositivo giratorio, se usan dos bobinas de transferencia de energía por inducción. 
+Desde un punto de vista técnico, el proyecto Roled es altamente viable, ya que los requerimientos materiales para su puesta en marcha son muy sencillos. La parte del proyecto que puede suponer un mayor problema es la realización del periférico, ya que se trata de un dispositivo físico. No obstante, su elaboración en cuanto a materias primas es asequible y está detallada en el siguiente punto de viabilidad económica.
 
 En cuanto a los recursos humanos, se necesitará poco personal para el mantenimiento del software, aunque también se espera que este vaya aumentando a medida que vaya adquiriendo una comunidad mayor de usuarios y, por lo tanto, mayores necesidades de soporte.  Durante las primeras fases, no se espera que sea necesario aumentar los trabajadores de la empresa, quedando todo el trabajo relegado a una sola persona, reduciendo de esta forma los gastos de salarios.
 
-En cuanto a las instalaciones, no se necesita un taller excesivamente grande, aunque sí es necesario disponer de espacio suficiente y adecuado para alojar la impresora (o impresoras) 3D. También se debe disponer de espacio de almacenaje suficiente así como disponer de una mesa de trabajo para poder realizar el montaje del periférico. Para la elaboración del software se necesita un ordenador sobremesa, por lo menos de gama media, que permita el desarrollo y el mantenimiendo del software de Roled. Para minimizar gastos, durante el primer año se usará el domicilio como taller y almacén y se solicitará el uso del "Viveiro de empresas" del centro educativo IES Armando Cotarelo Valledor para reuniones con clientes, con proveedores, etc. 
+En cuanto a las instalaciones, es necesario disponer de espacio suficiente y adecuado para alojar la impresora (o impresoras) 3D, disponer de espacio de almacenaje suficiente así como de una mesa de trabajo para poder realizar el montaje del periférico. Para la elaboración del software se necesita un ordenador sobremesa, por lo menos de gama media, que permita el desarrollo y el mantenimiendo del software de Roled. Para minimizar gastos, durante el primer año se usará el domicilio como taller y almacén y se solicitará el uso del "Viveiro de empresas" del centro educativo IES Armando Cotarelo Valledor para reuniones con clientes, con proveedores, etc. 
 
 El despliegue de la aplicación web se hará usando servicios de hosting. 
 
@@ -232,12 +202,6 @@ Tras el análisis de la competencia y dado que la fuente de ingresos principal d
 - 1. Hacer que la aplicación se use bajo suscripción, encareciendo el producto y haciendo que la comunidad de usuarios y de contenido se vea limitada.
 - 2. Permitir que las imágenes que se cargen en el periférico tengan que ser tratadas previamente en la aplicación web y viceversa, es decir, que solamente se podran proyectar esas imágenes holográficas en el periférico oficial de Roled.
 Por las dificultades técnicas que puede presentar la realización de la segunda medida, que a priori parece la que más se ajusta a los intereses del proyecto, no será incluida en este primer prototipo pero se estudiará su aplicación en el futuro como mejora del proyecto.  
-
-
-
-
-
-
 
 ### 2.7- Promoción
 
