@@ -12,8 +12,7 @@
 
 ## 1- Descripción General
 
-El proyecto Roled consiste en una aplicación web que permite la subida y la creación de imágenes que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Este periférico consiste en una pantalla POV ("Persistence of vision") formado por una matriz de Leds que al girar a una velocidad determinada permiten que el ojo humano no sea capaz de distinguir cada uno de los leds por separado y los perciba como una imagen unificada que puede ser estática o una imagen en movimiento.
-Esta aplicación web también funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados, así como la creación de animaciones sencillas basadas en fotogramas. 
+El proyecto Roled consiste en una aplicación web que permite la subida y la creación de dibujos que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Este periférico consiste en una pantalla POV ("Persistence of vision") formado por una matriz de Leds que al girar a una velocidad determinada que permiten formar imágenes estáticas o en movimiento. Esta aplicación web funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados, así como la creación de animaciones sencillas basadas en fotogramas. 
 
 Este tipo de productos son bastante populares en algunos países asiáticos como China, Japón o Corea, pero sus prototipos son de grandes dimensiones, convirtiéndolos en un producto muy costoso y poco práctico. Desde Roled, se pretende marcar la diferencia mediante un prototipo de "bolsillo", de pequeñas dimensiones y de un precio asequible que cualquiera pueda tener en su mesita de noche. Además, este va asociado a una aplicación web donde todos los usuarios pueden subir, crear y compartir sus diseños, pudiendo servir de plataforma para muchos artistas digitales que quieran dar a conocer su trabajo, a la vez que consigue que la experiencia del usuario sea más completa y creativa. 
 
@@ -23,7 +22,6 @@ El desarrollo del proyecto Roled, se puede separar en diferentes partes con unos
 
 **Infraetructura del proyecto**
 
-Para la base de datos, se usará una base de datos relacional, cuya gestión se realizará a través del SGBD MySQL de Oracle. Esta almacena los datos de los usuarios y las referencias de las imágenes subidas al servidor. 
 Para el despliegue de la aplicación web se usará un servidor web de la empresa Contabo, con un sistema operativo Debian de cuatro núcleos, 8GB de memoria RAM y un disco SSD de 200GB con datos ilimitados. 
 
 **Base de datos**
@@ -49,7 +47,7 @@ Para una comunicación más fluida entre el frontend y el backend se usará una 
 **Frontend**
 
 Para el frontend de la aplicación web se usarán los lenguajes de etiquetas de HTML5 y CSS3. Como lenguaje de programación del frontend se usará JavaScript. 
-Para la comunicación con la API del sistema, se usará JS o bien el framework JQuery. Se baraja la posibilidad de incluir alguna plantilla mediante Bootstrap, o el uso del framework Thymeleaf.
+Para la comunicación con la API del sistema, se usará JS. Se baraja la posibilidad de incluir alguna plantilla mediante Bootstrap.
 Debido a la utilización de las últimas versiones de HTML5 y CSS3, será necesario un navegador que soporte estas tecnologías para una correcta visualización de la aplicación web. 
 
 **Backend**
@@ -58,7 +56,7 @@ Para el backend se usará el lenguaje de programación php o bien Java. No se ha
 
 ## 2- Funcionalidades
 
-La siguiente tabla muestra todas las funcionalidades de las que dispone la aplicación web de Roled, con una breve descripción y qué usuarios tienen permiso para realizarlas.
+La siguiente tabla muestra todas las funcionalidades de las que dispone la aplicación web de Roled, con una breve descripción y qué usuarios tienen permiso para realizarlas. Algunas de las funcionalidades no serán implementadas en este proyeto, pero su funcionamiento será prototipado.
 
 | Acción                          |  Descripción                                           |   Usuario permitidos           |
 |---------------------------------|--------------------------------------------------------|--------------------------------|
@@ -115,24 +113,22 @@ Será totalmente necesario poseer el periférico POV de Roled para poder visuali
 
 ## 5- Normativa
 
-> *EXPLICACION* Investigarase que normativa vixente afecta ao desenvolvemento do proxecto e de que maneira. O proxecto debe adaptarse ás esixencias legais dos territorios onde vai operar.
-> 
-> Pola natureza dos sistema de información, unha lei que se vai a ter que mencionar de forma obrigatoria é la [Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales (LOPDPGDD)](https://www.boe.es/buscar/act.php?id=BOE-A-2018-16673). O ámbito da LOPDPGDD é nacional. Se a aplicación está pensada para operar a nivel europeo, tamén se debe facer referencia á [General Data Protection Regulation (GDPR)](https://eur-lex.europa.eu/eli/reg/2016/679/oj). Na documentación debe afirmarse que o proxecto cumpre coa normativa vixente.
->
-> Para cumplir a LOPDPGDD e/ou GDPR debe ter un apartado na web onde se indique quen é a persoa responsable do tratamento dos datos e para que fins se van utilizar. Habitualmente esta información estructúrase nos seguintes apartados:
->
-> - Aviso legal.
-> - Política de privacidade.
-> - Política de cookies.
->
-> É acosenllable ver [exemplos de webs](https://www.spotify.com/es/legal/privacy-policy/) que conteñan textos legais referenciando a LOPDPGDD ou GDPR.
+Para poder cumplir con la normativa estatal y europea, es obligatorio cumplir con la siguientes normas:
+- LOPDPGDD, legislación en materia de protección de datos a nivel estatal.
+- GDP, legistlación en materia de protección de datos a nivel europeo.
+- Certificado CE, referente a la calidad y seguridad.
 
+Las dos primeras normas serán incluidas en el pie de la aplicación de forma que el usuario puede ver que Roled cumple la normativa en materia de protección de datos, cómo se almacena esta información, así como poder desestimar su consentimiento. Aparecerán como los siiuientes enlaces:
+- Aviso legal 
+- Política de privacidad y de cookies
+- Términos y condiciones de uso
 
+La certificación CE será incluida en el dispositvo POV, como indica la certificación. 
 
 ## 6- Mejoras futuras
 
 El proyecto Roled abre un abanico de posibilidades y de mejoras a medio y largo plazo que podrían mejorar notablemente el producto:
-
+- Implementación de las funcionalidades que, por tiempo, solo serán incluidas en el prototipo de Figma.
 - Añadir una IA que cree diseños que estén específicamente optimizados para ser visualizados holográficamente, mediante una breve descripción de lo que el usuario necesita. 
 - Ofrecer una experiencia totalmente personalizada, de forma que cada dispositivo perifético POV tenga un tamaño y unas características totalmente personalizadas y adaptadas a las necesidades de cada usuario. Esto encarecería el producto pero añadiría un gran valor al proyecto pudiendo expandirse notablemente en el ámbito empresarial.
 - Mejora de las herramientas de dibujo que presenta el primer prototipo de la aplicación así como mejora de las herramientas de creación de animaciones. 
