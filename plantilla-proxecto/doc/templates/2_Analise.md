@@ -52,7 +52,7 @@ Debido a la utilización de las últimas versiones de HTML5 y CSS3, será necesa
 
 **Backend**
 
-Para el backend se usará el lenguaje de programación php o bien Java. No se ha decido el lenguaje a usar ya que depende de si se encuentra una librería que permita la integración de una IA en la aplicación web para php. No obtante, se usará el paradigma de POO para la realización del proyecto pudiendo adaptarlo fácilmente a uno de los dos lenguajes. En caso de usar Java, se usará Hibernate como ORM para llevar a cabo la persistencia de los datos mientras que, en caso de usar php, se usará la librería mysqli por objetos. Por lo tanto, aunque no está decido cual se usará finalmente, se ha pensado los requisitos y requerimientos de cada una de las opciones.  
+Para el backend se usará el lenguaje de programación php  con el paradigma de POO. Se usará la librería mysqli por objetos para la persistencia de los datos de la aplicación. 
 
 ## 2- Funcionalidades
 
@@ -118,7 +118,7 @@ Para poder cumplir con la normativa estatal y europea, es obligatorio cumplir co
 - GDP, legistlación en materia de protección de datos a nivel europeo.
 - Certificado CE, referente a la calidad y seguridad.
 
-Las dos primeras normas serán incluidas en el pie de la aplicación de forma que el usuario puede ver que Roled cumple la normativa en materia de protección de datos, cómo se almacena esta información, así como poder desestimar su consentimiento. Aparecerán como los siiuientes enlaces:
+Las dos primeras normas serán incluidas en el pie de la aplicación de forma que el usuario puede ver que Roled cumple la normativa en materia de protección de datos, cómo se almacena esta información, así como poder desestimar su consentimiento. Aparecerán como los siguientes enlaces:
 - Aviso legal 
 - Política de privacidad y de cookies
 - Términos y condiciones de uso

@@ -6,17 +6,27 @@
   - [3- Diagrama de Base de Datos](#3--diagrama-de-base-de-datos)
   - [4- Deseño de interface de usuarios](#4--deseño-de-interface-de-usuarios)
 
-> *EXPLICACIÓN:* Este documento inclúe os diferentes diagramas, esquemas e deseños que axuden a describir mellor o [nome do proxecto] detallando os seus compoñentes, funcionalidades, bases de datos e interface.
 
 ## 1- Diagrama da arquitectura
 
-> *EXPLICACIÓN:* Incluír os diagramas de arquitectura que representen de forma gráfica a aplicación, os seus compoñentes e a súa interrelación: front-end, back-end, bases de datos, nube, microservizos, etc.
+La siguiente imagen muestra los diagramas de despliegue y componentes que permiten ver como se conectan cada una de las partes que forman parte de la aplicación.
+
+![Diagrama de componentes y despliegue](../img/despliegue.PNG)
+
+Como se puede ver consta de tres nodos:
+- El dispositivo con el cliente que visualiza la aplicación. 
+- El servidor web de Xampp que contiene un servidor Apache, el lenguaje PHP que se usa para el backend, la base de datos mariaDB con el phpMyAdmin y la propia aplicación alojada.
+- El periférico POV.
 
 ## 2- Casos de uso
 
-> *EXPLICACIÓN:* Facer os diagramas de casos de uso que representen como as persoas usuarias interaccionan co sistema.
->
->Deben incluírse o(s) tipo(s) de usuario implicados en cada caso de uso.
+Para una mejor comprensión de las funcionalidades de la aplicación se dividieron en tres partes, gestión de usuarios, compras y gestión administrativa con un diagrama de casos de uso para cada una de esas partes.
+
+![Gestión de usuarios](../img/casosDeUso1.PNG)
+
+![Compras](../img/casosUso2.PNG)
+
+![Administracion](../img/casosDeUso3.PNG)
 
 ## 3- Diagrama de Base de Datos
 
@@ -27,13 +37,26 @@
 >
 > Pódese entregar a captura do phpMyAdmin se se emprega MariaDB como Modelo relacional.
 
+Para representar el diseño de la base de datos se realizaró el diagrama entidad-relación.
+
+![Entidad-relacion](../img/entidad-relacion.PNG)
+
+Del diagrama anterior se realizó su correspondiente modelo relacional:
+
+_Tabla usuario_:
+
+| Campo              | Descripción  |  Definición |
+|--------------------|--------------|-------------|
+| id_usuario         |              |             |
+| username           |              |             |
+| password           |              |             |             
+| email              |              |             |
+| fecha nacimient    |              |             |
+| tipo               |              |             |
+
+
+
+
 ## 4- Deseño de interface de usuarios
 
-> *EXPLICACIÓN:* Neste apartado deben incluírse unha mostra representativan dos mockups da aplicación. Estes mockups deben incluír todas as vistas da aplicación, é dicir, todas as páxinas diferentes que unha persoa usuaria (de calquera tipo) vai poder ver. Tamén se debe incluír información de como navegar dunha ventá a outra.
->
-> Os mockups axudan no deseño da aplicación. Poden facerse á man, cunha aplicación ou a través dunha web do estilo: diagrams Un mockup permite ver como se verá unha páxina concreta dunha aplicación web. O deseño de mockups axuda a:
->
-> - Avanzar moi rápido na parte frontend: ao ter os mockups realizados, permite saber que elementos vai ter cada vista e onde colocalos.
-> - Visualizar a información que vai a ser necesaria mostrar. Sabendo con que información imos traballar e sabendo a información que necesitamos mostrar, podemos organizar os datos dunha forma axeitada para gardalos na base de datos.
->
-> Se temos as ideas máis claras do noso proxecto podemos sustituir os mockups por prototipos.
+Dado que el diseño de la interfaz de usuario ya estaba más avanzado, se realizó un prototipo en vez de mockups. 
