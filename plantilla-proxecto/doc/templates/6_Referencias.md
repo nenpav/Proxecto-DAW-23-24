@@ -18,7 +18,10 @@ Pons, L. (2022, 9 noviembre). Tipos de modelo de negocio explicados - Guía Nego
 
 Riesgos Ergonómicos en el Trabajo - INSST - Portal INSST - INSST. (s. f.). Portal INSST. https://www.insst.es/materias/riesgos/riesgos-ergonomicos#:~:text=Ergonom%C3%ADa%20(o%20estudio%20de%20los,y%20el%20resultado%20global%20del
 
+https://diego.com.es/programacion-orientada-a-objetos-en-php
+
 ## 3- Sitios oficiais do software utilizado
+
 
 
 ## 4- Normas ou documentos legais
