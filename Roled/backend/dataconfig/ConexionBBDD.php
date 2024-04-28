@@ -1,11 +1,10 @@
 <?php
 
+/**
+ * Crea la conexión con la base de datos
+ */
     class ConexionBBDD{
-        
-        private $host;
-        private $user;
-        private $pwd;
-        private $bbdd;
+
         private $conexionBBDD;
 
         public function __construct($host, $user, $pwd, $bbdd){
@@ -22,7 +21,7 @@
         public function deleteConexion(){
             $this->conexionBBDD->close();
         }
-    
+
     }
 
 ?>

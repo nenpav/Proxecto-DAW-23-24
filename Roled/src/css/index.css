@@ -1,0 +1,77 @@
+@import url(base.css);
+
+
+
+/*=============================================
+=            Estilos del carrusel            =
+=============================================*/
+
+#carouselExampleAutoplaying{
+    width: 400px;
+    height: 400px;
+}
+
+/*=====  End of Estilos del carrusel  ======*/
+
+
+/*=============================================
+=            Estilos de las secciones            =
+=============================================*/
+
+.portada{
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.portada:nth-of-type(2){
+    height: calc(100vh - 2rem);
+}
+
+h1,h2{
+    width: 50px;
+    text-shadow: 4px 4px 4px var(--clr-hover);
+    padding-bottom: 2rem;
+}
+
+
+#comenzar{
+    width: 100%;
+    text-align: center;    
+}
+/*=====  End of Estilos de las secciones  ======*/
+
+
+/*=============================================
+=            Estilos de las imagenes            =
+=============================================*/
+
+#circulo{
+    width: 500px;
+}
+
+#giro{
+    animation: giro .1s 6 ease-in;
+}
+
+
+/*=====  End of Estilos de las imagenes  ======*/
+
+
+
+/*=============================================
+=            Estilos animacion imagen            =
+=============================================*/
+
+@keyframes giro {
+    to{
+        rotate: 360deg;
+    }   
+}
+
+
+/*=====  End of Estilos animacion imagen  ======*/
+

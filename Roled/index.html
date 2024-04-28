@@ -1,0 +1,82 @@
+<!--<?php
+    //Comprobar si existe una sesion de usuario iniciada
+        //Existe -> redireccion a pagina de inicio del usuario
+        //No existe -> se mantiene en esta pagina
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Roled</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./src/css/index.css">
+</head>
+<body>
+    <header>
+        <figure id="logo">
+            <a href="" aria-label="enlace a index"><img src="./src/img/ROLED-trans.png" alt="logo"></a>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="#" aria-label="Enlace a index" class="activa">Inicio<span></span></a></li>
+                <li><a href="" aria-label="Enlace a login">Login<span></span></a></li>
+                <li><a href="" aria-label="Enlace a registro">Sign up<span></span></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="portada">
+            <h1>Proyecta tus ideas</h1>
+            <figure id="giro">
+                <img id="circulo" src="./src/img/circulo.png" alt="">
+            </figure>
+        </section>
+        <section class="portada">
+            <h2>Crea tus diseños</h2>
+            <section id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <section class="carousel-inner">
+                  <figure class="carousel-item active">
+                    <img src="./src/img/portada1.png" class="d-block w-100" alt="">
+                  </figure>
+                  <figure class="carousel-item">
+                    <img src="./src/img/portada2.png" class="d-block w-100" alt="">
+                  </figure>
+                  <figure class="carousel-item">
+                    <img src="./src/img/portada3.png" class="d-block w-100" alt="">
+                  </figure>
+                  <figure class="carousel-item">
+                    <img src="./src/img/portada4.png" class="d-block w-100" alt="">
+                  </figure>
+                  <figure class="carousel-item">
+                    <img src="./src/img/portada5.png" class="d-block w-100" alt="">
+                  </figure>
+                  <figure class="carousel-item">
+                    <img src="./src/img/portada6.png" class="d-block w-100" alt="">
+                  </figure>
+                </section>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+            </section>
+            <section id="comenzar">
+                <button class="boton">comenzar</button>
+            </section>
+        </section>
+        <section>
+
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
