@@ -7,7 +7,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     pwd VARCHAR(12) NOT NULL,
     email VARCHAR(30) NOT NULL,
     tipo ENUM('U','A','S','C') NOT NULL,
-    fecha_nac DATE CHECK(fecha_nac >= '1900-01-01' AND YEAR(fecha_nac) <= YEAR(CURDATE()) - 8)
+    avatar VARCHAR(30) DEFAULT NULL,
+    fecha_nac DATE CHECK(fecha_nac >= '1900-01-01')
 );
 
 CREATE TABLE IF NOT EXISTS design(
