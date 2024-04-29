@@ -11,15 +11,8 @@
 
 ## 1- Descripción General
 
-El proyecto Roled consiste en una aplicación web que permite la subida y la creación de dibujos que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Este periférico consiste en una pantalla POV ("Persistence of vision") formado por una matriz de Leds que al girar a una velocidad determinada que permiten formar imágenes estáticas o en movimiento. Esta aplicación web funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados, así como la creación de animaciones sencillas basadas en fotogramas. 
-
-La funcionalidad principal de la aplicación web es la de poder crear diseños. Para ello proporciona a los usuarios una cuadricula para que los usuarios puedan dibujar utilizando la técnica del pixelart. Estos podrán utilizar una amplia gama de colores para colorear y podrán eliminar el contenido de una cuadrícula mediante la herramienta de la goma de borrar. También permite la elaboración de animaciones sencillas basadas en fotogramas, que el usuario manejará mediante un *slider* que representa una línea temporal, pudiendo modificar el dibujo de la cuadrícula con el fin de animar sus diseños. Para poder realizar los diseños es imprescindible haberse registrado en la aplicación y tener la sesión iniciada. 
-
-Los usuarios disponen de una página de perfil donde pueden ver sus datos personales y sus diseños. Estos podrán editar algunos datos personales como la foto del avatar. También podrán eliminar un diseño propio. Esta página es privada y solo es accesible por el usuario propietario. 
-
-Otra de las mayores funcionalidades de la aplicación es la página de comunidad, donde los usuarios comparten sus diseños para todos los usuarios de Roled. Los usuarios podrán filtrar estos diseños en base al usuario creador, su valoración o su antigüedad.
-
-Los usuarios también podrán realizar la compra de la suscripción para poder disfrutar del contenido extra, así como realizar la compra del dispositivo POV desde la propia aplicación. Esta funcionalidad será incluida como mejora futura y no será implementada. 
+La aplicación web desarrollada para la parte técnica del proyecto permite la subida y la creación de dibujos que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Esta aplicación web funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados, así como la creación de animaciones sencillas basadas en fotogramas. 
+Los usuarios podrán crear y editar sus diseños, ver y usar los diseños de la comunidad y proyectarlos en la pantalla POV que también podrán adquirir en la aplicación.
 
 ## 2- Funcionalidades
 
