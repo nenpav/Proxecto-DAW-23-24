@@ -14,45 +14,13 @@
 
 El proyecto Roled consiste en una aplicación web que permite la subida y la creación de dibujos que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Este periférico consiste en una pantalla POV ("Persistence of vision") formado por una matriz de Leds que al girar a una velocidad determinada que permiten formar imágenes estáticas o en movimiento. Esta aplicación web funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados, así como la creación de animaciones sencillas basadas en fotogramas. 
 
-Este tipo de productos son bastante populares en algunos países asiáticos como China, Japón o Corea, pero sus prototipos son de grandes dimensiones, convirtiéndolos en un producto muy costoso y poco práctico. Desde Roled, se pretende marcar la diferencia mediante un prototipo de "bolsillo", de pequeñas dimensiones y de un precio asequible que cualquiera pueda tener en su mesita de noche. Además, este va asociado a una aplicación web donde todos los usuarios pueden subir, crear y compartir sus diseños, pudiendo servir de plataforma para muchos artistas digitales que quieran dar a conocer su trabajo, a la vez que consigue que la experiencia del usuario sea más completa y creativa. 
+La funcionalidad principal de la aplicación web es la de poder crear diseños. Para ello proporciona a los usuarios una cuadricula para que los usuarios puedan dibujar utilizando la técnica del pixelart. Estos podrán utilizar una amplia gama de colores para colorear y podrán eliminar el contenido de una cuadrícula mediante la herramienta de la goma de borrar. También permite la elaboración de animaciones sencillas basadas en fotogramas, que el usuario manejará mediante un __slider__ que representa una línea temporal, pudiendo modificar el dibujo de la cuadrícula con el fin de animar sus diseños. Para poder realizar los diseños es imprescindible haberse registrado en la aplicación y tener la sesión iniciada. 
 
-El objetivo que se espera conseguir con el desarrollo de Roled es aumentar la oferta de aplicaciones que fomentan la creatividad, creando una aplicación que no solo aporte al usuario entretenimiento saludable y estimulante, sino que le permita formar parte de una comunidad de usuarios amigable y tolerante, aspectos muy difíciles de encontrar en Internet en la actualidad. Además, servirá de plataforma para que muchos artistas tengan visibilidad, pudiendo compartir sus proyectos de una forma muy atractiva y visual. 
+Los usuarios disponen de una página de perfil donde pueden ver sus datos personales y sus diseños. Estos podrán editar algunos datos personales como la foto del avatar. También podrán eliminar un diseño propio. Esta página es privada y solo es accesible por el usuario propietario. 
 
-El desarrollo del proyecto Roled, se puede separar en diferentes partes con unos requerimientos diferentes para cada una de ellas:
+Otra de las mayores funcionalidades de la aplicación es la página de comunidad, donde los usuarios comparten sus diseños para todos los usuarios de Roled. Los usuarios podrán filtrar estos diseños en base al usuario creador, su valoración o su antigüedad.
 
-**Infraetructura del proyecto**
-
-Para el despliegue de la aplicación web se usará un servidor web de la empresa Contabo, con un sistema operativo Debian de cuatro núcleos, 8GB de memoria RAM y un disco SSD de 200GB con datos ilimitados. 
-
-**Base de datos**
-
-Para el amacenamiento de los datos de los usuarios. así como de los diseños de la comunidad, se usará una base de datos relacional, con el SGBS MySQL.
-También se estima almacenar la matriz de píxeles de cada imagen que será enviada al periférico POV, con el fin de que no se tenga ue volver a calcular cada vez que se quiere reproducir la imagen. Esto dependerá de si se prioriza una base de datos más liviana o una mayor rapidez de procesamiento, lo cual se decidirá en la fase de codificación y pruebas. 
-
-**API**
-
-Para una comunicación más fluida entre el frontend y el backend se usará una API JSON que almacenará la referencia de las imágenes de la aplicación en la memoria. 
-
-**Periférico POV**
-
-- Para el diseño de las piezas que conforman el periférico se usa la aplicación "fusion360" de Autodesk, con su versión gratuita. 
-- Para la elaboración de las piezas de plástico se utiliza una impresora 3D Tronxy XY2 PRO. 
-- Para la elaboración del periférico, se usa una tira LED RGB direccionable WS2812B. 
-- Un motor brushless trifásico reciclado de un disco HDD. 
-- Como microcontrolador se usa un ESP32. Como lenguaje de programación para este microcontrolador C++.
-- Un driver ESC de 10A para el motor anteriormente mencionado. 
-- Un final de carrera óptico que permitirá contar las vueltas por minuto para la sincronización del motor con los Leds.
-- Una fuente de alimentación por inducción de 2A (bobinas de transferencia de energía por inducción).
-
-**Frontend**
-
-Para el frontend de la aplicación web se usarán los lenguajes de etiquetas de HTML5 y CSS3. Como lenguaje de programación del frontend se usará JavaScript. 
-Para la comunicación con la API del sistema, se usará JS. Se baraja la posibilidad de incluir alguna plantilla mediante Bootstrap.
-Debido a la utilización de las últimas versiones de HTML5 y CSS3, será necesario un navegador que soporte estas tecnologías para una correcta visualización de la aplicación web. 
-
-**Backend**
-
-Para el backend se usará el lenguaje de programación php  con el paradigma de POO. Se usará la librería mysqli por objetos para la persistencia de los datos de la aplicación. 
+Los usuarios también podrán realizar la compra de la suscripción para poder disfrutar del contenido extra, así como realizar la compra del dispositivo POV desde la propia aplicación. Esta funcionalidad será incluida como mejora futura y no será implementada. 
 
 ## 2- Funcionalidades
 
@@ -60,23 +28,23 @@ La siguiente tabla muestra todas las funcionalidades de las que dispone la aplic
 
 | Acción                          |  Descripción                                           |   Usuario permitidos           |
 |---------------------------------|--------------------------------------------------------|--------------------------------|
-| Registro en la app              | Hacer el formulario de registro                        | Todos menos los bloqueados     |
-| Inicio de sesión                | Autenticarnos en la aplicación e iniciar sesión        | Todos menos los bloqueados     |
-| Cerrar la sesión                | Cerrar la sesión en la aplicación                      | Todos menos los bloqueados     |
-| Crear un nuevo diseño           | Crear diseños con las herramientas de dibujo           | Todos menos los bloqueados     |
+| Registro en la app              | Hacer el formulario de registro                        | Todos                          |
+| Inicio de sesión                | Autenticarnos en la aplicación e iniciar sesión        | Todos                          |
+| Cerrar la sesión                | Cerrar la sesión en la aplicación                      | Todos                          |
+| Crear un nuevo diseño           | Crear diseños con las herramientas de dibujo           | Todos                          |
 | Borrar un diseño                | Eliminar un diseño                                     | Propietario y administrador    |
 | Editar un diseño                | Editar   un diseño                                     | Propietario y administrador    |
-| Publicar un nuevo diseño        | Hacer que el diseño sea visible para la comunidad      | Todos menos los bloqueados     |
-| Enviar un diseño al periférico  | Enviar un diseño para ser proyectado por el periférico | Todos menos los bloqueados     |
-| Ver los diseños propios         | Listar los diseños del propio usuario                  | Todos menos los bloqueados     |
-| Ver diseños de otro usuarios    | Listar los diseños de otro usuario                     | Todos menos los bloqueados     |
-| Visitar la Comunidad            | Lista de todos los diseños de todos los usuarios       | Todos menos los bloqueados     |
-| Valorar un diseño               | Valorar el diseño de otro usuario                      | Todos menos los bloqueados     |
+| Publicar un nuevo diseño        | Hacer que el diseño sea visible para la comunidad      | Todos                          |
+| Enviar un diseño al periférico  | Enviar un diseño para ser proyectado por el periférico | Todos                          |
+| Ver los diseños propios         | Listar los diseños del propio usuario                  | Todos                          |
+| Ver diseños de otro usuarios    | Listar los diseños de otro usuario                     | Todos                          |
+| Visitar la Comunidad            | Lista de todos los diseños de todos los usuarios       | Todos                          |
+| Valorar un diseño               | Valorar el diseño de otro usuario                      | Todos                          |
 | Eliminar un usuario             | Eliminar aun usuario de la BBDD                        | Administrador                  |
 | Bloquear un usuario             | Bloquear el acceso a un usuario                        | Administrador                  |
 | Arreglo de incidencias          | Arreglo de las incidencias de los usuarios             | Administrador                  |
 | Añadir funcionalidad            | Añadir funcionalidades nuevas a la app                 | Administrador                  |
-| Comprar el periférico POV       | Comprar el periférico desde la aplicación              | Todos menos los bloqueados     |
+| Comprar el periférico POV       | Comprar el periférico desde la aplicación              | Todos                          |
 | Ver contenido extra             | Ver el contenido adicional de pago                     | Suscriptores y creadores       |
 
 
@@ -91,15 +59,10 @@ Los usuarios genéricos conforman la mayor parte de los usuarios de la aplicaci�
 **Usuario administrador**
 
 Los usuarios administradores, como su nombre indican, son usuarios con permisos especiales que pueden realizar tareas de mantenimiento en la aplicación como el arreglo de incidencias, subir contenido o funcionalidades nuevas, etc.
-Debido a que el proyecto se encuentra en su fase inicial, los usuarios técnicos se engloban dentro del rol de usuarios administradores, por lo que también podrán cambiar el código de la aplicación web para arreglar posibles bugs o añadir mejoras. 
 
 **Usuario suscriptores con contenido exclusivo**
 
 Como se explicó en el apartado de financiación del Anteproyecto, una de las fuentes de ingreso del proyecto Roled es el contenido exclusivo de pago que no está disponible para los usuarios genéricos. Por este motivo, se crea el rol de usuario con contenido exclusivo que representa a todos aquellos usuarios que realicen el pago de contenido extra. Esta es la única diferencia que presentan con respecto a los usuarios genéricos y tienen acceso a todas las funcionalidades que presentan los usuarios genéricos.
-
-**Usuarios bloqueados**
-
-Todos los usuarios deben aceptar los términos y condiciones de uso de la aplicación de Roled, los cuales incluyen las situaciones bajo las que un usuario será bloqueado y pierde el derecho al acceso en la aplicación, incluidos los usuarios que hayan efectuado el pago por el contenido exclusivo. Debido a que existe un tiempo de alegaciones, las cuentas no son eliminadas en el momento del baneo, por lo que es necesario crear el rol de usuarios bloqueados para incluir todas esas cuentas que han perdido los derechos de uso en la aplicación. 
 
 **Creadores**
 
