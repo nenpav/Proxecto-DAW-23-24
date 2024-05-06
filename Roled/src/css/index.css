@@ -38,9 +38,14 @@ h1,h2{
 }
 
 
-#comenzar{
+.comenzar{
     width: 100%;
     text-align: center;    
+}
+
+#pov{
+    width: 100%;
+
 }
 /*=====  End of Estilos de las secciones  ======*/
 
