@@ -54,11 +54,11 @@ Los usuarios administradores, como su nombre indican, son usuarios con permisos 
 
 **Usuario suscriptores con contenido exclusivo**
 
-Como se explicó en el apartado de financiación del Anteproyecto, una de las fuentes de ingreso del proyecto Roled es el contenido exclusivo de pago que no está disponible para los usuarios genéricos. Por este motivo, se crea el rol de usuario con contenido exclusivo que representa a todos aquellos usuarios que realicen el pago de contenido extra. Esta es la única diferencia que presentan con respecto a los usuarios genéricos y tienen acceso a todas las funcionalidades que presentan los usuarios genéricos.
+Una de las fuentes de ingreso del proyecto Roled es el contenido exclusivo de pago que no está disponible para los usuarios genéricos. Por este motivo, se crea el rol de usuario con contenido exclusivo que representa a todos aquellos usuarios que realicen el pago de contenido extra. Tienen acceso a todas las funcionalidades que presentan los usuarios genéricos.
 
 **Creadores**
 
-Existe un último rol especial que representa a aquellos usuarios que superen un número determinado de diseños, los cuales deben ser compartidos al resto de usuarios, y, además, este usuario tenga una valoración alta por parte de la comunidad. Este tipo de usuarios tendrán acceso al contenido de pago de los usuarios suscriptores sin la necesidad de pagar ese contenido extra. De esta forma, se pretende premiar a aquellos usuarios que dedican tiempo y esfuerzo a mejorar la aplicación y subir contenido a esta. 
+Aquellos usuarios que superen un número determinado de diseños cobn una valoración alta por parte de la comunidad. Tendrán acceso al contenido de pago de los usuarios suscriptores sin la necesidad de pagar ese contenido extra. De esta forma, se pretende premiar a aquellos usuarios que dedican tiempo y esfuerzo a mejorar la aplicación y subir contenido a esta. 
 
 ## 4- Contorno operacional
 
