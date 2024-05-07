@@ -34,7 +34,7 @@ body{
     height: 100%;
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-template-rows: auto;
     gap: 3rem; 
     justify-content: center;
@@ -52,11 +52,12 @@ main{
 
 header{
     width: 100%;
-    height: 100px;
+    height:max-content;
     grid-column: 1/-1;
     padding: 1rem 0px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     position: sticky;
@@ -278,7 +279,6 @@ li{
     h3{
         font-size: calc(var(--tam-h3) / 1.5);
     }
-
     
     footer{
         /* grid-template-columns: 2;
@@ -295,6 +295,7 @@ li{
         margin: 10px 0;
         
     }
+   
 }
 
 @media screen and(min-width: 768px){
@@ -306,6 +307,14 @@ li{
         grid-area: 1 / 3 / 3 / 3;
     }
 }
+
+@media screen and (min-width: 1024px) {
+    main{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
 
 /*=====  End of Estilos de las mediaQueries  ======*/
 
