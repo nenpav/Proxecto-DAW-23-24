@@ -7,16 +7,15 @@
 
 /* Ventana modal de Login */
 
-#modalSesion{
+#modalSesion, #modalRegistro{
     margin: auto auto;
     width: 60%;
     height: 80%;
-    display: float;
     border-radius: 10px;
     border: none;
 }
 
-#modalSesion::backdrop{
+#modalSesion::backdrop, #modalRegistro::backdrop{
     background-color: var(--clr-prim-trans);
 }
 
@@ -82,7 +81,7 @@ dialog button, dialog input[type='submit']{
 }
 
 
-#cerrar{
+.cerrar{
     width: 10px;
     position: absolute;
     right: 10px;
