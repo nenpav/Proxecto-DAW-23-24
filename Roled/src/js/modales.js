@@ -8,13 +8,14 @@ const $d = document
 
 //console.log($botonLogin)
 //console.log($modalSesion)
-console.log($botonRegistro)
+console.log($cerrarModalSesion)
 
 function openModal(el, idModal){
     el.addEventListener("click",el=>{
         idModal.showModal()
     })
 }
+
 
 function closeModal(el, idModal){
     el.addEventListener("click",el=>{
