@@ -152,7 +152,7 @@
               <label for="pwd">Contraseña</label>
               <input type="password" name="pwd">
           </p>
-          <input class="boton" id="login" type="submit" value="Login">
+          <input class="boton" id="loginForm" type="submit" value="Login">
        </form>
       </section>
     </dialog>
@@ -187,7 +187,7 @@
             <label for="fnac">Fecha de Nacimiento</label>
             <input type="date" name="fnac" id="fnac">
           </p>
-          <input class="boton" id="registro" type="submit" value="Sign up">
+          <input class="boton" id="registroForm" type="submit" value="Sign up">
        </form>
       </section>
     </dialog>
