@@ -2,12 +2,12 @@
     //Comprobar si existe una sesion de usuario iniciada
         //Existe -> redireccion a pagina de inicio del usuario
         //No existe -> se mantiene en esta pagina
-  if (isset($_SESSION['modal']) && $_SESSION['modal']) {
+/*   if (isset($_SESSION['modal']) && $_SESSION['modal']) {
     echo "<script>window.addEventListener('DOMContentLoaded', function() {
             document.getElementById('modalSesion').showModal();
           });</script>";
     unset($_SESSION['modal']);
-  }
+  } */
 ?>
 <!DOCTYPE html>
 <html lang="es">
