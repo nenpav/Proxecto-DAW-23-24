@@ -1,19 +1,16 @@
 const $d = document
-      $botonLogin = $d.querySelector("#openModalSesion"),
+      $botonAbrirLogin = $d.querySelector("#openModalSesion"),
       $modalSesion = $d.querySelector("#modalSesion"),
       $cerrarModalSesion = $d.querySelector("#cerrarModSesion"),
-      $botonRegistro = $d.querySelector("#openModalRegistro"),
-      $modalRegistro = $d.querySelector("#modalRegistro"),
-      $cerrarModalRegistro = $d.querySelector("#cerrarModRegistro"),
-      $botonRegistro = $d.querySelector("#registro"),
       $botonLogin = $d.querySelector("#login")
 
-//console.log($botonLogin)
-//console.log($modalSesion)
-//console.log($botonRegistro)
+
+console.log($modalSesion)
+console.log($botonRegistro)
 
 function openModal(el, idModal){
     el.addEventListener("click",el=>{
+        
         idModal.showModal()
     })
 }
@@ -25,18 +22,12 @@ function closeModal(el, idModal){
     })
 }
 
-$botonRegistro.addEventListener("click",e=>{
+ $botonRegistro.addEventListener("click",e=>{
     e.preventDefault()
-    openModal($botonRegistro, $modalRegistro)
-})
+    $modalRegistro.showModal()
+    $modalSesion.close()
+    console.log("Se pulsó el botón")
+}) 
 
-$botonLogin.addEventListener("click",e=>{
-    e.preventDefault()
-    openModal($botonLogin, $modalSesion)
-})
-
-
-openModal($botonLogin, $modalSesion)
+openModal($botonAbrirLogin, $modalSesion)
 closeModal($cerrarModalSesion, $modalSesion)
-openModal($botonRegistro, $modalRegistro)
-closeModal($cerrarModalRegistro, $modalRegistro)

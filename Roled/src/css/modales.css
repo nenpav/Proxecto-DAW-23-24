@@ -7,20 +7,24 @@
 
 /* Ventana modal de Login */
 
-#modalSesion, #modalRegistro{
+#modalSesion{
     margin: auto auto;
-    width: 60%;
+    width: 90%;
     height: 80%;
     border-radius: 10px;
     border: none;
 }
 
-#modalSesion::backdrop, #modalRegistro::backdrop{
+#modalSesion::backdrop{
     background-color: var(--clr-prim-trans);
 }
 
-#left{
-    width: 50%;
+#error{
+    color: red;
+}
+
+dialog #left{
+    width: 45%;
     height: 100%;
     background-color: var(--clr-violeta);
     float: left;
@@ -30,9 +34,9 @@
     align-items: center;
 }
 
-#rigth{
+dialog #rigth{
     position: relative;
-    width: 50%;
+    width: 45%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -43,17 +47,17 @@
     color: white;
 }
 
-#rigth form p{
+dialog #rigth form p{
     display: flex;
     flex-direction: column;
 
 }
 
-#rigth form label{
+dialog #rigth form label{
    font-size: 1.2rem;
 }
 
-h3{
+dialog h3{
     text-shadow: 4px 4px 4px var(--clr-hover);
     margin: 2rem;
     font-size: calc(var(--tam-h3) / 0.75);
@@ -91,6 +95,7 @@ dialog button, dialog input[type='submit']{
     color: var(--clr-letra);
     background-color: var(--clr-fondo-primario);
 }
+
 
 
 /*----------  EStilos de las mediaqueries  ----------*/

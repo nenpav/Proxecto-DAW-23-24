@@ -7,7 +7,7 @@
 
 if(isset($_POST['registro'])){
     
-    //hay que validar los datos de entrada
+    
     $email = trim(strip_tags($_POST['email']));
     $login = trim(strip_tags($_POST['usuario']));
     $pwd = trim(strip_tags($_POST['pwd']));
@@ -15,7 +15,7 @@ if(isset($_POST['registro'])){
     //No sé si la gestión de la fecha es correcta. probar
     $fechaNac = $_POST['fnac'];
 
-    //La comprobación de si el usuario existe o no se va a hacer por JS
+   
     //Validar si las dos contraseñas son iguales
        
     $conexionBBDD->query("INSERT INTO  usuarios (username,pwd,email,tipo, avatar, fecha_nac) values
