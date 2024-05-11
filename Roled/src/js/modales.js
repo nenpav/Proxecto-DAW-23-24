@@ -6,7 +6,6 @@ const $d = document
 
 
 console.log($modalSesion)
-console.log($botonRegistro)
 
 function openModal(el, idModal){
     el.addEventListener("click",el=>{
@@ -22,12 +21,7 @@ function closeModal(el, idModal){
     })
 }
 
- $botonRegistro.addEventListener("click",e=>{
-    e.preventDefault()
-    $modalRegistro.showModal()
-    $modalSesion.close()
-    console.log("Se pulsó el botón")
-}) 
+
 
 openModal($botonAbrirLogin, $modalSesion)
 closeModal($cerrarModalSesion, $modalSesion)
