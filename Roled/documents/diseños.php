@@ -1,15 +1,23 @@
+<?php
+require_once("../backend/functions.php";)
+
+initSession();
+
+ $user = $_SESSION['login']; 
+ $queryDisenos = "SELECT * FROM design WHERE id_usuario = $user";
+ $ruta = "../src/json/rodel.json";
+
+ convertirJson(select($queryDisenos, $conexionBBDD), $ruta);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro</title>
+    <title>Mis Diseños</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/css/form.css">
-    <link rel="stylesheet" href="../src/css/modales.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-    <script src="../src/js/modales.js" defer></script>
-    <script src="../src/js/validaciones.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,50 +25,33 @@
             <a href="" aria-label="enlace a index"><img src="../src/img/ROLED-trans.png" alt="logo"></a>
         </figure>
         <nav>
-            <ul id="menuSinSesion">
-                <li><a href="" aria-label="Enlace a index" class="activa">Inicio<span></span></a></li>
-                <li><button id="openModalSesion">Login<span></span></button></li>
-                <li><button id="openModalRegistro">Sign up<span></span></button></li>
-            </ul>
-            <!-- Menú con sesión -->
+            <nav>
+                <ul id='menuConSesion'>
+                    <li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>
+                    <li><a href='' aria-label='Enlace a dibujar' class='activa'>Dibujar<span></span></a></li>
+                    <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
+                    <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+                    <div class='dropdown'>
+                        <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
+                            <img id='avatar' src='' alt='menu desplegable de usuario'>
+                            <span class='caret'></span>
+                        </button>
+                        <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
+                            <li><a href='#'>Mi perfil</a></li>
+                            <li><a href='#'>Mis diseños</a></li>
+                            <li role='separator' class='divider'></li>
+                            <li><a href='#'>Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+                </ul>
+            </nav>
         </nav>
     </header>
     <main>
-
-        <section id="formRegistro">
-            <section id="izq">
-              <h3>Formulario de Registro</h3>
-              <p>¿Ya tienes cuenta?</p>
-              <button class="boton" id="login">Login</button>
-            </section>
-            <section id="der">
-            <svg xmlns="http://www.w3.org/2000/svg" height="95px" viewBox="0 -960 960 960" width="95px" fill="#FFFFFF"><path d="M222-255q63-44 125-67.5T480-346q71 0 133.5 23.5T739-255q44-54 62.5-109T820-480q0-145-97.5-242.5T480-820q-145 0-242.5 97.5T140-480q0 61 19 116t63 109Zm257.81-195q-57.81 0-97.31-39.69-39.5-39.68-39.5-97.5 0-57.81 39.69-97.31 39.68-39.5 97.5-39.5 57.81 0 97.31 39.69 39.5 39.68 39.5 97.5 0 57.81-39.69 97.31-39.68 39.5-97.5 39.5Zm.66 370Q398-80 325-111.5t-127.5-86q-54.5-54.5-86-127.27Q80-397.53 80-480.27 80-563 111.5-635.5q31.5-72.5 86-127t127.27-86q72.76-31.5 155.5-31.5 82.73 0 155.23 31.5 72.5 31.5 127 86t86 127.03q31.5 72.53 31.5 155T848.5-325q-31.5 73-86 127.5t-127.03 86Q562.94-80 480.47-80Zm-.47-60q55 0 107.5-16T691-212q-51-36-104-55t-107-19q-54 0-107 19t-104 55q51 40 103.5 56T480-140Zm0-370q34 0 55.5-21.5T557-587q0-34-21.5-55.5T480-664q-34 0-55.5 21.5T403-587q0 34 21.5 55.5T480-510Zm0-77Zm0 374Z"/></svg>
-              <form action="./backend/registro.php" id="formRegistro" method="POST">
-                <p>
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email">
-                </p>
-                <p>
-                    <label for="user">Usuario</label>
-                    <input type="text" name="user" >
-                </p>
-                <p>
-                    <label for="pwd">Contraseña</label>
-                    <input type="password" name="pwd" >
-                </p>
-                <p>
-                    <label for="pwd2">Repetir Contraseña</label>
-                    <input type="password" name="pwd2" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito. ">
-                </p>
-                <p>
-                  <label for="fnac">Fecha de Nacimiento</label>
-                  <input type="date" name="fnac" id="fnac">
-                </p>
-                <span><p id="error"></p></span>
-                <input class="boton" id="registroForm" type="submit" value="Sign up">
-             </form>
-            </section>
-          </section>
+        <h1>Lista de diseños del usuario ....</h1>
+        <section id="galeria">
+            <!-- Lista de Diseños por ajax -->
+        </section>
     </main>
     <footer>
         <section id="rrss">
@@ -110,4 +101,13 @@
           </ul>
         </section>
 </body>
+<template id="plantillaDiseño">
+    <article>
+        <figure>
+            <img src="" alt="">
+        </figure>
+        <p>Propietario</p>
+        <button>Proyectar</button>
+    </article>
+</template>
 </html>

@@ -108,4 +108,35 @@ function formatoHash($pwd){
 }
 
 
+/* FUNCIONES DE BBDD */
+
+/**
+ * Consulta genérica de tipo select
+ */
+function select($query, $conexion){
+    $resultArr = array();
+    if(!$resultado = $conexion->query($query)){
+        throw new Exception("Error en la búsqueda de diseños");
+    }
+    while($fila = $resultadoQuery->fetch_assoc()){
+        $resultArr = $fila;
+    }
+
+    return $resultArr;
+}
+
+
+/* FUNCIONES DE JSON */
+
+/**
+ * Convierte un array en un JSON y lo guarda en el
+ * fichero indicado por param
+ */
+function convertirJson($array, $fichero){
+    $json = json_enconde($array);
+    file_put_contents($fichero, "");
+    file_put_contents($fichero, $json)
+}
+
+
 ?>

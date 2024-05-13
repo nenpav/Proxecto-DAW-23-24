@@ -48,8 +48,6 @@ function userName(){
     return true
 }
 
-
-
 $username.addEventListener("change",e=>{
     if(!userName()){
         $username.focus()
