@@ -34,6 +34,7 @@ function endSession(){
 }
 
 
+/* FUNCIONES DE UTILIDADES */
 
 /**
  * Función que renderiza el menú en base a si existe una sesión activa
@@ -62,10 +63,11 @@ function renderMenu($sesion){
     }else{
         echo "<ul id='menuSinSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";
-            echo "<li><a href='' aria-label='Enlace a login'>Login<span></span></a></li>";
-            echo "<li><a href='' aria-label='Enlace a registro'>Sign up<span></span></a></li>";
-    }
+            echo "<li><button id='openModalSesion'>Login<span></span></button></li>";
+            echo "<li><a href='./documents/registro.html' aria-label='Enlace a registro'>Sign up<span></span></a></li>";
+    
     echo "</ul>";
+    }   
 }
 
 /* FUNCIONES DE GESTIÓN DE USUARIOS */
@@ -74,12 +76,8 @@ function renderMenu($sesion){
  * comprueba si el usuario existe en base a su nombre
  */
 function isUserExits($nombre, $conexion){
-    $resultado = $conexion->query("SELECT * FROM usuarios WHERE nombre='$user'");
-     if(!$resultado){
-        echo "Error en la consulta: ".$conexion->error;
-        return false;
-     }
-     return $resultado->num_rows();
+    $resultado = $conexion->query("SELECT * FROM usuarios WHERE username= '$nombre'");
+     return $resultado->num_rows > 0;
 }
 
 
@@ -126,6 +124,22 @@ function select($query, $conexion){
 }
 
 
+
+/* FUNCIONES DE VALIDACIÓN */
+
+/**
+ * Valida que los datos no estén vacíos
+ */
+function obligatorios($array){
+    foreach($array as $a){
+        if(empty($a)){
+            return false;
+        }
+    }
+    return true;
+}
+
+
 /* FUNCIONES DE JSON */
 
 /**
@@ -135,7 +149,7 @@ function select($query, $conexion){
 function convertirJson($array, $fichero){
     $json = json_enconde($array);
     file_put_contents($fichero, "");
-    file_put_contents($fichero, $json)
+    file_put_contents($fichero, $json);
 }
 
 

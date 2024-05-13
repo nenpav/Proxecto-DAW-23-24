@@ -36,3 +36,7 @@ No caso de utilizar tecnoloxías diferentes ás estudadas no ciclo formativo, fa
 ## 4- Probas
 
 Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
+
+Js: 
+1- Pruebas en validaciones
+  Bug al validar la contraseña en el formulario de registro, dando siempre que es un valor incorrecto. 

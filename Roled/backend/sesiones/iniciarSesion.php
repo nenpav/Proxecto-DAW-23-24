@@ -3,13 +3,12 @@
 include_once("../functions.php"); //Comprobar la ruta
 
 $usuarioOk = false;
-$conexionBBDD = conectarBBDD('localhost','root','','roled'); //Hay que cambiar cuando se haga despliegue el server
+$conexionBBDD = new mysqli('localhost','root','','roled'); //Hay que cambiar cuando se haga despliegue el server
 
 initSession();
 
 if(isset($_POST['login'])){
 
-    //Esto hay que validarlo
     $login = trim(strip_tags($_POST['usuario']));
     $pwd = trim(strip_tags($_POST['pwd']));
 

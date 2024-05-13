@@ -1,13 +1,16 @@
 const $d=document,
-        $formRegistro = $d.querySelector("#formRegistro"),
+        $formRegistro = $d.querySelector("#formR"),
         $email = $formRegistro.email,
         $username = $formRegistro.user,
         $pwd =$formRegistro.pwd,
         $pwd2=$formRegistro.pwd2,
         $date=$formRegistro.fnac,
         $error = $d.querySelector("#error"),
-        $inputs = $d.querySelectorAll("input"),
-        $boton = $d.querySelector("#registroForm")
+        $inputs = $d.querySelectorAll("input")
+    
+console.log($pwd.value)
+
+
 
 function datosObligatorios(){
     $error.innerHTML=""
@@ -16,60 +19,72 @@ function datosObligatorios(){
             $error.innerHTML="Faltan datos obligatorios"
             return false
         }
-    });
+    })
     return true
 }
 
-function pwd(){
-    const regPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+ function email(){
+    const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     $error.innerHTML=""
-    if(!regPwd.test($pwd)){
-        $error.innerHTML="La contraseña no es válida"
+    if(!regEmail.test($email.value)){
+        $error.innerHTML="La email no es válido"
+        $pwd.classList.add("error")
         return false
     }
+    $pwd.classList.remove("error")
     return true
-}
+} 
+
+
+/*  function pwd(){
+    const regPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+    $error.innerHTML=""
+    if(!regPwd.test($pwd.value)){
+        $error.innerHTML="La contraseña no es válida"
+        $pwd.classList.add("error")
+        return false
+    }
+    $pwd.classList.remove("error")
+    return true
+}  */
 
 function pwd2(){
     $error.innerHTML=""
     if($pwd.value != $pwd2.value){
         $error.innerHTML="Las contraseñas no son iguales"
+        $pwd.classList.add("error")
         return false
     }
+    $pwd.classList.remove("error")
     return true
 }
 
-function userName(){
+ function userName(){
     const regUser = /^[a-zA-Z0-9-_]{3,10}$/
-    if(!regUser.test($username)){
+    if(!regUser.test($username.value)){
         $error.innerHTML="El nombre de usuario no es válido"
+        $pwd.classList.add("error")
         return false
     }
+    $pwd.classList.remove("error")
     return true
 }
 
-$username.addEventListener("change",e=>{
-    if(!userName()){
-        $username.focus()
-    }
-})
 
-$pwd.addEventListener("change",e=>{
-    if(!pwd()){
-        $pwd.focus()
-    }
-})
+$formRegistro.addEventListener("submit",e=>{
+    e.preventDefault() 
 
-$pwd2.addEventListener("change",e=>{
-    if(!pwd2()){
-        $pwd2.focus()
-    }
+   switch (true) {
+    case !email():
+        break;
+    case !userName():
+        break;
+    /* case !pwd():
+        break; */
+    case !pwd2:
+        break;
+    default:
+        $formRegistro.submit()  
+        break;
+   }
 })
-
-$d.addEventListener("DOMContentLoaded",e=>{
-    $boton.disabled=true
-})
-
-if(datosObligatorios()){
-    $boton.disabled=true
-}

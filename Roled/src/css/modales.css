@@ -9,7 +9,7 @@
 
 #modalSesion{
     margin: auto auto;
-    width: 90%;
+    width: 60%;
     height: 80%;
     border-radius: 10px;
     border: none;
@@ -24,7 +24,7 @@
 }
 
 dialog #left{
-    width: 45%;
+    width: 50%;
     height: 100%;
     background-color: var(--clr-violeta);
     float: left;
@@ -36,7 +36,7 @@ dialog #left{
 
 dialog #rigth{
     position: relative;
-    width: 45%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -82,6 +82,12 @@ dialog button, dialog input[type='submit']{
 #registro{
     background-color: var(--clr-letra);
     color: var(--clr-fondo-primario);
+    transition: all .75s ease-in-out;
+}
+
+#registro:hover{
+    background-color: var(--clr-hover);
+    color: var(--clr-letra);
 }
 
 
@@ -96,8 +102,31 @@ dialog button, dialog input[type='submit']{
     background-color: var(--clr-fondo-primario);
 }
 
+#confReg{
+    width: 300px;
+    height: 100px;
+    background-color: var(--clr-violeta);
+    color: var(--clr-letra);
+    margin: 0 auto;
+    border: none;
+    border-radius: 8px;
+    position: relative;
+    
+}
 
-
+#confReg p{
+    
+    margin: auto auto;
+}
+#cerrarConfReg{
+    color: var(--clr-letra);
+    background-color: transparent;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    width: 20px;
+    height: 20px;
+}
 /*----------  EStilos de las mediaqueries  ----------*/
 
 @media screen and(max-width: 425px) {

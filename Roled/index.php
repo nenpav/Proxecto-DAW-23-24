@@ -1,14 +1,21 @@
-
 <?php
+include_once("./backend/functions.php");
+initSession();
     //Comprobar si existe una sesion de usuario iniciada
         //Existe -> redireccion a pagina de inicio del usuario
         //No existe -> se mantiene en esta pagina
    if (isset($_SESSION['modal']) && $_SESSION['modal']) {
     echo "<script>window.addEventListener('DOMContentLoaded', function() {
-            document.getElementById('modalSesion').showModal();
+            document.getElementById('modalSesion').show();
           });</script>";
     unset($_SESSION['modal']);
   } 
+
+  if(isset($_GET['registro'])){
+    echo "<script>window.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('confReg').showModal();
+    });</script>";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,12 +35,9 @@
             <a href="" aria-label="enlace a index"><img src="./src/img/ROLED-trans.png" alt="logo"></a>
         </figure>
         <nav>
-            <ul id="menuSinSesion">
-                <li><a href="" aria-label="Enlace a index" class="activa">Inicio<span></span></a></li>
-                <li><button id="openModalSesion">Login<span></span></button></li>
-                <li><button id="openModalRegistro">Sign up<span></span></button></li>
-            </ul>
-            <!-- Menú con sesión -->
+        <?php
+          renderMenu($_SESSION['login']);
+        ?>
         </nav>
     </header>
     <main>
@@ -159,6 +163,20 @@
           <input class="boton" id="loginForm" type="submit" value="Login">
        </form>
       </section>
+    </dialog>
+    <dialog id="confReg">
+      <button id="cerrarConfReg">X</button>
+      <?php
+          if($_GET['registro'] == "ok"){
+            echo "<p id='confRegistro'>El usuario se ha registrado correctamente</p>";
+          }
+          if($_GET['registro'] == "fail"){
+            echo "<p id='confRegistro'>Error al registrar el usuario</p>";
+          }
+          if($_GET['registro'] == "userRepeat"){
+            echo "<p id='confRegistro'>Error, el nombre de usuario ya existe</p>";
+          }
+      ?>
     </dialog>
 
   
