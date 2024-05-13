@@ -18,9 +18,8 @@ if(isset($_POST['login'])){
         //Comprobar si la contraseña e correcta
         if(isCorrectPwd($login,$pwd,$conexionBBDD)){ 
             $usuarioOk = true;
-            $_SESSION['login'] = $login;
             if($usuarioOk){
-                //Lógica aún no pensada
+                $_SESSION['login'] = $login;
             }
         }
     }

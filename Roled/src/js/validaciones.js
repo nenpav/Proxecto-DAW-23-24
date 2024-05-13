@@ -50,19 +50,19 @@ function userName(){
 
 
 
-$username.addEventListener("blur",e=>{
+$username.addEventListener("change",e=>{
     if(!userName()){
         $username.focus()
     }
 })
 
-$pwd.addEventListener("blur",e=>{
+$pwd.addEventListener("change",e=>{
     if(!pwd()){
         $pwd.focus()
     }
 })
 
-$pwd2.addEventListener("blur",e=>{
+$pwd2.addEventListener("change",e=>{
     if(!pwd2()){
         $pwd2.focus()
     }
