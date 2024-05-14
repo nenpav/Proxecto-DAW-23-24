@@ -12,21 +12,17 @@ if($_POST){
     $fechaNac = $_POST['fnac'];
 
     if(isUserExits($login,$conexionBBDD)){
-        header("Location: ../index.php?registro=userRepeat");
+        header("Location: ../documents/registro.php?registro=userRepeat");
     }
 
     if($conexionBBDD->query("INSERT INTO  usuarios (username,pwd,email,tipo, avatar, fecha_nac) values
         ('$login', '$pwd', '$email', 'U', NULL, '$fechaNac')")){
 
-        header("Location: ../index.php?registro=ok"); 
+        header("Location: ../documents/registro.php?registro=ok"); 
     }else{
-        header("Location: ../index.php?registro=fail"); 
+        header("Location: ../documents/registro.php?registro=fail"); 
     }
     
 }
-
-
-
-    
 
 ?>

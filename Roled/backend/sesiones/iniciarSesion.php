@@ -7,30 +7,34 @@ $conexionBBDD = new mysqli('localhost','root','','roled'); //Hay que cambiar cua
 
 initSession();
 
-if(isset($_POST['login'])){
 
-    $login = trim(strip_tags($_POST['usuario']));
+if($_POST){
+
+    
+    $login = trim(strip_tags($_POST['user']));
     $pwd = trim(strip_tags($_POST['pwd']));
 
     //Comprobar si el usuario existe
     if(isUserExits($login, $conexionBBDD)>0){
-        //Comprobar si la contraseña e correcta
+        //Comprobar si la contraseña es correcta
         if(isCorrectPwd($login,$pwd,$conexionBBDD)){ 
             $usuarioOk = true;
             if($usuarioOk){
                 $_SESSION['login'] = $login;
+                echo "<script></script>";
+                //echo "OK";
             }
         }
     }
 
     if(!$usuarioOk){
-        $_SESSION['error'] = "El nombre de usuario o la contraseña no son correctos";
         $_SESSION['modal'] = true; 
+        //echo "No ok";
     }
            
 }
 
-header("Location: ../index.php");
+header("Location: ../../index.php");
 
 
 ?>

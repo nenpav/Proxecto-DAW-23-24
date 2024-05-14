@@ -6,7 +6,7 @@ const $d1 = document
       $cerrarConfReg = $d1.querySelector("#cerrarConfReg"),
       $modalConfReg = $d1.querySelector("#confReg")
 
-console.log($modalConfReg)
+//console.log($modalConfReg)
 
 function openModal(el, idModal){
     el.addEventListener("click",e=>{

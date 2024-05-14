@@ -37,34 +37,30 @@ function endSession(){
 /* FUNCIONES DE UTILIDADES */
 
 /**
- * Función que renderiza el menú en base a si existe una sesión activa
+ * Función que renderiza el menú en base a si existe una sesión activa. Solo para index
  */
-function renderMenu($sesion){
-
+function renderMenu($sesion,$conexion){
+    $rutaBase = "./src/img/avatarGen.png";
+    $rutaAvatar="..";
     if($sesion){
         echo "<ul id='menuConSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";
             echo "<li><a href='' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>";
             echo "<li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>";
-            echo "<li><a href='Tienda' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
+            echo "<li><a href='./documents/tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
             echo "<div class='dropdown'>
-                    <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                        <img id='avatar' src='' alt='menu desplegable de usuario'>
-                        <span class='caret'></span>
-                    </button>
-                    <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-                        <li><a href='#'>Action</a></li>
-                        <li><a href='#'>Another action</a></li>
-                        <li><a href='#'>Something else here</a></li>
-                        <li role='separator' class='divider'></li>
-                        <li><a href='#'>Separated link</a></li>
-                    </ul>
-                </div>";
+            <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion,$conexion, $rutaBase,$rutaAvatar)."' alt=''></button>
+            <div class='dropdown-content'>
+              <a href='./miPerfil.html' aria-label='Enlace a Mi Perfil'>Mi Perfil</a>
+              <a href='./diseños.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
+              <a href='../backend/sesiones/cerrarSesion.php' aria-label='Cerrar sesión'>Cerrar Sesión</a>
+            </div>
+        </div>";
     }else{
         echo "<ul id='menuSinSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";
             echo "<li><button id='openModalSesion'>Login<span></span></button></li>";
-            echo "<li><a href='./documents/registro.html' aria-label='Enlace a registro'>Sign up<span></span></a></li>";
+            echo "<li><a href='./documents/registro.php' aria-label='Enlace a registro'>Sign up<span></span></a></li>";
     
     echo "</ul>";
     }   
@@ -85,26 +81,44 @@ function isUserExits($nombre, $conexion){
  * Comprueba si la contraseña es correcta dado un nombre de usuario
  */
 function isCorrectPwd($usuario, $pwd, $conexion){
-    $resultado = $conexionBBDD->query("SELECT * FROM usuarios WHERE nombre='$user'");
+    $resultado = $conexion->query("SELECT * FROM usuarios WHERE username='$usuario'");
     /* if(!password_verify($pwd, $fila['pwd'])){
         return false;
-    } */
-    if(!$resultado){
-        echo "Error en la consulta: ".$conexionBBDD->error;
-        return false;
-    }   
+    } */ 
     if($resultado->fetch_assoc()['pwd']===$pwd){
+        
         return true;
     }
     return false;
 }
 
-
-//Función que tranforma una contraseña a un hash
+/**
+ * tranforma una contraseña a un hash
+ * */ 
 function formatoHash($pwd){
     return password_hash($pwd, PASSWORD_DEFAULT);
 }
 
+/**
+ * Crea una carpeta con el nombre de usuario
+ */
+/* function crearCarpetaUser($user){
+
+} */
+
+
+/**
+ * Busca la ruta del avatar del usuario. Si no existe pone una foto genérica 
+*/
+function buscarRutaAvatar($user,$conexion, $rutaBase, $rutaAvatar){
+    $ruta = $rutaBase;
+    if($resultado = $conexion->query("SELECT avatar FROM usuarios WHERE username='$user'")){
+        if($resultado->fetch_assoc()['avatar']!=NULL){
+            return $ruta = "$rutaAvatar/docsUsuario/$user/".$resultado->fetch_assoc()['avatar'];
+        }
+    }
+    return $ruta;
+}
 
 /* FUNCIONES DE BBDD */
 
@@ -151,6 +165,8 @@ function convertirJson($array, $fichero){
     file_put_contents($fichero, "");
     file_put_contents($fichero, $json);
 }
+
+
 
 
 ?>
