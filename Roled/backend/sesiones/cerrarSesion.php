@@ -1,13 +1,9 @@
 <?php
-//Comprobar si funciona
 
-    if(isset($_POST['salir'])){
-        require_once "./funciones.php" ;
-        initSession();
-        if(isset($_SESSION['login'])){
-            endSession();
-        }
-    }
-    header("Location: ../index.php");
-
+require_once "../functions.php" ;
+initSession();
+if(($_SESSION['login'])){
+    endSession();
+}
+    header("Location: ../../index.php");
 ?>

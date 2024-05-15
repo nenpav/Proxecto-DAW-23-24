@@ -1,8 +1,14 @@
 <?php
   require_once("../backend/functions.php");
   initSession();
-  $conexionBBDD= new mysqli('localhost','root','','roled');
+
+  if(!isset($_SESSION['login'])){
+    header("Location: ../index.php");
+  }
+    
   $user= $_SESSION['login'];
+  $conexionBBDD= new mysqli('localhost','root','','roled');
+  
   $rutaBase= "../src/img/avatarGen.png";
 ?>
 
@@ -13,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Tienda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/css/draw.css">
+    <link rel="stylesheet" href="../src/css/index.css">
 </head>
 <body>
     <header>
@@ -23,9 +29,9 @@
         <nav>
             <ul id='menuConSesion'>
                 <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                <li><a href='' aria-label='Enlace a dibujar' >Dibujar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Tienda'class='activa'>Tienda<span></span></a></li>
+                <li><a href='./draw.php' aria-label='Enlace a dibujar' >Dibujar<span></span></a></li>
+                <li><a href='./comunity.html' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
+                <li><a href='#' aria-label='Enlace a Tienda'class='activa'>Tienda<span></span></a></li>
                 <div class="dropdown">
                     <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'../../') ?>" alt=""></button>
                     <div class="dropdown-content">

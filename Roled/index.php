@@ -1,8 +1,8 @@
 <?php
 include_once("./backend/functions.php");
 initSession();
-$conexionBBDD = new mysqli('localhost','root','','roled');
 
+$conexionBBDD = new mysqli('localhost','root','','roled');
    if (isset($_SESSION['modal']) && $_SESSION['modal']) {
     echo "<script>window.addEventListener('DOMContentLoaded', function() {
             document.getElementById('modalSesion').showModal();
@@ -42,7 +42,8 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
         </figure>
         <nav>
         <?php
-          renderMenu($_SESSION['login'],$conexionBBDD);
+          $user = isset($_SESSION['login'])?$_SESSION['login']:'';
+          renderMenu($user,$conexionBBDD);
         ?>
         </nav>
     </header>

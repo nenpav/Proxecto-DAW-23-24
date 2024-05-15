@@ -1,3 +1,15 @@
+<?php
+require_once("../backend/functions.php");
+initSession();
+
+if(!isset($_SESSION['login'])){
+  header("Location: ../index.php");
+}
+
+$user= $_SESSION['login'];
+$conexionBBDD = new mysqli ('localhost','root','','roled');
+$rutaBase= "../src/img/avatarGen.png";
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,7 +18,6 @@
     <title>Dibujar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/draw.css">
-    <link rel="stylesheet" href="./src/css/modales.css">
 </head>
 <body>
     <header>
@@ -15,21 +26,17 @@
         </figure>
         <nav>
             <ul id='menuConSesion'>
-                <li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                <li><a href='' aria-label='Enlace a dibujar' class='activa'>Dibujar<span></span></a></li>
+                <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
+                <li><a href='#' aria-label='Enlace a dibujar' class='activa'>Dibujar<span></span></a></li>
                 <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-                <div class='dropdown'>
-                    <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                        <img id='avatar' src='' alt='menu desplegable de usuario'>
-                        <span class='caret'></span>
-                    </button>
-                    <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-                        <li><a href='#'>Mi perfil</a></li>
-                        <li><a href='#'>Mis diseños</a></li>
-                        <li role='separator' class='divider'></li>
-                        <li><a href='#'>Cerrar Sesión</a></li>
-                    </ul>
+                <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+                <div class="dropdown">
+                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'../../') ?>" alt=""></button>
+                  <div class="dropdown-content">
+                    <a href="./miPerfil.html" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
+                    <a href="./diseños.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
+                    <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
+                  </div>
                 </div>
             </ul>
         </nav>
@@ -37,15 +44,18 @@
     <main>
         <section id="menuDibujo"></section>
             <section id="seleccionColor">
+              <form action="">
                 <label for="color">Selecciona un color:</label>
                 <input type="color" name="color" id="color">
+              </form>
             </section>
             <section id="herramientas">
-                <figure id="pintar">
-                    <img src="" alt="iconoPintar">
+                <figure class="iconos" id="pintar">
+                  <!--Iconos diseñados por <a href="https://www.flaticon.es/autores/mynamepong" title="mynamepong"> mynamepong </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a>-->                    
+                    <img src="../src/img/pintura.png" alt="iconoPintar" title="Herramienta de pintura">
                 </figure>
-                <figure id="borrar">
-                    <img src="" alt="iconoBorrar">
+                <figure class="iconos" id="borrar">
+                    <img src="../src/img/goma.png" alt="iconoBorrar" title="Herramienta de borrado">
                 </figure>
             </section>
             <section id="slider">
@@ -54,7 +64,7 @@
         <section id="cuadricula">
             <!-- Aquí se crea la cuadrícula usando js -->
         </section>
-        <button>Guardar</button>
+        <button id='guardar' class='boton'>Guardar</button>
     </main>
     <footer>
         <section id="rrss">
@@ -104,6 +114,5 @@
           </ul>
         </section>
       </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

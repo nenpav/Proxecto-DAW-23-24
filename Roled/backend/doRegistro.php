@@ -15,14 +15,23 @@ if($_POST){
         header("Location: ../documents/registro.php?registro=userRepeat");
     }
 
-    if($conexionBBDD->query("INSERT INTO  usuarios (username,pwd,email,tipo, avatar, fecha_nac) values
-        ('$login', '$pwd', '$email', 'U', NULL, '$fechaNac')")){
+    $conexionBBDD->begin_transaction();
 
+    try{
+        if(!crearCarpetaUser($login)){
+            throw new Exception();
+        }
+
+        $conexionBBDD->query("INSERT INTO  usuarios (username,pwd,email,tipo, avatar, fecha_nac) values
+        ('$login', '$pwd', '$email', 'U', NULL, '$fechaNac')");
+
+        $conexionBBDD->commit();
         header("Location: ../documents/registro.php?registro=ok"); 
-    }else{
+    }catch(Exception $e){
+        $conexionBBDD->rollback();
         header("Location: ../documents/registro.php?registro=fail"); 
     }
-    
+
 }
 
 ?>

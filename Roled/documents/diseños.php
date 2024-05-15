@@ -1,13 +1,16 @@
 <?php
-require_once("../backend/functions.php";)
+require_once("../backend/functions.php");
 
 initSession();
+if(!isset($_SESSION['login'])){
+  header("Location: ../index.php");
+}
 
+ $conexionBBDD = new mysqli('localhost','root','','roled');
  $user = $_SESSION['login']; 
- $queryDisenos = "SELECT * FROM design WHERE id_usuario = $user";
- $ruta = "../src/json/rodel.json";
+ $ruta = "../src/json/roled.json";
 
- convertirJson(select($queryDisenos, $conexionBBDD), $ruta);
+ //convertirJson(select($queryDisenos, $conexionBBDD), $ruta);
 ?>
 
 <!DOCTYPE html>
@@ -16,6 +19,7 @@ initSession();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Diseños</title>
+    <link rel="stylesheet" href="../src/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
 </head>
@@ -27,22 +31,18 @@ initSession();
         <nav>
             <nav>
                 <ul id='menuConSesion'>
-                    <li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                    <li><a href='' aria-label='Enlace a dibujar' class='activa'>Dibujar<span></span></a></li>
-                    <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
-                    <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-                    <div class='dropdown'>
-                        <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                            <img id='avatar' src='' alt='menu desplegable de usuario'>
-                            <span class='caret'></span>
-                        </button>
-                        <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-                            <li><a href='#'>Mi perfil</a></li>
-                            <li><a href='#'>Mis diseños</a></li>
-                            <li role='separator' class='divider'></li>
-                            <li><a href='#'>Cerrar Sesión</a></li>
-                        </ul>
+                  <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
+                  <li><a href='#' aria-label='Enlace a dibujar' class='activa'>Dibujar<span></span></a></li>
+                  <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
+                  <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+                  <div class="dropdown">
+                    <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'../../') ?>" alt=""></button>
+                    <div class="dropdown-content">
+                      <a href="./miPerfil.html" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
+                      <a href="./diseños.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
+                      <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
                     </div>
+                  </div>
                 </ul>
             </nav>
         </nav>

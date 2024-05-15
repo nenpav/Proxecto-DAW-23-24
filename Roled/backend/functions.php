@@ -9,10 +9,9 @@ $session_name = "roled";
  */
 function initSession(){
     global $session_name;
-    if(!isset($_SESSION)){
-        session_name($session_name);
-        session_start();
-    }
+    session_name($session_name);
+    session_start();
+    
 }
 
 /**
@@ -45,15 +44,15 @@ function renderMenu($sesion,$conexion){
     if($sesion){
         echo "<ul id='menuConSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";
-            echo "<li><a href='' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>";
+            echo "<li><a href='./documents/draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>";
             echo "<li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>";
             echo "<li><a href='./documents/tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
             echo "<div class='dropdown'>
             <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion,$conexion, $rutaBase,$rutaAvatar)."' alt=''></button>
             <div class='dropdown-content'>
               <a href='./miPerfil.html' aria-label='Enlace a Mi Perfil'>Mi Perfil</a>
-              <a href='./diseños.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
-              <a href='../backend/sesiones/cerrarSesion.php' aria-label='Cerrar sesión'>Cerrar Sesión</a>
+              <a href='./documents/diseños.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
+              <a href='./backend/sesiones/cerrarSesion.php' aria-label='Cerrar sesión'>Cerrar Sesión</a>
             </div>
         </div>";
     }else{
@@ -102,9 +101,14 @@ function formatoHash($pwd){
 /**
  * Crea una carpeta con el nombre de usuario
  */
-/* function crearCarpetaUser($user){
+function crearCarpetaUser($username){
+    $rutaBase = "../../docsUsuarios/".$username;
 
-} */
+    if(!file_exists($rutaBase) && mkdir($rutaBase,0777,false)){
+        return true;
+    }
+    return false;
+} 
 
 
 /**
@@ -119,24 +123,6 @@ function buscarRutaAvatar($user,$conexion, $rutaBase, $rutaAvatar){
     }
     return $ruta;
 }
-
-/* FUNCIONES DE BBDD */
-
-/**
- * Consulta genérica de tipo select
- */
-function select($query, $conexion){
-    $resultArr = array();
-    if(!$resultado = $conexion->query($query)){
-        throw new Exception("Error en la búsqueda de diseños");
-    }
-    while($fila = $resultadoQuery->fetch_assoc()){
-        $resultArr = $fila;
-    }
-
-    return $resultArr;
-}
-
 
 
 /* FUNCIONES DE VALIDACIÓN */
