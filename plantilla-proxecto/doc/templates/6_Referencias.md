@@ -22,6 +22,11 @@ https://diego.com.es/programacion-orientada-a-objetos-en-php
 
 ## 3- Sitios oficiais do software utilizado
 
+Algunos de los elementos de la aplicación son componentes de Bootstrap:
+  1- El Carrusel de la pantalla de inicio
+  2- Una parte del menú, el que contiene las diferentes secciones (el dropdown no es un componente de bootstrap).
+  3- El ratio de la pantalla de dibujar
 
+Para el dropdown se ha tomado como referencia uno de los ejemplos utilizados en la web de W3S, aunque se ha adaptado y se han realizado muchas modificaciones.
 
 ## 4- Normas ou documentos legais

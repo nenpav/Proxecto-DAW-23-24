@@ -18,6 +18,7 @@ $rutaBase= "../src/img/avatarGen.png";
     <title>Dibujar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/draw.css">
+    <script src="../src/js/draw.js" defer></script>
 </head>
 <body>
     <header>
@@ -41,31 +42,40 @@ $rutaBase= "../src/img/avatarGen.png";
             </ul>
         </nav>
     </header>
+
     <main>
-        <section id="menuDibujo"></section>
-            <section id="seleccionColor">
+        <section id="menuDibujo">
+            <article id="seleccionColor">
               <form action="">
                 <label for="color">Selecciona un color:</label>
                 <input type="color" name="color" id="color">
               </form>
-            </section>
-            <section id="herramientas">
+            </article>
+            <article id="herramientas">
                 <figure class="iconos" id="pintar">
                   <!--Iconos diseñados por <a href="https://www.flaticon.es/autores/mynamepong" title="mynamepong"> mynamepong </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a>-->                    
-                    <img src="../src/img/pintura.png" alt="iconoPintar" title="Herramienta de pintura">
+                    <button><img src="../src/img/pintura.png" alt="iconoPintar" title="Herramienta de pintura"></button>
                 </figure>
                 <figure class="iconos" id="borrar">
-                    <img src="../src/img/goma.png" alt="iconoBorrar" title="Herramienta de borrado">
+                    <button><img src="../src/img/goma.png" alt="iconoBorrar" title="Herramienta de borrado"></button>
                 </figure>
-            </section>
-            <section id="slider">
-            </section>
+            </article>
+            <article id="slider">
+              <label for="range" class="form-label">Animar Imagen</label>
+              <input type="range" class="form-range" min="0" max="5" step="1" id="range">
+            </article>
+            <button id='guardar' class='boton'>Guardar</button>
         </section>
-        <section id="cuadricula">
-            <!-- Aquí se crea la cuadrícula usando js -->
+
+        <section id="lienzo">
+          <svg id="svgLienzo" width="600" height="600" role="img" aria-label="lienzo de dibujo">
+            <!--Cuadrícula-->
+            <circle id="circulo" cx="300" cy="300" r="250" fill="white" aria-label="área de dibujo con píxeles" /> 
+          </svg>
         </section>
-        <button id='guardar' class='boton'>Guardar</button>
+       
     </main>
+
     <footer>
         <section id="rrss">
           <figure>
