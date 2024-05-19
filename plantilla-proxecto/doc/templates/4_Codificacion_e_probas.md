@@ -17,6 +17,7 @@
 1- En un inicio se optó por usar una etiqueta canvas para el lienzo de dibujo de la aplicación pero presentaba problemas de accesibilidad. Para solucionar esto, se optó
 por el uso de una etiqueta svg que permite realizar las mismas operaciones pero con una mayor accesibilidad para el usuario.
 
+
 ## 2- Prototipos
 
 > A medida que se vai codificando crearanse varios prototipos, preferentemente realizados con Figma. Para cada un indicar unha descrición das funcionalidades implementadas.
