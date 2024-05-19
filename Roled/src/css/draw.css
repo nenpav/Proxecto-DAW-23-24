@@ -22,10 +22,6 @@ main{
     align-items: center;
 }
 
-#svgLienzo{
-    position: relative;
-}
-
 #lienzo {
     grid-column: 2;
     grid-row: 1;
@@ -41,10 +37,7 @@ main{
     margin-bottom: 1rem;
 }
 
-rect{
-    z-index: 99;
-    position: relative;
-}
+
 
 /*=============================================
 =            Estilos del formulario            =

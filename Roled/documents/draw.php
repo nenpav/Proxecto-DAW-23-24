@@ -70,7 +70,7 @@ $rutaBase= "../src/img/avatarGen.png";
         <section id="lienzo">
           <svg id="svgLienzo" width="600" height="600" role="img" aria-label="lienzo de dibujo">
             <!--Cuadrícula-->
-            <circle id="circulo" cx="300" cy="300" r="250" fill="white" aria-label="área de dibujo con píxeles" /> 
+           
           </svg>
         </section>
        
