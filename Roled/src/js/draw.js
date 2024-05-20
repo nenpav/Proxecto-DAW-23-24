@@ -1,7 +1,15 @@
  const $d2=document,
       $lienzo = $d2.querySelector("#svgLienzo"),
       $pintar = $d2.querySelector("#pintar"),
-      $borrar = $d2.querySelector("#borrar")
+      $borrar = $d2.querySelector("#borrar"),
+      $nombre = $d2.querySelector("#nombre"),
+      $guardar = $d2.querySelector("#guardarConf"),
+      $error = $d2.querySelector("#error"),
+      $form = $d2.querySelector("#guardarSvg")
+
+
+    //console.log($error)
+    
 
 const lienzo = 600,
     r = 250,
@@ -9,12 +17,14 @@ const lienzo = 600,
     longitud = lienzo / pixel
 
 let pintar = true,
-    borrar = false
+    borrar = false,
+    pulsado = false
 
 function mascaraCirculo(x, y, radio, size){
     const centro = size/2,
             dx = (x+pixel/2) - centro,
             dy = (y+pixel/2) - centro
+            
 
     //console.log((dx*dx + dy*dy) <= (radio*radio))
     return (dx*dx + dy*dy) <= (radio*radio)
@@ -97,5 +107,32 @@ $lienzo.addEventListener("mouseover",e=>{
         }
     }
 })
+
+/* Función de validación del nombre */
+$nombre.addEventListener("blur",e=>{
+    e.preventDefault()
+    $error.innerHTML=""
+    if($nombre.value==""){
+        $error.innerHTML="El nombre no puede estar vacío"
+        $guardar.disabled=true
+    }else{
+        $guardar.disabled=false
+    }
+})
+
+/* Transformar el svg en una cadena */
+
+$guardar.addEventListener("click",e=>{
+    e.preventDefault()
+    const svgLienzo = new XMLSerializer().serializeToString($lienzo)
+    if(svgLienzo!=""){
+        $d2.querySelector("#datosSvg").value = svgLienzo
+        $form.submit()
+    }else{
+        $error.innerHTML="Error al guardar la imagen"
+    }
+})
+
+
 
  

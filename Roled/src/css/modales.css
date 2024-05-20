@@ -7,7 +7,7 @@
 
 /* Ventana modal de Login */
 
-#modalSesion{
+#modalSesion, #modalGuardar{
     margin: auto auto;
     width: 60%;
     height: 80%;
@@ -15,12 +15,35 @@
     border: none;
 }
 
-#modalSesion::backdrop{
+#modalSesion::backdrop, #modalGuardar::backdrop{
     background-color: var(--clr-prim-trans);
+}
+
+#modalGuardar{
+    width: 500px;
+    background-color: var(--clr-violeta);
+    height: min-content;
+
+}
+#modalGuardar section{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#modalGuardar form{
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 #error{
     color: red;
+    
 }
 
 dialog #left{
@@ -79,13 +102,13 @@ dialog button, dialog input[type='submit']{
     margin: 0 auto;
 }
 
-#registro{
+#registro, #guardarConf{
     background-color: var(--clr-letra);
     color: var(--clr-fondo-primario);
     transition: all .75s ease-in-out;
 }
 
-#registro:hover{
+#registro:hover, #guardarConf:hover{
     background-color: var(--clr-hover);
     color: var(--clr-letra);
 }

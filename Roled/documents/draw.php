@@ -19,6 +19,7 @@ $rutaBase= "../src/img/avatarGen.png";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/draw.css">
     <script src="../src/js/draw.js" defer></script>
+    
 </head>
 <body>
     <header>
@@ -64,13 +65,12 @@ $rutaBase= "../src/img/avatarGen.png";
               <label for="range" class="form-label">Animar Imagen</label>
               <input type="range" class="form-range" min="0" max="5" step="1" id="range">
             </article>
-            <button id='guardar' class='boton'>Guardar</button>
+            <button id='guardar' class='boton' onclick="window.modalGuardar.showModal()">Guardar</button>
         </section>
 
         <section id="lienzo">
           <svg id="svgLienzo" width="600" height="600" role="img" aria-label="lienzo de dibujo">
             <!--Cuadrícula-->
-           
           </svg>
         </section>
        
@@ -124,5 +124,21 @@ $rutaBase= "../src/img/avatarGen.png";
           </ul>
         </section>
       </footer>
+
+
+      <dialog id="modalGuardar">
+        <section>
+          <button class="cerrar" id="cerrarModSave" onclick="window.modalGuardar.close()">X</button>
+          <h3>Guardar diseño</h3>
+          <form action="../backend/doSave.php" method="POST" id="guardarSvg">
+            <label for="nombre">Nombre del diseño</label>
+            <input type="text" name="nombre" placeholder="Nombre del diseño" id="nombre">
+            <p id="error"></p>
+            <input type="submit" value="Guardar" name="guardar" class="boton" id="guardarConf">
+            <input type="hidden" name="datosSvg" id="datosSvg">
+            <input type="hidden" name="nombre" id="nombre">
+          </form> 
+        </section>
+      </dialog>
 </body>
 </html>
