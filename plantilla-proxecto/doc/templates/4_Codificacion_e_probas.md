@@ -23,18 +23,7 @@ createElement() por la de createElementNS().
 
 ## 2- Prototipos
 
-> A medida que se vai codificando crearanse varios prototipos, preferentemente realizados con Figma. Para cada un indicar unha descrición das funcionalidades implementadas.
->
-> Debes ir incluindo unha mostra representativan dos prototipos da aplicación.
->
-> Os proptotipos axudan no deseño da aplicación. Podes empregar:
->
-> - [Sketch](https://www.sketch.com/)
-> - [Figma](https://www.figma.com/). Recomendada
-> - [Proto.io](https://proto.io/)
->
-> A mellor opción é empregar Figma xa que esta é unha ferramenta en línea colavorativa. 
-> **Comparte o prototipo cos profesores por medio de Figma ou descarga o arquivo local o cal subirás o teu repositorio de GitHub**.
+
 
 ## 3- Innovación
 
@@ -48,4 +37,4 @@ Js:
 1- Pruebas en validaciones
   Bug al validar la contraseña en el formulario de registro, dando siempre que es un valor incorrecto. 
 
-2- Cambiar el color del error de la modal de guardar el diseño. No se lee bien
+2- Cambiar el color del error de la modal de guardar el diseño. No se lee bien.
