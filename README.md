@@ -11,19 +11,14 @@
   - [Guía de contribución](#guía-de-contribución)
   - [Links](#links)
 
-> *EXPLICACIÓN*: Este documento será a "*páxina de aterrizaxe*" do teu proxecto. Será ou primeiro que vexan vos que se interesen por el. Cúida a sua redacción con todo ou mimo. Elimina posteriormente todas as lineas "EXPLICACIÓN*" cando creas finalizada a súa redacción.
-> Podes acompañar á redacción deste ficheiro con imaxes ou gifs, pero non abuses deles.
-
 ## Taboleiro do proyecto
 
-> *EXPLICACIÓN:* neste punto indica se o proyecto está en fase de desenrolo ou finalizado.
-
-El proyecto está en fase de desarrollo.
+Fase de desarrollo.
 
 ## Descrición
 
-> *EXPLICACIÓN*: Realiza unha breve descrición do proxecto. Non menos de 100 palabras e non máis de 300. Resalta o fundamental *coas túas propias palabras**. Utiliza unha linguaxe correcta, *pero natural**, que o entenda todo o mundo, mesmo e en especial, as persoas que non teñan un coñecemento técnico avanzado. Pode ser un estracto ou resumo de apartados que xa contemples noutros ficheiros.
-> Descrición básica das ferramentas/tecnoloxías/linguaxes de programación,... empregados.
+El proyecto Roled consiste en una aplicación de dibujo basado en el pixelart que permite enviarl estos diseños a un dispositivo POV ("Persistence of vision") que permite reproducir estos dibujos de forma holográfica. También permite la creación de animaciones basadas en fotogramas. Todos estos diseños son públicos para el resto de usuarios de la aplicación, con el objetivo de crear una comunidad dentro de la aplicación. Aunque no está implementado, la aplicación también permite realizar la compra del dispositivo POV y realizar el pago de la suscripción.
+Para realizar este proyecto se uso HTML5,CSS3 y JavaScript para la parte del frontend y PHP para la parte del Backend. Para la programación del dispositivo POV se usó C+.
 
 ## Instalación / Posta en marcha
 
@@ -32,24 +27,23 @@ Para poder poner en marcha la aplicación en un entorno local se necesita:
   2 - Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
   3 - Acceder desde el navegador -> localhost/Roled
 
+Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: -------
+
 ## Uso
 
-> *EXPLICACIÓN*: É este apartado describe brevemente como se usará a aplicación Web do proxecto. Describe o uso da interface web *só o uso** (a modo de sumario) *dos aspectos máis relevantes do seu funcionamento** (máxima brevidade, coma se fose un anuncio reclamo ou comercial).
->
-
-Dibuja, comparte y proyecta tus diseños mediante una experiencia holográfica completa.
+Dibuja, comparte y proyecta tus diseños mediante una experiencia holográfica completa. 
 
 ## Sobre o autor
 
-> *EXPLICACIÓN*: Realiza unha breve descrición de quen es (perfil profesional), os teus puntos fortes, ou tecnoloxías que máis dominas... a motivación do proxecto, tendo sobre todo en conta un nicho de mercado sen explotar.. *Non máis de 200 palabras**. Indica a forma fiable de contactar contigo durante o proceso de creación do proxecto.
+
+Este proyecto es creado como TFC para el ciclo de Desarrollo de Aplicaciones Web. Perfil rofesional junior con muy poca experiencia, enfocado tanto en el desarrollo frontend como backend de aplicaciones web. Conocimientos básicos en diferentes lenguajes de programación como Java, JS y PHP, así como otros lenguajes de marcas como XML, JSON, HTML, etc. 
+El proyecto nace con el objetivo de aumentar la oferta de aplicaciones que fomenten la creatividad y creen una comunidad de usuarios respetuosa, además de que puede tener numerosas aplicaciones comerciales en diferentes sectores como el de la publicidad, creadores de contenido, decoración en discotecas, etc., abriendo un nicho de mercado que no está siendo explotado en nuestro país. 
 
 ## Licenza
 
 > *EXPLICACIÓN*: É requisito INDISPENSABLE o licenciar explicitamente o proxecto software. Recoméndase licenciar con GNU Free Documentation License Version 1.3*. Crear un ficheiro `LICENSE` na raiz do repo, co teu ficheiro de licenza. Lembra que se empregas unha licenza de software libre estás a autorizar a derivación da túa obra baixo a mesma licenza que elixas, podendo dar continuidade, p. e. outro alumno, para continuar o teu proxecto noutro curso.
 
 ## Índice
-
-> *EXPLICACIÓN*: Simplemente indexa ordenadamente todo o tey proxecto.
 
 1. [Anteproyecto](./plantilla-proxecto/doc/templates/1_Anteproxecto.md)
 2. [Análise](./plantilla-proxecto/doc/templates/2_Analise.md)

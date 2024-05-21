@@ -16,6 +16,8 @@
 
 ## 1- Descripción del proyecto
 
+
+
 No hace mucho tiempo las imágenes holográficas parecían una azaña del futuro, propias de las novelas de Clarke y Asimov. La aparición de la tecnología Led junto con el fenómeno de persistencia de la visión, permite que de forma relativamente sencilla se puedan generar imágenes holográficas. Es en este principio en el que se sustenta el proyecto Roled. Consiste en una aplicación web que permite la subida y la creación de imágenes que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Este periférico consiste en una pantalla POV ("Persistence of vision") formado por una matriz de Leds que al girar a una velocidad determinada permiten que el ojo humano no sea capaz de distinguir cada uno de los leds por separado y los perciba como una imagen unificada que puede ser estática o una imagen en movimiento.
 Esta aplicación web también funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados. También permite la creación de animaciones sencillas basadas en fotogramas. 
 

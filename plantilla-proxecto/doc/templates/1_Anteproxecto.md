@@ -22,18 +22,30 @@
 
 ## 1- Descripción del proyecto
 
-El proyecto Roled ofrece una aplicación de dibujo que permite diseñar y enviar los diseños a un dispositivo POV ("Persistence of vision") que permite reproducir esos dibujos de forma holográfica. También permite la creación de animaciones basadas en fotogramas. 
+El proyecto Roled ofrece una experiencia holográfica completa y asequible para todos los bolsillos. Consiste en una aplicación de dibujo y animaciones, basada en la técnica del pixelart, que además permite proyectar estos diseños de forma holográfica gracias a la pantalla POV ("Persistence of Vision") de Roled. 
+
+Las pantallas POV son muy populares en algunos países asiáticos como China, Japón o Corea pero este producto es totamente novedoso para el mercado nacional. Por lo tanto, Roled busca ocupar ese nicho sin explotar ofreciendo un producto de calidad, económico y con todas las garantías de calidad necesarias. Además, Roled no ofrece solamente un producto, sino que ofrece una experiencia holográfica completa gracias a la aplicación web, para que el usuario pueda crear sus propios diseños para ser posteriormente proyectados. 
+
+Las posibles aplicaciones del Dispositivo POV son muy extensas, desde el ámbito de la publicidad y el marketing, como decoración en pubs o discotecas, uso lúdico en el público más joven, creadores de contenido en plataformas de stream o redes sociales, etc. Además, la aplicación web puede servir a muchos artistas para dar a conocer su trabajo.
+
+El target de usuarios son mayoritariamente los jóvenes para un uso lúdico y en el ámbito de las redes sociales y los creadores de contenido, ampliando este target a empresas en caso del sector del marketing o discotecas. 
+
+Las tecnologías usadas para el proyecto son las siguientes:
+- Para la pantalla POV se usará un motor, un controlador para ese motor, un microcontrolador, una tira de LEDs así como otros componentes electrónicos que son necesarios para su funcionamiento. El microcontrolador tendrá un sencillo programa en C++. 
+- CSS3, HTML5 y JavaScript para el frontend.
+- PHP para el backend.
+- MySQL como SGBD de una BBDD relacional.
+- JSON para la API.
 
 ## 2- Empresa
 
 ### 2.1- Idea de negocio
 
-> _EXPLICACIÓN_: Define o producto central, o valor engadido e a utilidade. Se se ogrecen productos aumentados, indicalo tamén.
 
-|Producto           || dispositivo POV |
+|Producto central   || dispositivo POV |
 |Producto aumentado || aplicación web  |
-
-Las aplicaciones de Roled son variadas pudiendo tener cabida en el mundo de los videojuegos y los creadores de contenido y el ámbito de la publicidad y el marketing.
+|Valor añadido      ||                 |
+|Utilidad           ||                 |
 
 
 ### 2.2- Justificación de la idea
