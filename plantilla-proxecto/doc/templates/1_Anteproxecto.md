@@ -28,7 +28,7 @@ Las pantallas POV son muy populares en algunos países asiáticos como China, Ja
 
 Las posibles aplicaciones del Dispositivo POV son muy extensas, desde el ámbito de la publicidad y el marketing, como decoración en pubs o discotecas, uso lúdico en el público más joven, creadores de contenido en plataformas de stream o redes sociales, etc. Además, la aplicación web puede servir a muchos artistas para dar a conocer su trabajo.
 
-El target de usuarios son mayoritariamente los jóvenes para un uso lúdico y en el ámbito de las redes sociales y los creadores de contenido, ampliando este target a empresas en caso del sector del marketing o discotecas. 
+El target de usuarios son mayoritariamente los jóvenes para un uso lúdico, el ámbito de las redes sociales y los creadores de contenido, ampliando este target a empresas en caso del sector del marketing o discotecas. 
 
 Las tecnologías usadas para el proyecto son las siguientes:
 - Para la pantalla POV se usará un motor, un controlador para ese motor, un microcontrolador, una tira de LEDs así como otros componentes electrónicos que son necesarios para su funcionamiento. El microcontrolador tendrá un sencillo programa en C++. 
@@ -97,7 +97,7 @@ Se opta por un modelo de negocio mixto, ya que no existe una única fuente de in
 
 No se opta por un modelo de pago tradicional ya que como existen otros productos semejantes en la competencia, enfocarse únicamente en la venta del periférico puede ser un riesgo para el futuro del proyecto. Tampoco se opta por un modelo de negocio íntegramente por suscripción ya que se considera que si la aplicación es de pago, mermará la cantidad de usuarios que realizan diseños y el valor de la aplicación y la comunidad disminuirá siendo menos atractiva.
 
-El hecho de que el modelo de negocio sea mixto y no esté tan enfocado a una fuente de ingresos concreta, reduce el riesgo al no ser tan dependiende de esa fuente de ingresos. Además, la adaptabilidad a los cambios del proyecto es mayor, siendo este un beneficio muy importante en un ámbito tan cambiante e imprevisible como lo es el mundo tecnológico. 
+Todo es reduce el riesgo al no ser tan dependiende de una fuente de ingresos concreta. Además, la adaptabilidad a los cambios del proyecto es mayor, siendo este un beneficio muy importante en un ámbito tan cambiante e imprevisible como lo es el mundo tecnológico. 
 
 #### 2.5.1- Viabilidad
 
@@ -110,8 +110,6 @@ En cuanto a los recursos humanos, se necesitará poco personal para el mantenimi
 En cuanto a las instalaciones, es necesario disponer de espacio suficiente y adecuado para alojar la impresora (o impresoras) 3D, disponer de espacio de almacenaje suficiente así como de una mesa de trabajo para poder realizar el montaje del periférico. Para la elaboración del software se necesita un ordenador sobremesa, por lo menos de gama media, que permita el desarrollo y el mantenimiendo del software de Roled. Para minimizar gastos, durante el primer año se usará el domicilio como taller y almacén y se solicitará el uso del "Viveiro de empresas" del centro educativo IES Armando Cotarelo Valledor para reuniones con clientes, con proveedores, etc. 
 
 El despliegue de la aplicación web se hará usando servicios de hosting. 
-
-El mayor impedimento técnico que existe en el proyecto puede surgir cuando el volumen de ventas crezca, ya que al elaborar la estructura del periférico mediante impresoras 3D, este puede tardar demasiado tiempo. No obstante esto se puede solucionar, con la compra de más impresoras de baja gama. Además, como el proyecto está diseñado para que vaya escalando poco a poco, esta mayor demanda podrá ser controlada con facilidad. 
 
 ##### 2.5.1.2- Viabilidade económica
 
@@ -203,7 +201,7 @@ Los ratios demuestran que existe un mayor margen para aumentar la deuda, por eje
 
 ### 2.6- Competencia
 
-Para poder analizar la competencia del mercado y el impacto que puede tener en el desarrollo del proyecto, se realizó una búsqueda exhaustiva de los productos que pudiesen ser semejantes al proyeto Roled. Se encontraron, como se esperaba, productos muy parecidos al periférico sobre todo procedentes del mercado chino en grandes plataformas online como Aliexpress. También existen ofertas de software para realizar creaciones y dibujos personalizados. No obstante, no existe ningún producto que fusione las dos funcionalidades, lo cual hace de Roled un producto único en el mercado, sobre todo a nivel nacional. 
+Para poder analizar la competencia del mercado y el impacto que puede tener en el desarrollo del proyecto, se realizó una búsqueda de los productos que pudiesen ser semejantes al proyeto Roled. Se encontraron, como se esperaba, productos muy parecidos al periférico sobre todo procedentes del mercado chino en grandes plataformas online como Aliexpress. También existen ofertas de software para realizar creaciones y dibujos personalizados. No obstante, no existe ningún producto que fusione las dos funcionalidades, lo cual hace de Roled un producto único en el mercado, sobre todo a nivel nacional. 
 Para poder comparar mejor la competencia, se realizó un mapa de posicionamiento teniendo en cuenta el precio y el tamaño como dos parámetros para comparar los productos. 
 
 ![Mapa de posicionamiento](../img/posicionamiento.png)
@@ -234,13 +232,13 @@ Para representar en qué se diferencia el producto que ofrece Roled de otros pro
 
 ![Curva de valor](../img/curva_valor.PNG)
 
-Roled apuesta por un producto de menor tamaño y menor precio, con un software de dibujo asociado que mejora la experiencia del usuario. Además, se usarán materiales reciclados como el plástico y los motores como medida de responsabilidad civil, apostando por un producto más respetuoso con el medio ambiente. Roled apuesta por la personalización personalizable permitiendo crear los propios diseños para ser proyectados en la pantalla POV.
+Roled apuesta por un producto de menor tamaño y menor precio, con un software de dibujo asociado que mejora la experiencia del usuario. Además, se usarán materiales reciclados como el plástico y los motores como medida de responsabilidad civil, apostando por un producto más respetuoso con el medio ambiente. Roled apuesta por la personalización permitiendo crear los propios diseños para ser proyectados en la pantalla POV.
 
-Por lo tanto, Roled se diferencia de la competencia ofreciendo una experiencia holográfica completa y personalizada, que va desde el diseño de los dibujos en la aplicación hasta la proyección de estos diseños en el dispositivo. 
+Por lo tanto, Roled se diferencia de la competencia ofreciendo una experiencia holográfica completa y personalizada, que va desde el diseño de los dibujos en la aplicación hasta la proyección de estos diseños en el dispositivo. Además, a diferencia del producto existente en el mercado asiático, Roled es un proyecto nacional lo cual implica  numerosas ventajas en caso de necesitar soporte técnico, en los plazos de envío y en la garantía de seguridad que ofrece un producto con la certificación europea CE.
 
 ### 2.9- Forma xurídica
 
-> _EXPLICACIÓN_: Neste apartado
+La forma juridica de Roled es una cooperativa, debido a las numerosas ventajas fiscales y organizativas que presenta con respecto a otras formas jurídicas. 
 
 ### 2.10- Prevención de riesgos laborales
 
