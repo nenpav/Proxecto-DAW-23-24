@@ -21,13 +21,15 @@ por el uso de una etiqueta svg que permite realizar las mismas operaciones pero 
 al copiar un elemento directamente en el html, este se visualizaba correctamente. El bug se resolvió cambiando la función de JS para crear el elemento, cambiando la función
 createElement() por la de createElementNS().
 
+3- Se intentó usar la librería de php imagine-svg para convertir el svg en una imagen, utilizando el gestor de dependencias Composer. Sin embargo, tras problemas con uno de
+los módulos que no funcionaban y al no encontrar solución al problema, se optó por desechar esta forma y guardar directamente el fichero en su formato. 
 ## 2- Prototipos
 
 
 
 ## 3- Innovación
 
-No caso de utilizar tecnoloxías diferentes ás estudadas no ciclo formativo, fai unha descrición dos retos asumidos e como se resolveron.
+
 
 ## 4- Probas
 

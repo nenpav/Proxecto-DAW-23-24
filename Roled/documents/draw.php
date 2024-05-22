@@ -74,6 +74,7 @@ $rutaBase= "../src/img/avatarGen.png";
           </svg>
         </section>
        
+
     </main>
 
     <footer>
@@ -136,7 +137,6 @@ $rutaBase= "../src/img/avatarGen.png";
             <p id="error"></p>
             <input type="submit" value="Guardar" name="guardar" class="boton" id="guardarConf">
             <input type="hidden" name="datosSvg" id="datosSvg">
-            <input type="hidden" name="nombre" id="nombre">
           </form> 
         </section>
       </dialog>

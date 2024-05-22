@@ -123,6 +123,15 @@ $nombre.addEventListener("blur",e=>{
 /* Transformar el svg en una cadena */
 
 $guardar.addEventListener("click",e=>{
+    $d2.querySelector("#datosSvg").value = $lienzo
+    $form.submit()
+
+})
+
+
+/* 
+Para guardar como string
+$guardar.addEventListener("click",e=>{
     e.preventDefault()
     const svgLienzo = new XMLSerializer().serializeToString($lienzo)
     if(svgLienzo!=""){
@@ -131,7 +140,7 @@ $guardar.addEventListener("click",e=>{
     }else{
         $error.innerHTML="Error al guardar la imagen"
     }
-})
+}) */
 
 
 

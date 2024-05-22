@@ -1,5 +1,6 @@
 <?php
-require_once("../backend/functions.php");
+require_once("./functions.php");
+//phpinfo();
 initSession();
 
 if(!isset($_SESSION['login'])){
@@ -13,41 +14,38 @@ if(!$_POST){
     //redirigir no sé a donde aún
 }
 
-$svgString = !empty($_POST['datosSvg'])?$_POST['datosSvg']:'';
-$nombreSvg = $_POST['nombre'];
+$svg = !empty($_POST['datosSvg'])?$_POST['datosSvg']:'';
+$nombre = $_POST['nombre'];
+var_dump($_POST['nombre']);
 $login = $_SESSION['login'];
-$ruta = "../../docsUsuarios/$login/$nombreSvg.jpg";
+$ruta = "../../docsUsuarios/$login/$nombre.svg";
 
+//var_dump($svg) ;
 $conexionBBDD = new mysqli("localhost","root","","roled");
 
 $conexionBBDD->begin_transaction();
 try{
-    if($svgString==""){
+    if($svg==""){
         throw new Exception("Error al procesar la imagen");
     }
 
-    //Librería imagick
-    $imagen = new Imagick();
-    $imagen->readImageBlob($svgString);
-    $imagen->setImageFormat("jpeg");
-    $imagenJpeg = $image->getImageBlob();
-
-    if(!file_put_contents($ruta,$imagenJpeg)){
+    if(!file_put_contents($ruta,$svg)){
         throw new Exception("Error al guardar la imagen");
-    }
+    }  
 
-    if(!$resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$login'")){
+   /*  if(!$resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$login'")){
         throw new Exception("Error al guardar la imagen");
     }
     $id_usuario = $resultado->fetch_assoc()['id_usuario']; 
 
     if(!$resultado2->$conexionBBDD->query("INSERT INTO design (id_usuario, nombre) VALUES ($id_usuario,'$nombreSvg')")){
         throw new Exception("Error al guardar la imagen");
-    }
-    
+    } */
+    echo "Guardado ok";
     $conexionBBDD->commit();
 }catch(Exception $e){
     $conexionBBDD->rollback();
+    echo "Guardado mal";
 }
 
 
