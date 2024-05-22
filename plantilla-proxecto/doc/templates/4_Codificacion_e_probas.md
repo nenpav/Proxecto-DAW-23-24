@@ -40,3 +40,4 @@ Js:
   Bug al validar la contraseña en el formulario de registro, dando siempre que es un valor incorrecto. 
 
 2- Cambiar el color del error de la modal de guardar el diseño. No se lee bien.
+
