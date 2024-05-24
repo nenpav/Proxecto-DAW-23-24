@@ -16,7 +16,7 @@ if(!$_POST){
 
 $svg = !empty($_POST['datosSvg'])?$_POST['datosSvg']:'';
 $nombre = $_POST['nombre'];
-var_dump($_POST['nombre']);
+//var_dump($_POST['nombre']);
 $login = $_SESSION['login'];
 $ruta = "../../docsUsuarios/$login/$nombre.svg";
 
@@ -33,14 +33,14 @@ try{
         throw new Exception("Error al guardar la imagen");
     }  
 
-   /*  if(!$resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$login'")){
+    if(!$resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$login'")){
         throw new Exception("Error al guardar la imagen");
     }
-    $id_usuario = $resultado->fetch_assoc()['id_usuario']; 
 
-    if(!$resultado2->$conexionBBDD->query("INSERT INTO design (id_usuario, nombre) VALUES ($id_usuario,'$nombreSvg')")){
+    $id_usuario = $resultado->fetch_assoc()['id_usuario']; 
+    if(!$resultado->$conexionBBDD->query("INSERT INTO design (id_usuario, nombre) VALUES ($id_usuario,'$nombre')")){
         throw new Exception("Error al guardar la imagen");
-    } */
+    } 
     echo "Guardado ok";
     $conexionBBDD->commit();
 }catch(Exception $e){
