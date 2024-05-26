@@ -117,8 +117,9 @@ function crearCarpetaUser($username){
 function buscarRutaAvatar($user,$conexion, $rutaBase, $rutaAvatar){
     $ruta = $rutaBase;
     if($resultado = $conexion->query("SELECT avatar FROM usuarios WHERE username='$user'")){
-        if($resultado->fetch_assoc()['avatar']!=NULL){
-            return $ruta = "$rutaAvatar/docsUsuario/$user/avatar/".$resultado->fetch_assoc()['avatar'];
+        $fila = $resultado->fetch_assoc();
+        if($fila['avatar']!=NULL){
+            return "$rutaAvatar/docsUsuarios/$user/avatar/".$fila['avatar'];
         }
     }
     return $ruta;

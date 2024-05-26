@@ -55,7 +55,8 @@ $rutaBase= "../src/img/avatarGen.png";
               <label for="cargar" class="labelAvatar">
                   <i class="fa fa-camera"></i>
               </label>
-              <form method="POST" action="../backend/avatar.php" enctype="multipart/form-data">
+              <form action="../backend/avatar.php" enctype="multipart/form-data" method="POST">
+                <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
                 <input type="file" id="cargar" name="cargar">
                 <input class="boton" type="submit" value="Guardar">
               </form>

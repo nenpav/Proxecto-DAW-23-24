@@ -33,7 +33,7 @@ $rutaBase= "../src/img/avatarGen.png";
                 <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
                 <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                 <div class="dropdown">
-                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'../../'); ?>" alt=""></button>
+                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'/../..') ?>" alt=""></button>
                   <div class="dropdown-content">
                     <a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
                     <a href="./diseños.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
