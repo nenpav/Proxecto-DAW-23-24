@@ -1,0 +1,46 @@
+@import url(./base.css);
+@import url(./modales.css);
+
+
+.avatarImg{
+    position: relative;
+    width: 200px;
+}
+
+#cargar{
+    visibility: hidden;
+}
+
+.avatarImg .img {
+    background-image: url("../img/avatarGen.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+
+  .fa .fa-camera{
+    width: 80px;
+  }
+ .labelAvatar i{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: 195px;
+    left:60%;
+    color: var(--clr-letra);
+    padding: 1rem;
+    text-align: center;
+    
+} 
+form{
+height: max-content;
+}
+
+.titulo{
+    margin-top: 2rem;
+    color: var(--clr-letra);
+    width: max-content;
+}

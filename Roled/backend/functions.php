@@ -50,7 +50,7 @@ function renderMenu($sesion,$conexion){
             echo "<div class='dropdown'>
             <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion,$conexion, $rutaBase,$rutaAvatar)."' alt=''></button>
             <div class='dropdown-content'>
-              <a href='./miPerfil.html' aria-label='Enlace a Mi Perfil'>Mi Perfil</a>
+              <a href='./documents/miPerfil.php' aria-label='Enlace a Mi Perfil'>Mi Perfil</a>
               <a href='./documents/diseños.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
               <a href='./backend/sesiones/cerrarSesion.php' aria-label='Cerrar sesión'>Cerrar Sesión</a>
             </div>
@@ -118,7 +118,7 @@ function buscarRutaAvatar($user,$conexion, $rutaBase, $rutaAvatar){
     $ruta = $rutaBase;
     if($resultado = $conexion->query("SELECT avatar FROM usuarios WHERE username='$user'")){
         if($resultado->fetch_assoc()['avatar']!=NULL){
-            return $ruta = "$rutaAvatar/docsUsuario/$user/".$resultado->fetch_assoc()['avatar'];
+            return $ruta = "$rutaAvatar/docsUsuario/$user/avatar/".$resultado->fetch_assoc()['avatar'];
         }
     }
     return $ruta;

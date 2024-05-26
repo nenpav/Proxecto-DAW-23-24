@@ -1,3 +1,16 @@
+<?php
+require_once("../backend/functions.php");
+initSession();
+
+if(!isset($_SESSION['login'])){
+  header("Location: ../index.php");
+}
+
+$user= $_SESSION['login'];
+$conexionBBDD = new mysqli ('localhost','root','','roled');
+$rutaBase= "../src/img/avatarGen.png";
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +18,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Mi Perfil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/css/draw.css">
-    <link rel="stylesheet" href="./src/css/modales.css">
+    <link rel="stylesheet" href="../src/css/miPerfil.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -21,7 +34,7 @@
                 <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                 <div class='dropdown'>
                     <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                        <img id='avatar' src='' alt='menu desplegable de usuario'>
+                        <img id='avatar' src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'../../'); ?>" alt='menu desplegable de usuario'>
                         <span class='caret'></span>
                     </button>
                     <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
@@ -35,10 +48,18 @@
         </nav>
     </header>
     <main>
-        <h1>Perfil de </h1>
-        <section id="cambiarAvatar">
-            <!--Gestionar cambiar la foto de avatar-->
-        </section>
+        <h1><?php  echo $user ?></h1>
+          <div class="avatarImg">
+            <h4 class="titulo">Cambiar foto de perfil</h4>
+              <div class="img"></div>
+              <label for="cargar" class="labelAvatar">
+                  <i class="fa fa-camera"></i>
+              </label>
+              <form method="POST" action="../backend/avatar.php" enctype="multipart/form-data">
+                <input type="file" id="cargar" name="cargar">
+                <input class="boton" type="submit" value="Guardar">
+              </form>
+          </div>
         <section id="ListaDisenhos">
             <!-- Paginación-->
             <section class="paginacion"></section>
