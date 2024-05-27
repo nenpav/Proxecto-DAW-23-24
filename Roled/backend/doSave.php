@@ -21,7 +21,7 @@ $nombre = $_POST['nombre'];
 $login = $_SESSION['login'];
 $ruta = "../../docsUsuarios/$login/$nombre.svg";
 
-//var_dump($svg) ;
+//var_dump($svg);
 $conexionBBDD = new mysqli("localhost","root","","roled");
 
 $conexionBBDD->begin_transaction();
@@ -34,20 +34,16 @@ try{
         throw new Exception("Error al guardar la imagen");
     }  
 
-    if (!$resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$login'")) {
-        throw new Exception("Error al obtener el ID del usuario");
-    }
-    
-    $id_usuario = $resultado->fetch_assoc()['id_usuario'];
-
-    if (!$resultado = $conexionBBDD->query("INSERT INTO design (id_usuario, nombre) VALUES ($id_usuario, '$nombre.svg')")) {
+    if (!$resultado = $conexionBBDD->query("INSERT INTO design (id_usuario, nombre) VALUES ('$login', '$nombre.svg')")) {
         throw new Exception("Error al guardar la imagen");
     }
     
     //echo "Guardado ok";
     $conexionBBDD->commit();
+    header("Location: ../documents/draw.php?save=ok");
 }catch(Exception $e){
     $conexionBBDD->rollback();
+    header("Location: ../documents/draw.php?save=ko");
     //echo "Guardado mal";
 }
 

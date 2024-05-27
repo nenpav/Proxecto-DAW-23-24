@@ -267,6 +267,7 @@ li{
     position: absolute;
     top: 0;
     right: 0px;
+    border-radius: 50%;
   }
   
   .dropdown-content a {

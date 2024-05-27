@@ -2,6 +2,21 @@
 @import url(./modales.css);
 
 
+.content{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.izq{
+    width: 50%;
+}
+/*=============================================
+=            Estilos del avatar            =
+=============================================*/
+
 .avatarImg{
     position: relative;
     width: 200px;
@@ -23,6 +38,7 @@
   .fa .fa-camera{
     width: 80px;
   }
+
  .labelAvatar i{
     width: 20px;
     height: 20px;
@@ -35,6 +51,30 @@
     text-align: center;
     
 } 
+
+
+/*=====  End of Estilos del avatar  ======*/
+
+
+/*=============================================
+=            Estilos de la lista de diisenhos            =
+=============================================*/
+
+.disenos{
+    width: 200px;
+    height: 200px;
+    position: relative;
+}
+
+.disenos img{
+    width: 100%;
+}
+
+
+/*=====  End of Estilos de la lista de diisenhos  ======*/
+
+
+
 form{
 height: max-content;
 }

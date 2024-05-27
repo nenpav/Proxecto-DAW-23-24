@@ -9,6 +9,20 @@ if(!isset($_SESSION['login'])){
 $user= $_SESSION['login'];
 $conexionBBDD = new mysqli ('localhost','root','','roled');
 $rutaBase= "../src/img/avatarGen.png";
+$fichero = "../src/json/roled.json";
+$array = [];
+/* Obtener los disenhos del usuario */
+if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$user'")){
+  if(($resultado->num_rows>0)){
+    while($fila = $resultado->fetch_assoc()){
+      $array[] = $fila;
+    }
+    //var_dump($array);
+    convertirJson($array, $fichero);
+  }
+}
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,6 +34,7 @@ $rutaBase= "../src/img/avatarGen.png";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/miPerfil.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../src/js/ajax.js" defer></script>
 </head>
 <body>
     <header>
@@ -30,11 +45,11 @@ $rutaBase= "../src/img/avatarGen.png";
             <ul id='menuConSesion'>
                 <li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>
                 <li><a href='' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
+                <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
                 <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                 <div class='dropdown'>
                     <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                        <img id='avatar' src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'../../'); ?>" alt='menu desplegable de usuario'>
+                        <img id='avatar' src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt='menu desplegable de usuario'>
                         <span class='caret'></span>
                     </button>
                     <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
@@ -49,21 +64,31 @@ $rutaBase= "../src/img/avatarGen.png";
     </header>
     <main>
         <h1><?php  echo $user ?></h1>
-          <div class="avatarImg">
-            <h4 class="titulo">Cambiar foto de perfil</h4>
-              <div class="img"></div>
-              <label for="cargar" class="labelAvatar">
-                  <i class="fa fa-camera"></i>
-              </label>
-              <form action="../backend/avatar.php" enctype="multipart/form-data" method="POST">
-                <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
-                <input type="file" id="cargar" name="cargar">
-                <input class="boton" type="submit" value="Guardar">
-              </form>
-          </div>
-        <section id="ListaDisenhos">
-            <!-- Paginación-->
-            <section class="paginacion"></section>
+        <section class="content">
+          <section class="izq">
+            <div class="avatarImg">
+              <h4 class="titulo">Cambiar foto de perfil</h4>
+                <div class="img"></div>
+                <label for="cargar" class="labelAvatar">
+                    <i class="fa fa-camera"></i>
+                </label>
+                <form action="../backend/avatar.php" enctype="multipart/form-data" method="POST">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
+                  <input type="file" id="cargar" name="cargar">
+                  <input class="boton" type="submit" value="Guardar">
+                </form>
+            </div>
+          </section>
+          <section id="ListaDisenhos">
+              <h4 class="titulo">Mis Diseños</h4>
+              <section class="disenhos">
+                <!-- Lista de diseños dinámica por ajax -->
+              </section>
+              <button class="boton">Ver más</button>
+              <!-- Paginación-->
+              <section class="paginacion"></section>
+          </section>
+
         </section>
     </main>
     <footer>
@@ -116,4 +141,12 @@ $rutaBase= "../src/img/avatarGen.png";
       </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
+<template id="disenhos">
+    <article>
+        <figure>
+            <img src="" alt="">
+        </figure>
+        <button>Proyectar</button>
+    </article>
+</template>
 </html>

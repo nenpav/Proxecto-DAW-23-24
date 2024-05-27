@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS usuarios (
 CREATE TABLE IF NOT EXISTS design(
     id_design INT AUTO_INCREMENT primary key,
     fecha DATE DEFAULT CURDATE(),
-    id_usuario INT NOT NULL,
+    id_usuario VARCHAR(20) NOT NULL,
     nombre VARCHAR(40) NOT NULL
 );
 
@@ -24,7 +24,7 @@ CREATE TABLE IF NOT EXISTS dispositivo (
 );
 
 ALTER TABLE design
-ADD CONSTRAINT fk_usu_des FOREIGN key (id_usuario) references usuarios(id_usuario);
+ADD CONSTRAINT fk_usu_des FOREIGN key (id_usuario) references usuarios(username);
 
 ALTER TABLE dispositivo
 ADD CONSTRAINT fk_usu_dispo FOREIGN key (id_usuario) references usuarios(id_usuario);

@@ -1,8 +1,9 @@
 <?php
 
-/* FUNCIONES DE SESIONES */
-
 $session_name = "roled";
+$conexionBBDD = new mysqli('localhost','root','','roled');
+
+/* FUNCIONES DE SESIONES */
 
 /**
  * Inicia una sesión de usuario
@@ -38,7 +39,8 @@ function endSession(){
 /**
  * Función que renderiza el menú en base a si existe una sesión activa. Solo para index
  */
-function renderMenu($sesion,$conexion){
+function renderMenu($sesion){
+    global $conexionBBDD;
     $rutaBase = "./src/img/avatarGen.png";
     $rutaAvatar="..";
     if($sesion){
@@ -48,7 +50,7 @@ function renderMenu($sesion,$conexion){
             echo "<li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>";
             echo "<li><a href='./documents/tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
             echo "<div class='dropdown'>
-            <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion,$conexion, $rutaBase,$rutaAvatar)."' alt=''></button>
+            <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion, $rutaBase,$rutaAvatar)."' alt=''></button>
             <div class='dropdown-content'>
               <a href='./documents/miPerfil.php' aria-label='Enlace a Mi Perfil'>Mi Perfil</a>
               <a href='./documents/diseños.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
@@ -70,8 +72,9 @@ function renderMenu($sesion,$conexion){
 /**
  * comprueba si el usuario existe en base a su nombre
  */
-function isUserExits($nombre, $conexion){
-    $resultado = $conexion->query("SELECT * FROM usuarios WHERE username= '$nombre'");
+function isUserExits($nombre){
+    global $conexionBBDD;
+    $resultado = $conexionBBDD->query("SELECT * FROM usuarios WHERE username= '$nombre'");
      return $resultado->num_rows > 0;
 }
 
@@ -79,8 +82,9 @@ function isUserExits($nombre, $conexion){
 /**
  * Comprueba si la contraseña es correcta dado un nombre de usuario
  */
-function isCorrectPwd($usuario, $pwd, $conexion){
-    $resultado = $conexion->query("SELECT * FROM usuarios WHERE username='$usuario'");
+function isCorrectPwd($usuario, $pwd){
+    global $conexionBBDD;
+    $resultado = $conexionBBDD->query("SELECT * FROM usuarios WHERE username='$usuario'");
     /* if(!password_verify($pwd, $fila['pwd'])){
         return false;
     } */ 
@@ -114,9 +118,10 @@ function crearCarpetaUser($username){
 /**
  * Busca la ruta del avatar del usuario. Si no existe pone una foto genérica 
 */
-function buscarRutaAvatar($user,$conexion, $rutaBase, $rutaAvatar){
+function buscarRutaAvatar($user, $rutaBase, $rutaAvatar){
+    global $conexionBBDD;
     $ruta = $rutaBase;
-    if($resultado = $conexion->query("SELECT avatar FROM usuarios WHERE username='$user'")){
+    if($resultado = $conexionBBDD->query("SELECT avatar FROM usuarios WHERE username='$user'")){
         $fila = $resultado->fetch_assoc();
         if($fila['avatar']!=NULL){
             return "$rutaAvatar/docsUsuarios/$user/avatar/".$fila['avatar'];
@@ -148,12 +153,20 @@ function obligatorios($array){
  * fichero indicado por param
  */
 function convertirJson($array, $fichero){
-    $json = json_enconde($array);
+    $json = json_encode($array);
     file_put_contents($fichero, "");
     file_put_contents($fichero, $json);
 }
 
+/* FUNCIONES DE CONSULTAS */
 
-
+function obtenerIdUsuario($username){
+    global $conexionBBDD;
+    $id_usuario=-1;
+    if($resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$username'")){
+        $id_usuario = $resultado->fetch_assoc()['id_usuario'];
+    }
+    return $id_usuario;
+}
 
 ?>

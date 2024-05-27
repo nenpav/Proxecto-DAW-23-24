@@ -11,7 +11,7 @@ if($_POST){
     $pwd2 = trim(strip_tags($_POST['pwd2']));
     $fechaNac = $_POST['fnac'];
 
-    if(isUserExits($login,$conexionBBDD)){
+    if(isUserExits($login)){
         header("Location: ../documents/registro.php?registro=userRepeat");
     }
 

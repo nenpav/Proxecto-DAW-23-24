@@ -6,6 +6,12 @@ if(!isset($_SESSION['login'])){
   header("Location: ../index.php");
 }
 
+if(isset($_GET['save'])){
+  echo "<script>window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('confSave').showModal();
+  });</script>";
+}
+
 $user= $_SESSION['login'];
 $conexionBBDD = new mysqli ('localhost','root','','roled');
 $rutaBase= "../src/img/avatarGen.png";
@@ -19,6 +25,7 @@ $rutaBase= "../src/img/avatarGen.png";
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/draw.css">
     <script src="../src/js/draw.js" defer></script>
+    <script src="../src/js/modales.js" defer></script>
     
 </head>
 <body>
@@ -33,7 +40,7 @@ $rutaBase= "../src/img/avatarGen.png";
                 <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
                 <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                 <div class="dropdown">
-                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user,$conexionBBDD, $rutaBase,'/../..') ?>" alt=""></button>
+                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>
                   <div class="dropdown-content">
                     <a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
                     <a href="./diseños.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
@@ -70,7 +77,7 @@ $rutaBase= "../src/img/avatarGen.png";
 
         <section id="lienzo">
           <svg id="svgLienzo" width="600" height="600" role="img" aria-label="lienzo de dibujo">
-            <!--Cuadrícula-->
+            
           </svg>
         </section>
        
@@ -140,5 +147,17 @@ $rutaBase= "../src/img/avatarGen.png";
           </form> 
         </section>
       </dialog>
+
+      <dialog id="confSave">
+        <button id="cerrarConfSave">X</button>
+        <?php
+            if($_GET['save'] == "ok"){
+              echo "<p id='confSave'>El diseño se ha correctamente</p>";
+            }
+            if($_GET['save'] == "ko"){
+              echo "<p id='confSave'>Error al guardar el diseño</p>";
+            }
+        ?>
+    </dialog>
 </body>
 </html>

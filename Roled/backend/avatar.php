@@ -7,7 +7,7 @@ if(!isset($_SESSION['login'])){
 $username= $_SESSION['login'];
 $ruta = "../../docsUsuarios/".$username."/avatar";
 $conexionBBDD = new mysqli ('localhost','root','','roled');
-var_dump($_FILES);
+//var_dump($_FILES);
 
 if($_POST){
     $conexionBBDD->begin_transaction();
@@ -50,11 +50,10 @@ if($_POST){
 
             //Guardar en BBDD
 
-            if (!$resultado = $conexionBBDD->query("SELECT id_usuario FROM usuarios WHERE username='$username'")) {
-                throw new Exception("Error al obtener el ID del usuario");
+            $id_usuario = obtenerIdUsuario($login);
+            if($id_usuario==-1){
+                throw new Exception("Error al guardar la imagen");
             }
-            
-            $id_usuario = $resultado->fetch_assoc()['id_usuario'];
         
             if (!$resultado = $conexionBBDD->query("UPDATE usuarios SET avatar = '$nombre' WHERE id_usuario = $id_usuario")) {
                 throw new Exception("Error al guardar la imagen");
