@@ -53,7 +53,7 @@ function renderMenu($sesion){
             <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion, $rutaBase,$rutaAvatar)."' alt=''></button>
             <div class='dropdown-content'>
               <a href='./documents/miPerfil.php' aria-label='Enlace a Mi Perfil'>Mi Perfil</a>
-              <a href='./documents/diseños.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
+              <a href='./documents/design.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
               <a href='./backend/sesiones/cerrarSesion.php' aria-label='Cerrar sesión'>Cerrar Sesión</a>
             </div>
         </div>";

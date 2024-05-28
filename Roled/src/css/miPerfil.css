@@ -13,6 +13,12 @@
 .izq{
     width: 50%;
 }
+
+#listaDisenhos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 /*=============================================
 =            Estilos del avatar            =
 =============================================*/
@@ -60,10 +66,18 @@
 =            Estilos de la lista de diisenhos            =
 =============================================*/
 
+
+.disenhos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 .disenos{
     width: 200px;
     height: 200px;
     position: relative;
+   
 }
 
 .disenos img{
@@ -80,6 +94,7 @@ height: max-content;
 }
 
 .titulo{
+    text-align: center;
     margin-top: 2rem;
     color: var(--clr-letra);
     width: max-content;

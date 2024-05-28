@@ -1,1 +1,40 @@
 @import url(./base.css);
+
+#listaDisenhos{
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.disenhos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.disenhos article{
+    margin-top: 20px;
+    border: 5px solid var(--clr-violeta);
+    border-radius: 8px;
+}
+.disenos{
+    width: 200px;
+    height: 200px;
+    position: relative;
+   
+}
+
+.disenos img{
+    width: 100%;
+}
+
+.pag{
+   background-color: var(--clr-violeta);
+   position: absolute;
+   right: 0;
+}
+
+/* s */

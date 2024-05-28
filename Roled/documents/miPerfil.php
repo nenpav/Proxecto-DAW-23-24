@@ -35,6 +35,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     <link rel="stylesheet" href="../src/css/miPerfil.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../src/js/ajax.js" defer></script>
+    <script src="./src/js/miPerfil.js" defer></script>
 </head>
 <body>
     <header>
@@ -43,21 +44,17 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
         </figure>
         <nav>
             <ul id='menuConSesion'>
-                <li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                <li><a href='' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
+                <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
+                <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
                 <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-                <div class='dropdown'>
-                    <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                        <img id='avatar' src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt='menu desplegable de usuario'>
-                        <span class='caret'></span>
-                    </button>
-                    <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-                        <li><a href='#'>Mi perfil</a></li>
-                        <li><a href='#'>Mis diseños</a></li>
-                        <li role='separator' class='divider'></li>
-                        <li><a href='#'>Cerrar Sesión</a></li>
-                    </ul>
+                <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+                <div class="dropdown">
+                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>
+                  <div class="dropdown-content">
+                    <a href="#" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
+                    <a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
+                    <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
+                  </div>
                 </div>
             </ul>
         </nav>
@@ -84,9 +81,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
               <section class="disenhos">
                 <!-- Lista de diseños dinámica por ajax -->
               </section>
-              <button class="boton">Ver más</button>
-              <!-- Paginación-->
-              <section class="paginacion"></section>
+              <button id="mas" class="boton">Ver más</button>
           </section>
 
         </section>
@@ -139,7 +134,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
           </ul>
         </section>
       </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
 </body>
 <template id="disenhos">
     <article>

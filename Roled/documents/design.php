@@ -8,21 +8,31 @@ if(!isset($_SESSION['login'])){
 
  $conexionBBDD = new mysqli('localhost','root','','roled');
  $user = $_SESSION['login']; 
- $ruta = "../src/json/roled.json";
+ $rutaBase= "../src/img/avatarGen.png";
+ $fichero = "../src/json/roled.json";
 
- //convertirJson(select($queryDisenos, $conexionBBDD), $ruta);
+ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$user'")){
+  if(($resultado->num_rows>0)){
+    while($fila = $resultado->fetch_assoc()){
+      $array[] = $fila;
+    }
+    //var_dump($array);
+    convertirJson($array, $fichero);
+  }
+}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Mis Diseños</title>
-    <link rel="stylesheet" href="../src/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
-</head>
+    <link rel="stylesheet" href="../src/css/galeria.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../src/js/ajax.js" defer></script>
+  </head>
 <body>
     <header>
         <figure id="logo">
@@ -32,14 +42,14 @@ if(!isset($_SESSION['login'])){
             <nav>
                 <ul id='menuConSesion'>
                   <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                  <li><a href='#' aria-label='Enlace a dibujar' class='activa'>Dibujar<span></span></a></li>
+                  <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
                   <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
-                  <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+                  <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                   <div class="dropdown">
-                    <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../') ?>" alt=""></button>
+                    <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>
                     <div class="dropdown-content">
                       <a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
-                      <a href="./diseños.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
+                      <a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
                       <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
                     </div>
                   </div>
@@ -48,10 +58,31 @@ if(!isset($_SESSION['login'])){
         </nav>
     </header>
     <main>
-        <h1>Lista de diseños del usuario ....</h1>
-        <section id="galeria">
-            <!-- Lista de Diseños por ajax -->
+        <h1>Mis diseños</h1>
+          <section id="ListaDisenhos">
+                <section class="disenhos">
+                  <!-- Lista de diseños dinámica por ajax -->
+                </section>
         </section>
+        <nav class="pag" aria-label="Page navigation">
+          <ul class="pagination">
+            <li>
+              <a href="" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li>
+              <a href="" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
     </main>
     <footer>
         <section id="rrss">
@@ -78,10 +109,10 @@ if(!isset($_SESSION['login'])){
         </section>
         <section id="accesibilidad">
           <figure>
-            <img src="./src/img/wcag1AA-blue.gif" alt="">
+            <img src="../src/img/wcag1AA-blue.gif" alt="">
           </figure>
           <figure>
-            <img src="./src/img/wcag1AA.gif" alt="">
+            <img src="../src/img/wcag1AA.gif" alt="">
           </figure>
         </section>
         <section id="contacto">
