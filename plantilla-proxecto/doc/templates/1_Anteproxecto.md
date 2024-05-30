@@ -56,6 +56,8 @@ En cuanto a la aplicación Web, existen otras aplicaciones de dibujo en el merca
 
 ### 2.3- Segmento de clientes
 
+El análisis del segmento de clientes se realizó mediante la siguiente encuesta: https://forms.gle/N7SKFR8f1eBvb7gs9.
+
 Roled tiene dos segmentos de clientes diferenciados y, dependiendo del segmento y del uso, existe una diferenciación entre clientes y usuarios:
 
 - Usuarios 
