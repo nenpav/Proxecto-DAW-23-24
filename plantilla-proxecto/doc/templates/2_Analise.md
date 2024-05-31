@@ -8,7 +8,6 @@
   - [5- Normativa](#5--normativa)
   - [6- Mejoras futuras](#6--mejoras-futuras)
 
-
 ## 1- Descripción General
 
 La aplicación web desarrollada para la parte técnica del proyecto permite la subida y la creación de dibujos que, tras ser tratadas y convertidas a un formato correcto, son enviadas a un periférico que proyecta esas imágenes de forma holográfica. Esta aplicación web funciona como un software de diseño con herramientas básicas de dibujo que permite al usuario crear sus propios diseños para ser posteriormente proyectados, así como la creación de animaciones sencillas basadas en fotogramas. 
@@ -38,7 +37,6 @@ La siguiente tabla muestra todas las funcionalidades de las que dispone la aplic
 | Añadir funcionalidad            | Añadir funcionalidades nuevas a la app                 | Administrador                  |
 | Comprar el periférico POV       | Comprar el periférico desde la aplicación              | Todos                          |
 | Ver contenido extra             | Ver el contenido adicional de pago                     | Suscriptores y creadores       |
-
 
 ## 3- Tipos de usuarios
 
