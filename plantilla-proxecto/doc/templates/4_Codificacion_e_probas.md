@@ -23,13 +23,18 @@ createElement() por la de createElementNS().
 
 3- Se intentó usar la librería de php imagine-svg para convertir el svg en una imagen, utilizando el gestor de dependencias Composer. Sin embargo, tras problemas con uno de
 los módulos que no funcionaban y al no encontrar solución al problema, se optó por desechar esta forma y guardar directamente el fichero en su formato. 
+
+4- Problema con el formato al crear el JSON resultante de la consulta a través de PHP. Se solucionó controlando si se obtenía un registro o varios para convertirlo en un Array y posteriormente
+poder ser manejado con un map.
+
 ## 2- Prototipos
 
-
+El prototipo se realiza mediante la Aplicación de Figma.
 
 ## 3- Innovación
 
-
+++++++++++++++++++++++++++++++++++++++++++++
+Pendiente de ver qué pasa con el POV.
 
 ## 4- Probas
 
@@ -41,3 +46,5 @@ Js:
 
 2- Cambiar el color del error de la modal de guardar el diseño. No se lee bien.
 
+3- Al guardar un diseño en svg se guarda como un Object SVG por lo que no se puede visualizar correctamente. Se solucionó transformado el SVG a string para posteriormente
+ser mandado en un input hidden y guardar el fichero en el directorio del servidor.
