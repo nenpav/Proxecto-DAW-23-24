@@ -47,7 +47,7 @@ function renderMenu($sesion){
         echo "<ul id='menuConSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";
             echo "<li><a href='./documents/draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>";
-            echo "<li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>";
+            echo "<li><a href='./documents/comunity.php' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>";
             echo "<li><a href='./documents/tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
             echo "<div class='dropdown'>
             <button class='dropbtn'><img id='avatar' src='".buscarRutaAvatar($sesion, $rutaBase,$rutaAvatar)."' alt=''></button>

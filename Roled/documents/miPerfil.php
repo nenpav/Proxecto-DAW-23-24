@@ -21,8 +21,6 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     convertirJson($array, $fichero);
   }
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -35,7 +33,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     <link rel="stylesheet" href="../src/css/miPerfil.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="../src/js/ajax.js" defer></script>
-    <script src="./src/js/miPerfil.js" defer></script>
+    <script src="../src/js/miPerfil.js" defer></script>
 </head>
 <body>
     <header>
@@ -46,7 +44,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
             <ul id='menuConSesion'>
                 <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
                 <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
+                <li><a href='./comunity.php' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
                 <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                 <div class="dropdown">
                   <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>

@@ -1,10 +1,10 @@
 const $d=document,
       $galeria= $d.querySelector("#galeria"),
       $galeriaUser = $d.querySelector(".disenhos"),
-      $botonVerMas = $d.querySelector("#mas")
+      $galeriaComun = $d.querySelector(".disenhosCom")
 
     
-      //console.log($galeriaUser)
+      console.log($galeriaComun)
 let disenos = []
 
 async function ajax(options){
@@ -57,10 +57,10 @@ function renderDisenos(disenos, element){
 }
 
 
- function getDisenos(element, page=1){
+ function getDisenos(element, url){
     disenos= []
     ajax({
-        url: 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json',
+        url: url,
         fExito: json => {
             
             if (Array.isArray(json)) {
@@ -82,9 +82,10 @@ function renderDisenos(disenos, element){
  $d.addEventListener("DOMContentLoaded", e=>{
     e.preventDefault()
     if($galeriaUser != 'undefined'){
-        getDisenos($galeriaUser)
+        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json')
         
-    }else{
-        //getDisenos($galeria)
+    }
+    if($galeriaComun != 'undefined'){
+        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json')
     }
 }) 

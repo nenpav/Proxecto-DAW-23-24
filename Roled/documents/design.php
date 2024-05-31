@@ -43,7 +43,7 @@ if(!isset($_SESSION['login'])){
                 <ul id='menuConSesion'>
                   <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
                   <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
-                  <li><a href='' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
+                  <li><a href='./comunity.php' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
                   <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
                   <div class="dropdown">
                     <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>

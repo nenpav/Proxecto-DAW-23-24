@@ -1,3 +1,28 @@
+<?php
+
+require_once("../backend/functions.php");
+initSession();
+
+if(!isset($_SESSION['login'])){
+  header("Location: ../index.php");
+}
+
+$user= $_SESSION['login'];
+$conexionBBDD = new mysqli ('localhost','root','','roled');
+$rutaBase= "../src/img/avatarGen.png";
+$fichero = "../src/json/comunidad.json";
+$array = [];
+/* Obtener los disenhos*/
+if($resultado = $conexionBBDD->query("SELECT * FROM design")){
+  if(($resultado->num_rows>0)){
+    while($fila = $resultado->fetch_assoc()){
+      $array[] = $fila;
+    }
+    //var_dump($array);
+    convertirJson($array, $fichero);
+  }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -5,8 +30,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <title>Explorar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../src/css/draw.css">
-    <link rel="stylesheet" href="./src/css/modales.css">
+    <link rel="stylesheet" href="../src/css/galeria.css">
+    <script src="../src/js/ajax.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -15,34 +41,47 @@
         </figure>
         <nav>
             <ul id='menuConSesion'>
-                <li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                <li><a href='' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
-                <li><a href='' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-                <div class='dropdown'>
-                    <button class='btn btn-default dropdown-toggle' type='button' id='dropdownMenu1' data-toggle='dropdown' aria-haspopup='true' aria-expanded='true'>
-                        <img id='avatar' src='' alt='menu desplegable de usuario'>
-                        <span class='caret'></span>
-                    </button>
-                    <ul class='dropdown-menu' aria-labelledby='dropdownMenu1'>
-                        <li><a href='#'>Mi perfil</a></li>
-                        <li><a href='#'>Mis diseños</a></li>
-                        <li role='separator' class='divider'></li>
-                        <li><a href='#'>Cerrar Sesión</a></li>
-                    </ul>
+                <li><a href='../index.ph' aria-label='Enlace a index'>Inicio<span></span></a></li>
+                <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
+                <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
+                <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+                <div class="dropdown">
+                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>
+                  <div class="dropdown-content">
+                    <a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
+                    <a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
+                    <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
+                  </div>
                 </div>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Explora la Comunidad Roled</h1>
-        <section id="galeria">
-            <!--Aquí se listan todos los diseños disponibles de la aplicación, paginados a través de consultas por ajax a una api donde están
-            las rutas de las imágenes-->
+        <h1>Comunidad Roled</h1>
+        <section id="ListaDisenhosCom">
+                <section class="disenhosCom">
+                  <!-- Lista de diseños dinámica por ajax -->
+                </section>
         </section>
-        <section id="paginacion">
-            <!-- Paginación de la galería -->
-        </section>
+        <nav class="pag" aria-label="Page navigation">
+          <ul class="pagination">
+            <li>
+              <a href="" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="">1</a></li>
+            <li><a href="">2</a></li>
+            <li><a href="">3</a></li>
+            <li><a href="">4</a></li>
+            <li><a href="">5</a></li>
+            <li>
+              <a href="" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
     </main>
     <footer>
         <section id="rrss">

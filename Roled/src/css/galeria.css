@@ -1,13 +1,13 @@
 @import url(./base.css);
 
-#listaDisenhos{
+#listaDisenhos, #listaDisenhosCom{
     margin: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.disenhos{
+.disenhos, .disenhosCom{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -15,7 +15,7 @@
 }
 
 
-.disenhos article{
+.disenhos article, .disenhosCom article{
     margin-top: 20px;
     border: 5px solid var(--clr-violeta);
     border-radius: 8px;
@@ -37,4 +37,4 @@
    right: 0;
 }
 
-/* s */
+/*  */
