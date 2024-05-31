@@ -7,8 +7,7 @@ const $d1 = document
       $modalConfReg = $d1.querySelector("#confReg"),
       $cerrarConfSave = $d1.querySelector("#cerrarConfSave"),
       $modalConfSave = $d1.querySelector("#confSave")
-      
-console.log($cerrarConfSave)
+
 
 
 function openModal(el, idModal){

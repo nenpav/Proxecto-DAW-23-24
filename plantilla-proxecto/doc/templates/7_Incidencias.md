@@ -6,8 +6,6 @@
 ## 1- Incidencias
 
 
-
-
 ## 2- Tarefas
 
 - Correcciones Alicia Anteproyecto
@@ -17,4 +15,26 @@
   - Añadir las ventajas fiscales de la cooperativa.
 
 
+- Pendiente
+
+  - Añadir usuario administrador y hacer los controles pertinentes
+  - Añadir paginación
+  - Añadir el menú hamburguesa para móvil
+  - Hacer las cosas responsive
+  - Corrección de errores de maquetación
+  - Comprobar botones modales
+  - Corregir función validar contraseña
+  - Proceso de animación
   
+
+- Terminado
+  - Registro de usuario
+  - Inicio de sesión
+  - Cerrar sesión
+  - Dibujar y guardar el diseño
+  - Ver los diseños del usuario (página Mis Diseños)
+  - Visitar la comunidad
+  - Borrar un diseño
+
+- Prototipar
+  - Valorar diseño de un usuario (pendiente)

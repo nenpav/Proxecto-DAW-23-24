@@ -1,10 +1,11 @@
 const $d=document,
       $galeria= $d.querySelector("#galeria"),
       $galeriaUser = $d.querySelector(".disenhos"),
-      $galeriaComun = $d.querySelector(".disenhosCom")
+      $galeriaComun = $d.querySelector(".disenhosCom"),
+      $botonBorrar = $d.querySelector(".borrar")
 
     
-      console.log($galeriaComun)
+      //console.log($galeriaComun)
 let disenos = []
 
 async function ajax(options){
@@ -37,27 +38,28 @@ async function ajax(options){
     fError: error=>console.log(error)
 }) */
 
-function renderDisenos(disenos, element){
+function renderDisenos(disenos, element, addBorrar){
     element.innerHTML=""
-    //console.log(disenos)
+    //console.log(addBorrar)
     if(disenos){
         element.innerHTML = disenos.map(el=>
             `
-                <article>
-                    <figure class="disenos">
-                        <img src="../../docsUsuarios/${el.id_usuario}/${el.nombre}" alt="">
-                    </figure>
-                    <button class="boton" data-id="${el.id_design}">Proyectar</button>
-                </article>
+            <article>
+                <figure class="disenos">
+                    <img src="../../docsUsuarios/${el.id_usuario}/${el.nombre}" alt="">
+                </figure>
+                <button class="boton ${addBorrar ? 'btn2' : ''}" data-id="${el.id_design}">Proyectar</button>
+                ${addBorrar ? `<button class="boton btn2 borrar" data-id="${el.id_design}">Borrar</button>` : ''}
+            </article>
             `
-        )
+        ).join('')
     }else{
         element.innerHTML = "<h4>No hay diseños disponibles</h4>"
     }
 }
 
 
- function getDisenos(element, url){
+ function getDisenos(element, url, addBorrar){
     disenos= []
     ajax({
         url: url,
@@ -71,21 +73,50 @@ function renderDisenos(disenos, element){
                 disenos = [...json]
                 
             } 
-            renderDisenos(disenos, element)
+            renderDisenos(disenos, element, addBorrar)
         },
         fError: error=>console.log(error)
     })
 } 
 
+async function deleteDisenho(id) {
+    try {
+        const resp = await fetch(`./borrarDis.php?id=${id}`, {
+            method: 'DELETE',
+        })
+        if (!resp.ok) {
+            throw new Error({
+                status:resp.status,
+                statusText:resp.statusText
+            })
+        }
+        const respuesta = await resp.text();
+       
+        location.reload(); 
+    }catch (error) {
+        console.error('Error:', error.message);
+    }
+    
+}
+
+if($galeriaUser!=null){
+    $galeriaUser.addEventListener("click",e=>{
+        e.preventDefault()
+        if(e.target.dataset.id && e.target.classList.contains("borrar")){
+            deleteDisenho(e.target.dataset.id)
+    
+        }
+    })
+}
 
 
  $d.addEventListener("DOMContentLoaded", e=>{
     e.preventDefault()
-    if($galeriaUser != 'undefined'){
-        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json')
+    if($galeriaUser != null){
+        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json', true)
         
     }
-    if($galeriaComun != 'undefined'){
-        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json')
+    if($galeriaComun != null){
+        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false)
     }
 }) 

@@ -5,7 +5,6 @@ initSession();
 if(!isset($_SESSION['login'])){
   header("Location: ../index.php");
 }
-
  $conexionBBDD = new mysqli('localhost','root','','roled');
  $user = $_SESSION['login']; 
  $rutaBase= "../src/img/avatarGen.png";
@@ -131,6 +130,8 @@ if(!isset($_SESSION['login'])){
             <li><a href="">Política de privacidad</a></li>
           </ul>
         </section>
+    </footer>
+
 </body>
 <template id="plantillaDiseño">
     <article>

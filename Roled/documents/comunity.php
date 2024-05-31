@@ -41,7 +41,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
         </figure>
         <nav>
             <ul id='menuConSesion'>
-                <li><a href='../index.ph' aria-label='Enlace a index'>Inicio<span></span></a></li>
+                <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
                 <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
                 <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
                 <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>

@@ -92,7 +92,7 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
         </section>
         <section class="portada">
           <h2>Pantalla POV</h2>
-          <figure>
+          <figure id="rol">
             <img src="./src/img/molino.delfin.cuadrado.CWEB_-e1612817731327.jpg" alt="">
           </figure>
           <section class="comenzar">

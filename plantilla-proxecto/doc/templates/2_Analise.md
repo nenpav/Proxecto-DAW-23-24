@@ -28,7 +28,6 @@ La siguiente tabla muestra todas las funcionalidades de las que dispone la aplic
 | Publicar un nuevo diseño        | Hacer que el diseño sea visible para la comunidad      | Todos                          |
 | Enviar un diseño al periférico  | Enviar un diseño para ser proyectado por el periférico | Todos                          |
 | Ver los diseños propios         | Listar los diseños del propio usuario                  | Todos                          |
-| Ver diseños de otro usuarios    | Listar los diseños de otro usuario                     | Todos                          |
 | Visitar la Comunidad            | Lista de todos los diseños de todos los usuarios       | Todos                          |
 | Valorar un diseño               | Valorar el diseño de otro usuario                      | Todos                          |
 | Eliminar un usuario             | Eliminar aun usuario de la BBDD                        | Administrador                  |
