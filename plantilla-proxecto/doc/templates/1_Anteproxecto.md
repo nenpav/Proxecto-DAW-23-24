@@ -29,23 +29,21 @@ Las pantallas POV son muy populares en algunos países asiáticos como China per
 
 ### 2.1- Idea de negocio
 
-El producto central de Roled es un dispositivo POV que permite proyectar imágenes holográficas
-gracias a la tecnología LED y el fenómeno de la "Persistencia de la Visión". 
-
-Además, Roled ofrece una aplicación web gratuita que permite la creación de dibujos de pixelart, con la posibilidad de animarlos, que podrán ser proyectados en el dispositivo POV.
+El producto central de Roled es un dispositivo POV que permite proyectar imágenes holográficas gracias a la tecnología LED y el fenómeno de la "Persistencia de la Visión". Además, Roled ofrece una aplicación web gratuita que permite la creación de dibujos mediante la técnica del pixelart, con la posibilidad de animarlos, que podrán ser proyectados en el dispositivo POV.
 
 Como valor añadido, Roled ofrece un contenido exclusivo de pago en la aplicación, que será gratuito para aquellos usuarios que realicen y compartan muchos diseños con la comunidad.
-Además, de forma gratuita, todos los usuarios gozarán de un servicio de soporte de calidad y de formación para aprender a configurar y usar el dispositivo POV.
+Además, también de forma gratuita, todos los usuarios gozarán de un servicio de soporte de calidad y de formación para aprender a configurar y usar el dispositivo POV. Las empresas que adquieran el producto, podrán adquirir de forma económica el servicio de mantenimiento de los dispositivos. 
 
-|Producto central   || Dispositivo POV                       |
-|Producto aumentado || Aplicación web                        |
-|Valor añadido      || Contenido exclusivo de pago, soporte  |
+|------------------------------------------------------------|
+|Producto central   | Dispositivo POV                        |
+|Producto aumentado | Aplicación web                         |
+|Valor añadido      | Contenido exclusivo de pago, soporte   |
 
 Las posibles aplicaciones del Dispositivo POV son muy extensas, desde el ámbito de la publicidad y el marketing, como decoración en pubs o discotecas, uso lúdico en el público más joven, creadores de contenido en plataformas de stream o redes sociales, etc. Además, la aplicación web puede servir a muchos artistas como plataforma para dar a conocer su trabajo. Por lo tanto, el segmento de usuarios y clientes cambia según el ámbito de uso del producto, aumentando su versatilidad.
 
 ### 2.2- Xustificación da idea
 
-En la actualidad, existen muchas ofertas de aplicaciones de entretenimiento como videojuegos, redes sociales, etc. No obstante, no ofrecen ningún tipo de estimulación o experiencia más allá de acabar con el aburrimiento. Desde Roled, se apuesta por una aplicación que fomenta la creatividad y que permita a todos los usuarios formar parte de una comunidad de usuarios sana y tolerante, aspectos muy difíciles de encontrar en Internet hoy en día.
+En internet existe una gran variedad de ofertas de aplicaciones de entretenimiento como videojuegos, redes sociales, etc. No obstante, no ofrecen ningún tipo de estimulación o experiencia más allá de acabar con el aburrimiento. Desde Roled, se apuesta por una aplicación que fomenta la creatividad y que permita a todos los usuarios formar parte de una comunidad de usuarios sana y tolerante, aspectos muy difíciles de encontrar en la red.
 
 En la actualidad existen dispositivos POV procedentes principalmente del mercado de China. No obstante, no es un producto que tenga presencia en el mercado nacional por lo que para poder adquirir un producto se debe recurrir a plataformas como Aliexpress y semejantes, con los riesgos que eso implica en cuanto a soporte, devolución de productos defectuosos, etc. 
 Roled ofrece las garantías de adquirir un producto nacional, que cumple con todos los requisitos de garantía y seguridad establecidos por la UE y España, a la vez que ofrece a todos los clientes un servicio de soporte e incidencias de calidad. 
@@ -62,7 +60,7 @@ Roled tiene dos segmentos de clientes diferenciados y, dependiendo del segmento 
 
 - Usuarios 
 
-Hace referencia a personas que utilizan el producto de forma lúdica y buscando simplemente disfrutar de la experiencia del producto. Estos usuarios se espera que sean principalemente jóvenes de entre 10 - 35, ya que son los que presentan una relación más estrecha con la tecnología, las redes sociales y las plataformas de stream, tanto del ámbito de los videojuegos como de contenido más artístico. Debido a que algunos de estos usuarios no tienen ingresos propios, en ocasiones los clientes podrán ser familiares o personas adultas cercanas con un mayor poder adquisitivo.
+Hace referencia a personas que utilizan el producto de forma lúdica y buscando simplemente disfrutar de la experiencia del producto. Estos usuarios se espera que sean principalemente jóvenes de entre 10 a 35, ya que son los que presentan una relación más estrecha con la tecnología, las redes sociales y las plataformas de stream, tanto del ámbito de los videojuegos como de contenido más artístico. Debido a que algunos de estos usuarios no tienen ingresos propios, en ocasiones los clientes podrán ser familiares o personas adultas cercanas con un mayor poder adquisitivo.
 
 - Empresas
 

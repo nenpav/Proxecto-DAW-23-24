@@ -7,4 +7,14 @@
 
 
 
+
 ## 2- Tarefas
+
+- Correcciones Alicia Anteproyecto
+
+  - Repasar la redacción
+  - Justificar con datos las cifras del mercado de China
+  - Añadir las ventajas fiscales de la cooperativa.
+
+
+  
