@@ -17,7 +17,8 @@ Fase de desarrollo.
 
 ## Descrición
 
-El proyecto Roled consiste en una aplicación de dibujo basado en el pixelart que permite enviarl estos diseños a un dispositivo POV ("Persistence of vision") que permite reproducir estos dibujos de forma holográfica. También permite la creación de animaciones basadas en fotogramas. Todos estos diseños son públicos para el resto de usuarios de la aplicación, con el objetivo de crear una comunidad dentro de la aplicación. Aunque no está implementado, la aplicación también permite realizar la compra del dispositivo POV y realizar el pago de la suscripción.
+El proyecto Roled consiste en una aplicación de dibujo basado en el pixelart que permite enviar estos diseños a un dispositivo POV ("Persistence of vision") que permite reproducir estos dibujos de forma holográfica. Estos diseños pueden ser animados mediante fotogramas.
+Los diseños son públicos para el resto de usuarios de la aplicación, con el objetivo de crear una comunidad dentro de la aplicación. Aunque no está implementado, la aplicación también permite realizar la compra del dispositivo POV y realizar el pago de la suscripción.
 Para realizar este proyecto se uso HTML5,CSS3 y JavaScript para la parte del frontend y PHP para la parte del Backend. Para la programación del dispositivo POV se usó C+.
 
 ## Instalación / Posta en marcha
@@ -35,13 +36,17 @@ Dibuja, comparte y proyecta tus diseños mediante una experiencia holográfica c
 
 ## Sobre o autor
 
-
-Este proyecto es creado como TFC para el ciclo de Desarrollo de Aplicaciones Web. Perfil rofesional junior con muy poca experiencia, enfocado tanto en el desarrollo frontend como backend de aplicaciones web. Conocimientos básicos en diferentes lenguajes de programación como Java, JS y PHP, así como otros lenguajes de marcas como XML, JSON, HTML, etc. 
+Este proyecto es creado como TFC para el ciclo de Desarrollo de Aplicaciones Web. Perfil rofesional junior con poca experiencia, enfocado tanto en el desarrollo frontend como backend de aplicaciones web. Conocimientos básicos en diferentes lenguajes de programación como Java, JS y PHP, así como otros lenguajes de marcas como XML, JSON, HTML, etc. 
 El proyecto nace con el objetivo de aumentar la oferta de aplicaciones que fomenten la creatividad y creen una comunidad de usuarios respetuosa, además de que puede tener numerosas aplicaciones comerciales en diferentes sectores como el de la publicidad, creadores de contenido, decoración en discotecas, etc., abriendo un nicho de mercado que no está siendo explotado en nuestro país. 
 
 ## Licenza
 
-> *EXPLICACIÓN*: É requisito INDISPENSABLE o licenciar explicitamente o proxecto software. Recoméndase licenciar con GNU Free Documentation License Version 1.3*. Crear un ficheiro `LICENSE` na raiz do repo, co teu ficheiro de licenza. Lembra que se empregas unha licenza de software libre estás a autorizar a derivación da túa obra baixo a mesma licenza que elixas, podendo dar continuidade, p. e. outro alumno, para continuar o teu proxecto noutro curso.
+El proyecto consta de Licencia propietaria o comercial personalizada donde está permitido el uso del softare pero quedan restringidas, salvo autorización, las siguientes acciones:
+- No se puede copiar ni distribuir el contenido del proyecto.
+- No se puede modificar, traducir o crear software derivado sin permiso.
+- No se puede realizar ingeniería inversa de software.
+
+Para más información, ver el fichero de `LICENSE` en la raíz del repositorio.
 
 ## Índice
 
@@ -59,4 +64,4 @@ El proyecto nace con el objetivo de aumentar la oferta de aplicaciones que fomen
 
 ## Links
 
-> EXPLICACIÓN*: Ligazóns externas e descipciones destas ligazóns que creas conveniente indicar aquí. Xeralmente xa van estar integrados coa túa documentación, pero se requires realizar unha listaxe deles, leste é o lugar.
+Ver apartado de "Referencias" para ver la documentación del proyecto.
