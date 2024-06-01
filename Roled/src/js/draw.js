@@ -61,11 +61,15 @@ $pintar.addEventListener("click", e=>{
     e.preventDefault()
     pintar= true,
     borrar = false
+    $pintar.classList.add("activa")
+    $borrar.classList.remove("activa")
 })
 
 $borrar.addEventListener("click",e=>{
     borrar = true,
     pintar = false
+    $borrar.classList.add("activa")
+    $pintar.classList.remove("activa")
 })
 
 

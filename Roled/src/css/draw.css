@@ -89,7 +89,9 @@ button{
     border: none;
 }
 
-
+.activa{
+    background-color: var(--clr-violeta);
+}
 /*=====  End of Estilos de los iconos   ======*/
 
 

@@ -298,6 +298,9 @@ li{
 
 /*=====  End of Estilos del dropdown  ======*/
 
+#menuMovil{
+    display: none;
+}
 
 
 /*=============================================
@@ -376,8 +379,9 @@ li{
         padding: 10px;
     }
 
+
     #rrss figure svg {
-        width: 50px; 
+        width: 30px; 
     }
 
     #accesibilidad, #contacto, #terminos {
@@ -392,6 +396,55 @@ li{
    #rol img{
     width: 100%;
    }
+
+   .navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer; /* Añadido para mostrar que es clickeable */
+}
+
+.navbar-toggler-icon {
+    background-image: url("../img/menu-hamburgesa.svg");
+    /* Ajusta el tamaño del ícono según tu necesidad */
+    width: 30px;
+    height: 30px;
+}
+
+.navbar-collapse {
+    display: none; /* Oculta el menú desplegable por defecto */
+    text-align: center;
+}
+
+.dropdown .dropbtn {
+    display: none;
+}
+
+.dropdown-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.dropdown-content a {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-align: left;
+}
+
+#menuConSesion, #menuMovil {
+    display: none;
+}
+
+/* Añade un estilo para mostrar el menú cuando el botón está activo */
+.navbar-toggler.active + .navbar-collapse {
+    display: block;
+}
+
+
    
 }
 
