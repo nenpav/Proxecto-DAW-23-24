@@ -32,6 +32,10 @@ if($_POST){
         header("Location: ../documents/registro.php?registro=fail"); 
     }
 
+}else{
+    header("Location: ../index.php");
 }
+
+
 
 ?>

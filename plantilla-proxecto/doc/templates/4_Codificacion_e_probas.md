@@ -24,8 +24,9 @@ createElement() por la de createElementNS().
 3- Se intentó usar la librería de php imagine-svg para convertir el svg en una imagen, utilizando el gestor de dependencias Composer. Sin embargo, tras problemas con uno de
 los módulos que no funcionaban y al no encontrar solución al problema, se optó por desechar esta forma y guardar directamente el fichero en su formato. 
 
-4- Problema con el formato al crear el JSON resultante de la consulta a través de PHP. Se solucionó controlando si se obtenía un registro o varios para convertirlo en un Array y posteriormente
-poder ser manejado con un map.
+4- Problema con el formato al crear el JSON resultante de la consulta a través de PHP. Se solucionó controlando si se obtenía un registro o varios para convertirlo en un Array y posteriormente poder ser manejado con un map.
+
+5- Se añade el control de si el usuario ya tiene una imagen de avatar, al subir una nueva, se borre la anterior y se modifiquen los datos del avatar en la base de datos.
 
 ## 2- Prototipos
 

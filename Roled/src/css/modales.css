@@ -125,7 +125,7 @@ dialog button, dialog input[type='submit']{
     background-color: var(--clr-fondo-primario);
 }
 
-#confReg, #confSave{
+#confReg, #confSave , #save{
     width: 300px;
     height: 100px;
     background-color: var(--clr-violeta);
@@ -137,11 +137,11 @@ dialog button, dialog input[type='submit']{
     
 }
 
-#confReg p, #confSave p{
+#confReg p, #confSave p, #save p{
     
     margin: auto auto;
 }
-#cerrarConfReg, #cerrarConfSave{
+#cerrarConfReg, #cerrarConfSave, #cerrarSave{
     color: var(--clr-letra);
     background-color: transparent;
     position: absolute;

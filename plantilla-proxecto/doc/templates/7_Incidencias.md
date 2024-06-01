@@ -14,17 +14,16 @@
   - Justificar con datos las cifras del mercado de China
   - Añadir las ventajas fiscales de la cooperativa.
 
-
 - Pendiente
 
   - Añadir usuario administrador y hacer los controles pertinentes
-  - Añadir paginación
+  - Añadir paginación (si da tiempo)
   - Añadir el menú hamburguesa para móvil
   - Hacer las cosas responsive
   - Corrección de errores de maquetación
-  - Comprobar botones modales
   - Corregir función validar contraseña
   - Proceso de animación
+  - Codificar la contraseña en formato hash
   
 
 - Terminado
@@ -35,6 +34,8 @@
   - Ver los diseños del usuario (página Mis Diseños)
   - Visitar la comunidad
   - Borrar un diseño
+  - Corrección botones modal
+  - Añadir control de imagen de avatar
 
 - Prototipar
   - Valorar diseño de un usuario (pendiente)

@@ -6,6 +6,12 @@ if(!isset($_SESSION['login'])){
   header("Location: ../index.php");
 }
 
+if(isset($_GET['subida'])){
+  echo "<script>window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('save').showModal();
+  });</script>";
+}
+
 $user= $_SESSION['login'];
 $conexionBBDD = new mysqli ('localhost','root','','roled');
 $rutaBase= "../src/img/avatarGen.png";
@@ -32,8 +38,10 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/miPerfil.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../src/css/modales.css">
     <script src="../src/js/ajax.js" defer></script>
     <script src="../src/js/miPerfil.js" defer></script>
+    <script src="../src/js/modales.js" defer></script>
 </head>
 <body>
     <header>
@@ -133,6 +141,17 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
         </section>
       </footer>
 <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+<dialog id="save">
+    <button id="cerrarSave">X</button>
+    <?php
+        if($_GET['subida'] == "ok"){
+          echo "<p id='confSubida'>El avatar se ha subido correctamente</p>";
+        }
+        if($_GET['subida'] == "ko"){
+          echo "<p id='confSubida'>Error al subir el avatar</p>";
+        }
+    ?>
+  </dialog>
 </body>
 <template id="disenhos">
     <article>

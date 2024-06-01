@@ -22,6 +22,12 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
       document.getElementById('confReg').showModal();
     });</script>";
   }
+
+  if(isset($_GET['index']) && $_GET['index']=='ok'){
+    echo "<script>window.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('modalSesion').showModal();
+    });</script>";
+  }
 ?>
 <!DOCTYPE html>
 <html lang="es">
