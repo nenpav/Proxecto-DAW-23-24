@@ -28,6 +28,7 @@ los módulos que no funcionaban y al no encontrar solución al problema, se opt�
 
 5- Se añade el control de si el usuario ya tiene una imagen de avatar, al subir una nueva, se borre la anterior y se modifiquen los datos del avatar en la base de datos.
 
+
 ## 2- Prototipos
 
 El prototipo se realiza mediante la Aplicación de Figma.
@@ -49,3 +50,4 @@ Js:
 
 3- Al guardar un diseño en svg se guarda como un Object SVG por lo que no se puede visualizar correctamente. Se solucionó transformado el SVG a string para posteriormente
 ser mandado en un input hidden y guardar el fichero en el directorio del servidor.
+

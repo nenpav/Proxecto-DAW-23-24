@@ -19,8 +19,8 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
       $array[] = $fila;
     }
     //var_dump($array);
-    convertirJson($array, $fichero);
   }
+  convertirJson($array, $fichero);
 }
 ?>
 <!DOCTYPE html>

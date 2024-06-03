@@ -5,6 +5,7 @@
 
 ## 1- Incidencias
 
+-Si se elimina y se crea la bbdd de nuevo los json quedan con los datos anteriores. Comprobar que pasa si se borran todos los diseños.
 
 ## 2- Tarefas
 
@@ -15,13 +16,10 @@
   - Añadir las ventajas fiscales de la cooperativa.
 
 - Pendiente
-
-  - Añadir usuario administrador y hacer los controles pertinentes
   - Añadir paginación (si da tiempo)
   - Añadir el menú hamburguesa para móvil
   - Hacer las cosas responsive
   - Corrección de errores de maquetación
-  - Proceso de animación
   - Configurar el despliegue
   
 
@@ -37,6 +35,7 @@
   - Añadir control de imagen de avatar
   - Corregir función validar contraseña
   - Codificar la contraseña en formato hash
+  - Proceso de animación
 
 
 - Prototipar

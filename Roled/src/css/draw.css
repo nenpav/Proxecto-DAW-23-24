@@ -89,7 +89,24 @@ button{
     border: none;
 }
 
-.activa{
+.botonRango{
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: var(--clr-violeta);    
+    color: var(--clr-letra);
+    font-weight: 600;
+}
+
+.botonRango:hover{
+    background-color: var(--clr-hover);
+}
+
+.botonRango:disabled{
+    background-color: var(--clr-disabled);
+    color: var(--clr-violeta);
+}
+.activo{
     background-color: var(--clr-violeta);
 }
 /*=====  End of Estilos de los iconos   ======*/

@@ -81,7 +81,7 @@ function renderDisenos(disenos, element, addBorrar){
 
 async function deleteDisenho(id) {
     try {
-        const resp = await fetch(`./borrarDis.php?id=${id}`, {
+        const resp = await fetch(`../backend/borrarDis.php?id=${id}`, {
             method: 'DELETE',
         })
         if (!resp.ok) {

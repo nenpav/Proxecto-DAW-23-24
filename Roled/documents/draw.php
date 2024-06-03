@@ -69,19 +69,20 @@ $rutaBase= "../src/img/avatarGen.png";
                 </figure>
             </article>
             <article id="slider">
-              <label for="range" class="form-label">Animar Imagen</label>
-              <input type="range" class="form-range" min="0" max="5" step="1" id="range">
+              <input type="checkbox" name="animar" id="animar">
+              <label for="animar">Modo animación</label>
+              <label for="range"></label>
+              <input type="range" class="form-range" min="0" max="4" step="1" value="0" id="range" disabled>
+              <p id="actual">Frame actual: 1</p>
+              <p id="numFrames">Número de frames: 1</p>
+              <button class="botonRango" id="mas">+</button>
+              <button class ="botonRango" id="menos">-</button>
             </article>
             <button id='guardar' class='boton' onclick="window.modalGuardar.showModal()">Guardar</button>
         </section>
 
         <section id="lienzo">
-          <svg id="svgLienzo" width="600" height="600" role="img" aria-label="lienzo de dibujo">
-            
-          </svg>
         </section>
-       
-
     </main>
 
     <footer>

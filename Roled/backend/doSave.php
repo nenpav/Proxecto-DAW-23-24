@@ -17,7 +17,7 @@ if(!$_POST){
 
 $svg = !empty($_POST['datosSvg'])?$_POST['datosSvg']:'';
 $nombre = $_POST['nombre'];
-//var_dump($_POST['nombre']);
+//var_dump($svg);
 $login = $_SESSION['login'];
 $ruta = "../../docsUsuarios/$login/$nombre.svg";
 

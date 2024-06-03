@@ -9,15 +9,15 @@ if(!isset($_SESSION['login'])){
  $user = $_SESSION['login']; 
  $rutaBase= "../src/img/avatarGen.png";
  $fichero = "../src/json/roled.json";
-
+$array=[];
  if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$user'")){
   if(($resultado->num_rows>0)){
     while($fila = $resultado->fetch_assoc()){
       $array[] = $fila;
     }
     //var_dump($array);
-    convertirJson($array, $fichero);
   }
+  convertirJson($array, $fichero);
 }
 ?>
 
