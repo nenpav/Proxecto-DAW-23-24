@@ -5,6 +5,7 @@
 
 if($_POST){
    
+    //No se validan los vacíos ya que se validan antes de enviar el formulario por JavaScript
     $email = trim(strip_tags($_POST['email']));
     $login = trim(strip_tags($_POST['user']));
     $pwd = trim(strip_tags($_POST['pwd']));
@@ -21,14 +22,17 @@ if($_POST){
         if(!crearCarpetaUser($login)){
             throw new Exception();
         }
+        
+        $hash = formatoHash($pwd);
 
-        $conexionBBDD->query("INSERT INTO  usuarios (username,pwd,email,tipo, avatar, fecha_nac) values
-        ('$login', '$pwd', '$email', 'U', NULL, '$fechaNac')");
+        $conexionBBDD->query("INSERT INTO  usuarios (username,pwdHash,email,tipo, avatar, fecha_nac) values
+        ('$login', '$hash', '$email', 'U', NULL, '$fechaNac')");
 
         $conexionBBDD->commit();
         header("Location: ../documents/registro.php?registro=ok"); 
     }catch(Exception $e){
         $conexionBBDD->rollback();
+        eliminarCarpetaUser($login);
         header("Location: ../documents/registro.php?registro=fail"); 
     }
 

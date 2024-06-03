@@ -1,4 +1,4 @@
-const $d=document,
+ const $d=document,
         $formRegistro = $d.querySelector("#formR"),
         $email = $formRegistro.email,
         $username = $formRegistro.user,
@@ -8,9 +8,7 @@ const $d=document,
         $error = $d.querySelector("#error"),
         $inputs = $d.querySelectorAll("input")
     
-console.log($pwd.value)
-
-
+//console.log($pwd.value)
 
 function datosObligatorios(){
     $error.innerHTML=""
@@ -28,16 +26,16 @@ function datosObligatorios(){
     $error.innerHTML=""
     if(!regEmail.test($email.value)){
         $error.innerHTML="La email no es válido"
-        $pwd.classList.add("error")
+        $email.classList.add("error")
         return false
     }
-    $pwd.classList.remove("error")
+    $email.classList.remove("error")
     return true
 } 
 
 
-/*  function pwd(){
-    const regPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+  function pwd(){
+    const regPwd = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[.@$!%*?&])[A-Za-z\d.@$!%*?&]{8,15}$/
     $error.innerHTML=""
     if(!regPwd.test($pwd.value)){
         $error.innerHTML="La contraseña no es válida"
@@ -46,16 +44,16 @@ function datosObligatorios(){
     }
     $pwd.classList.remove("error")
     return true
-}  */
+}  
 
 function pwd2(){
     $error.innerHTML=""
     if($pwd.value != $pwd2.value){
         $error.innerHTML="Las contraseñas no son iguales"
-        $pwd.classList.add("error")
+        $pwd2.classList.add("error")
         return false
     }
-    $pwd.classList.remove("error")
+    $pwd2.classList.remove("error")
     return true
 }
 
@@ -63,28 +61,29 @@ function pwd2(){
     const regUser = /^[a-zA-Z0-9-_]{3,10}$/
     if(!regUser.test($username.value)){
         $error.innerHTML="El nombre de usuario no es válido"
-        $pwd.classList.add("error")
+        $username.classList.add("error")
         return false
     }
-    $pwd.classList.remove("error")
+    $username.classList.remove("error")
     return true
 }
 
 
 $formRegistro.addEventListener("submit",e=>{
     e.preventDefault() 
-
+    $error.innerHTML = ""
    switch (true) {
     case !email():
         break;
     case !userName():
         break;
-    /* case !pwd():
-        break; */
-    case !pwd2:
+    case !pwd():
+        break; 
+    case !pwd2():
         break;
     default:
         $formRegistro.submit()  
         break;
    }
-})
+}) 
+

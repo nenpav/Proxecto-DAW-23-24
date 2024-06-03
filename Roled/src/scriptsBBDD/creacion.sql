@@ -4,7 +4,7 @@ CREATE DATABASE IF NOT EXISTS roled;
 CREATE TABLE IF NOT EXISTS usuarios (
     id_usuario INT AUTO_INCREMENT primary key,
     username VARCHAR(20) NOT NULL UNIQUE,
-    pwd VARCHAR(12) NOT NULL,
+    pwdHash VARCHAR(255) NOT NULL,
     email VARCHAR(30) NOT NULL,
     tipo ENUM('U','A','S','C') NOT NULL,
     avatar VARCHAR(30) DEFAULT NULL,

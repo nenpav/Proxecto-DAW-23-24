@@ -21,9 +21,8 @@
   - Añadir el menú hamburguesa para móvil
   - Hacer las cosas responsive
   - Corrección de errores de maquetación
-  - Corregir función validar contraseña
   - Proceso de animación
-  - Codificar la contraseña en formato hash
+  - Configurar el despliegue
   
 
 - Terminado
@@ -36,6 +35,9 @@
   - Borrar un diseño
   - Corrección botones modal
   - Añadir control de imagen de avatar
+  - Corregir función validar contraseña
+  - Codificar la contraseña en formato hash
+
 
 - Prototipar
   - Valorar diseño de un usuario (pendiente)

@@ -85,13 +85,13 @@ function isUserExits($nombre){
 function isCorrectPwd($usuario, $pwd){
     global $conexionBBDD;
     $resultado = $conexionBBDD->query("SELECT * FROM usuarios WHERE username='$usuario'");
-    /* if(!password_verify($pwd, $fila['pwd'])){
-        return false;
-    } */ 
-    if($resultado->fetch_assoc()['pwd']===$pwd){
+    if(password_verify($pwd, $resultado->fetch_assoc()['pwdHash'])){
+        return true;
+    } 
+    /* if($resultado->fetch_assoc()['pwdHash']===$pwd){
         
         return true;
-    }
+    } */
     return false;
 }
 
@@ -114,6 +114,15 @@ function crearCarpetaUser($username){
     return false;
 } 
 
+ /**
+  * Elimina la carpeta en caso de error durante el registro
+  */
+  function eliminarCarpetaUser($username) {
+    $rutaBase = "../../docsUsuarios/".$username;
+    if (is_dir($rutaBase)) {
+        rmdir($rutaBase); 
+    }
+}
 
 /**
  * Busca la ruta del avatar del usuario. Si no existe pone una foto genérica 
