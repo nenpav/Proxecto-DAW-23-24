@@ -153,8 +153,41 @@ dialog button, dialog input[type='submit']{
 }
 /*----------  EStilos de las mediaqueries  ----------*/
 
-@media screen and(max-width: 425px) {
-    
+@media screen and (max-width: 425px) {
+    dialog section#left{
+        display: none;
+    }
+
+    #modSesion{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    dialog #rigth{
+        width: 100%;
+        height: 100%;
+
+    }   
+    dialog #rigth p {
+        align-items: center;
+        width:100%;
+    }
+
+    dialog #rigth p label, dialog #rigth p input{
+        width: 100px;
+    }
+    dialog #rigth svg{
+        width: 80px;
+    }
+    dialog p#errorS{
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
 

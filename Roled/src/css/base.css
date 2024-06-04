@@ -1,5 +1,5 @@
 /**
-* Estilos base de todas las vistas de la aplicación
+* Estilos base de todas las pantallas de la aplicación
 *
 */
 
@@ -46,6 +46,7 @@ main{
     flex: 1;
     
 }
+
 .error{
     border: 1px solid red;
     color: red;
@@ -143,12 +144,16 @@ nav>ul>li>button{
 li{
     color: var(--clr-letra);
 }
+
+#menuMovil{
+    display: none;
+}
 /*=====  End of Estilos del menú  ======*/
 
 
 
 /*=============================================
-=            Estilos de las cabeceras            =
+=            Estilos de los encabezados            =
 =============================================*/
 
 h1, h2, h3{
@@ -167,9 +172,7 @@ h3{
     font-size: var(--tam-h3);
 }
 
-/*=====  End of Estilos de las cabeceras  ======*/
-
-
+/*=====  End of Estilos de los encabezados  ======*/
 
 
 /*=============================================
@@ -298,9 +301,7 @@ li{
 
 /*=====  End of Estilos del dropdown  ======*/
 
-#menuMovil{
-    display: none;
-}
+
 
 
 /*=============================================
@@ -372,6 +373,7 @@ li{
     h3{
         font-size: calc(var(--tam-h3) / 1.5);
     }
+
     nav>ul>li{
         height: auto;
     }
@@ -388,7 +390,6 @@ li{
         padding: 10px;
     }
 
-
     #rrss figure svg {
         width: 30px; 
     }
@@ -402,6 +403,7 @@ li{
     #rol{
         width: 300px;
     }
+
    #rol img{
     width: 100%;
    }
@@ -431,10 +433,10 @@ li{
     width: 30px;
     height: 30px;
 }
-.navbar-collapse {
+/* .navbar-collapse {
     display: none; 
     text-align: center;
-}
+} */
 .dropdown .dropbtn {
     display: none;
 }
@@ -463,7 +465,6 @@ li{
     text-align: right;
 }
 
-/* Añade un estilo para mostrar el menú cuando el botón está activo */
 .navbar-toggler.active + #menuMovil {
     display: flex;
 }
@@ -474,6 +475,26 @@ li{
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+#menuSinSesion {
+    gap: 20px;
+    margin-bottom: 1rem;
+  
+}
+
+#menuSinSesion a.activa{
+    background-color: transparent;
+}
+
+#menuSinSesion a.activa span{
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    transition: all .5s ease-in;
 }
    
 }
