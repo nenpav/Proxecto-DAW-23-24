@@ -33,41 +33,40 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
     <link rel="stylesheet" href="../src/css/galeria.css">
     <script src="../src/js/ajax.js" defer></script>
     <script src="../src/js/base.js" defer></script>
-
 </head>
 <body>
     <header>
-        <figure id="logo">
-            <a href="" aria-label="enlace a index"><img src="../src/img/ROLED-trans.png" alt="logo"></a>
-        </figure>
-        <nav>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+      <figure id="logo">
+          <a href="" aria-label="enlace a index"><img src="../src/img/ROLED-trans.png" alt="logo"></a>
+      </figure>
+      <nav>
+        <button class="navbar-toggler" type="button" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-            <ul id='menuConSesion'>
-                <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
-                <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
-                <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-                <div class="dropdown">
-                  <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>
-                  <div class="dropdown-content">
-                    <a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
-                    <a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
-                    <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
-                  </div>
-                </div>
-            </ul>
-            <ul id="menuMovil">
-                <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
-                <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
-                <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
-                <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-                <li><a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a></li> 
-                <li><a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a></li>
-                <li><a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a></li>   
-            </ul>
-        </nav>
+        <ul id='menuConSesion'>
+            <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
+            <li><a href='./draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>
+            <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
+            <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+            <div class="dropdown">
+              <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../../'); ?>" alt=""></button>
+              <div class="dropdown-content">
+                <a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
+                <a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
+                <a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a>
+              </div>
+            </div>
+        </ul>
+        <ul id="menuMovil" class="navbar-nav d-none">
+            <li class="nav-item"><button class="cerrar-menuHam" type="button" aria-label="Cerrar menú">X</button></li>
+            <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
+            <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
+            <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
+            <li><a href="./miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a></li> 
+            <li><a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a></li>
+            <li><a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a></li>   
+        </ul>
+      </nav>
     </header>
     <main>
         <h1 id="titComunity">Comunidad Roled</h1>

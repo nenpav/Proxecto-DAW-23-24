@@ -44,6 +44,9 @@ function renderMenu($sesion){
     $rutaBase = "./src/img/avatarGen.png";
     $rutaAvatar="..";
     if($sesion){
+        echo '<button class="navbar-toggler" type="button" aria-label="Toggle navigation">';
+            echo '<span class="navbar-toggler-icon"></span>';
+        echo "</button>";
         echo "<ul id='menuConSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";
             echo "<li><a href='./documents/draw.php' aria-label='Enlace a dibujar'>Dibujar<span></span></a></li>";
@@ -56,7 +59,17 @@ function renderMenu($sesion){
               <a href='./documents/design.php' aria-label='Enlace a mis diseños'>Mis Diseños</a>
               <a href='./backend/sesiones/cerrarSesion.php' aria-label='Cerrar sesión'>Cerrar Sesión</a>
             </div>
-        </div>";
+            </div>";
+            echo "</ul>";
+            echo "<ul id='menuMovil' class='navbar-nav d-none'>";
+            echo '<li class="nav-item"><button class="cerrar-menuHam" type="button" aria-label="Cerrar menú">X</button></li>';
+            echo "<li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>";
+            echo "<li><a href='./documents/comunity' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>";
+            echo "<li><a href='./documents/tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
+            echo '<li><a href="./documents//miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a></li>';
+            echo '<li><a href="./documents/design.php" aria-label="Enlace a mis diseños">Mis Diseños</a></li>';
+            echo '<li><a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a></li>';
+            echo "</ul>";
     }else{
         echo "<ul id='menuSinSesion'>";
             echo "<li><a href='#' aria-label='Enlace a index' class='activa'>Inicio<span></span></a></li>";

@@ -17,11 +17,10 @@
 
 - Pendiente
   - Añadir paginación (si da tiempo)
-  - Añadir el menú hamburguesa para móvil
   - Hacer las cosas responsive
   - Corrección de errores de maquetación
   - Configurar el despliegue
-  
+  - guardar las animaciones
 
 - Terminado
   - Registro de usuario
@@ -36,6 +35,7 @@
   - Corregir función validar contraseña
   - Codificar la contraseña en formato hash
   - Proceso de animación
+  - Añadir el menú hamburguesa para móvil
 
 
 - Prototipar
