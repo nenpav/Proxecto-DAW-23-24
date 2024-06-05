@@ -75,12 +75,9 @@ function crearCuadricula(matriz){
 }
 
 
-//Funciones de las animaciones
+
  function crearFrames(){
-    while($contenedorLienzos.childElementCount>1){
-        $contenedorLienzos.removeChild($contenedorLienzos.lastChild)
-    }
-    let num = $rang.max
+    let num = $rang.max 
     for(let i=1;i<=num; i++){
         crearCuadricula(generarMatriz())
     }  
@@ -105,9 +102,6 @@ function max(operacion){
     }
 }
 
-function guardarUnSvg(){
-
-}
 
 //Eventos
 
@@ -213,9 +207,14 @@ $guardar.addEventListener("click",e=>{
 $animar.addEventListener("change",e=>{
     $rang.disabled = !e.target.checked
     $botonMas.disabled = !e.target.checked
-    $botonMenos.disabled = !e.target.checked
-    if(e.target.checked){
-        crearFrames()
+    $botonMeno
+    s.disabled = !e.target.checked
+    if($animar.checked){
+        if(contadorFrames == 1) {
+            crearFrames()
+             contadorFrames++ 
+            //console.log(contadorFrames)
+        }
         const lienzos = $contenedorLienzos.querySelectorAll("svg")
         lienzos.forEach(el=>{
             if(el.id == $rang.value.toString()){
@@ -225,13 +224,18 @@ $animar.addEventListener("change",e=>{
             }
         })
         $numFrames.innerHTML=""
-        $numFrames.innerHTML="Número de frames: 5"
+        $numFrames.innerHTML=`Número de frames: ${parseInt($rang.max)+1}`
     }else{
         while($contenedorLienzos.childElementCount>1){
             $contenedorLienzos.removeChild($contenedorLienzos.lastChild)
         }
         $numFrames.innerHTML=""
         $numFrames.innerHTML="Número de frames: 1"
+        $rang.value = 0
+        contadorFrames=1
+        //console.log(contadorFrames)
+        const lienzo = $d2.querySelector("svg")
+        lienzo.style.display = "block"
     }
 })
 

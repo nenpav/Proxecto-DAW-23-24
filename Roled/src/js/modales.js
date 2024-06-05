@@ -40,7 +40,7 @@ closeModal($cerrarConfSubida, $modalSubida)
 if($botonRegistro != undefined){
     $botonRegistro.addEventListener("click",e=>{
         e.preventDefault()
-        window.location.href = "./documents/registro.php"
+        window.location.href = redireccionModal
     })
 }
 

@@ -14,6 +14,7 @@ main{
 }
 
 #menuDibujo {
+    
     grid-column: 1;
     display: flex;
     flex-direction: column;
@@ -112,12 +113,16 @@ button{
 /*=====  End of Estilos de los iconos   ======*/
 
 
-/*=============================================
-=            Estilos del lienzo            =
-=============================================*/
+@media screen and (max-width: 1023px) {
+    #menuDibujo{
+        margin-left: 40px;
+    }
 
+    .iconos{
+        width: 80px;
+    }
 
-
-
-/*=====  End of Estilos del lienzo  ======*/
-
+    article#slider {
+        margin-left: 20px;
+    }
+}

@@ -86,7 +86,7 @@ $rutaBase= "../src/img/avatarGen.png";
               <label for="range"></label>
               <input type="range" class="form-range" min="0" max="4" step="1" value="0" id="range" disabled>
               <p id="actual">Frame actual: 1</p>
-              <p id="numFrames">Número de frames: 1</p>
+              <p id="numFrames">Nº de frames: 1</p>
               <button class="botonRango" id="mas">+</button>
               <button class ="botonRango" id="menos">-</button>
             </article>

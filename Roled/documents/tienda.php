@@ -57,7 +57,7 @@
         </nav>
     </header>
     <main>
-        <figure>
+        <figure id="tiendaProgreso">
             <img src="../src/img/wip.png" alt="Work in Progress">
         </figure>
     </main>

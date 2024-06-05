@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0 auto;
 }
 
 #izq{
@@ -28,6 +29,7 @@ section#der{
     border: 25px solid var(--clr-violeta);
     background-color: var(--clr-fondo-primario);
     color: white;
+    padding: 2rem;
     
 }
 
@@ -37,7 +39,7 @@ p{
 }
 
 
-form input{
+#formRegistro input{
     height: 25px;
     width: 300px;
 }
@@ -56,4 +58,75 @@ h3{
 #loginR:hover{
     background-color: var(--clr-hover);
     color: var(--clr-letra);
+}
+
+input#registroForm.boton{
+    width: 100px;
+}
+
+@media screen and (max-width: 425px){
+    section#izq{
+        display: none;
+    }
+
+    section#der svg{
+        width: 80px;
+    }
+
+    #formR{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #formR p{
+        width: 100%;
+        }
+    
+    #formR input, #formR label{
+    width: 90%;
+    margin: 0 auto;
+    }
+    #error{
+    text-align: center;
+    }
+
+    section#der{
+        width: 90%;
+        height: auto;
+        padding: 20px 0;
+    }
+    
+}
+
+@media screen and (min-width: 768px){
+    #formRegistro{
+        margin: 0 auto;
+    }
+
+    #izq h3{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #formR{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+    }
+
+    #formR p{
+        width: 100%;
+    }
+    #formR label, #formR input{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
 }

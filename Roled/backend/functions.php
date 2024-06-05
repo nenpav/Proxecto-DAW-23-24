@@ -64,7 +64,7 @@ function renderMenu($sesion){
             echo "<ul id='menuMovil' class='navbar-nav d-none'>";
             echo '<li class="nav-item"><button class="cerrar-menuHam" type="button" aria-label="Cerrar menú">X</button></li>';
             echo "<li><a href='#' aria-label='Enlace a index'>Inicio<span></span></a></li>";
-            echo "<li><a href='./documents/comunity' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>";
+            echo "<li><a href='./documents/comunity.php' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>";
             echo "<li><a href='./documents/tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>";
             echo '<li><a href="./documents//miPerfil.php" aria-label="Enlace a Mi Perfil">Mi Perfil</a></li>';
             echo '<li><a href="./documents/design.php" aria-label="Enlace a mis diseños">Mis Diseños</a></li>';

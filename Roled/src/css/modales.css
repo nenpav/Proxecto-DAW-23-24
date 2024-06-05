@@ -5,8 +5,6 @@
 =============================================*/
 
 
-/* Ventana modal de Login */
-
 #modalSesion, #modalGuardar{
     margin: auto auto;
     width: 60%;
@@ -59,8 +57,8 @@ dialog #left{
 
 dialog #rigth{
     position: relative;
-    width: 50%;
-    height: 100%;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -154,12 +152,17 @@ dialog button, dialog input[type='submit']{
 /*----------  EStilos de las mediaqueries  ----------*/
 
 @media screen and (max-width: 425px) {
-    dialog section#left{
+    
+    #modalSesion{
+        height: max-content;
+    }
+    
+    dialog section#left {
         display: none;
     }
 
     #modSesion{
-        height: 100%;
+        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -169,7 +172,8 @@ dialog button, dialog input[type='submit']{
 
     dialog #rigth{
         width: 100%;
-        height: 100%;
+        height: max-content;
+        justify-content: flex-start;
 
     }   
     dialog #rigth p {
@@ -178,7 +182,7 @@ dialog button, dialog input[type='submit']{
     }
 
     dialog #rigth p label, dialog #rigth p input{
-        width: 100px;
+        width: 90%;
     }
     dialog #rigth svg{
         width: 80px;
@@ -187,9 +191,51 @@ dialog button, dialog input[type='submit']{
         width: 90%;
         height: auto;
         margin: 0 auto;
+        text-align: center;
+        color: red;
     }
+
+    #cerrarModSesion{
+        margin-bottom: 20px;
+    }
+
+    dialog #rigth form{
+        display: flex;
+        flex-direction: column;
+       
+        align-items: center;
+    }
+   
+  
+
 }
 
+@media screen and (min-width:768px) {
+    dialog #left{
+        height: 100%;
+    }
+    dialog #rigth{
+        width: 50%;
+        height: 100%;
+    }
+    dialog #rigth form{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    dialog #rigth form p{
+        width: 90%;
+    }
+    #modalSesion{
+        height: 60%;
+    }
+    #loginForm{
+        margin: 0 auto;
+    }
+}
 
 /*=====  End of Estilos de las ventanas modales  ======*/
 

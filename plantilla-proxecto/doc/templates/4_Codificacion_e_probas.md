@@ -42,12 +42,11 @@ Pendiente de ver qué pasa con el POV.
 
 Deben describirse as probas realizadas e conclusión obtidas. Describir os problemas atopados e como foron solucionados.
 
-Js: 
 1- Pruebas en validaciones
   Bug al validar la contraseña en el formulario de registro, dando siempre que es un valor incorrecto. 
 
 2- Cambiar el color del error de la modal de guardar el diseño. No se lee bien.
 
-3- Al guardar un diseño en svg se guarda como un Object SVG por lo que no se puede visualizar correctamente. Se solucionó transformado el SVG a string para posteriormente
-ser mandado en un input hidden y guardar el fichero en el directorio del servidor.
+3- Al guardar un diseño en svg se guarda como un Object SVG por lo que no se puede visualizar correctamente. Se solucionó transformado el SVG a string para posteriormente ser mandado en un input hidden y guardar el fichero en el directorio del servidor.
 
+4- Bug en la pantalla de dibujo. Si se desactiva el modo animación y el range no está en la posición 0, se bloquea en la posición en la que esté y el lienzo no se ve
