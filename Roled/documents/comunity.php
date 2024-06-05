@@ -68,7 +68,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
         </ul>
       </nav>
     </header>
-    <main>
+    <main class="gallery">
         <h1 id="titComunity">Comunidad Roled</h1>
         <section id="ListaDisenhosCom">
                 <section class="disenhosCom">

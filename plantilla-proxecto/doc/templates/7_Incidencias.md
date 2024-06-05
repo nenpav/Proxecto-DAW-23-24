@@ -18,7 +18,7 @@
 
 - Pendiente
   - Añadir paginación (si da tiempo)
-  - Hacer las cosas responsive
+  
   - Corrección de errores de maquetación
   - Configurar el despliegue
   - guardar las animaciones
@@ -37,7 +37,7 @@
   - Codificar la contraseña en formato hash
   - Proceso de animación
   - Añadir el menú hamburguesa para móvil
-
+  - Hacer el diseño responsive
 
 - Prototipar
   - Valorar diseño de un usuario (pendiente)

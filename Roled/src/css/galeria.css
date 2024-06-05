@@ -17,7 +17,7 @@
 
 
 .disenhos article, .disenhosCom article{
-    margin-top: 20px;
+    margin: 20px 0;
     border: 5px solid var(--clr-violeta);
     border-radius: 8px;
 }
@@ -33,10 +33,17 @@
 }
 
 .pag{
-    margin: 1rem;
+   margin: 1rem;
    background-color: var(--clr-violeta);
    position: absolute;
    right: 0;
+   bottom: 0;
+   border-radius: 8px;
+}
+
+.pagination{
+    gap:10px;
+    padding: 0 10px;
 }
 
 .btn2{
@@ -50,4 +57,7 @@
     text-align: center;
 }
 
-/*  */
+main.gallery{
+    justify-content: space-between;
+    position: relative;
+}

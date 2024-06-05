@@ -67,7 +67,7 @@ $array=[];
         </ul>
         </nav>
     </header>
-    <main>
+    <main class="gallery">
         <h1>Mis diseños</h1>
           <section id="ListaDisenhos">
                 <section class="disenhos">

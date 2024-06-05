@@ -170,8 +170,9 @@ $nombre.addEventListener("blur",e=>{
 
 $guardar.addEventListener("click",e=>{
     e.preventDefault()
-    const svgLienzo = new XMLSerializer().serializeToString($contenedorLienzos.firstChild)
+    const svgLienzo = new XMLSerializer().serializeToString($contenedorLienzos.firstChild.nextSibling)
     if(svgLienzo!=""){
+        //console.log($contenedorLienzos.firstChild.nextSibling)
         $d2.querySelector("#datosSvg").value = svgLienzo
         console.log($d2.querySelector("#datosSvg"));
         $form.submit()
@@ -203,6 +204,7 @@ $guardar.addEventListener("click",e=>{
 
     $form.submit()
 })  */
+
 
 $animar.addEventListener("change",e=>{
     $rang.disabled = !e.target.checked

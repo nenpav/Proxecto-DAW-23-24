@@ -50,3 +50,5 @@ Deben describirse as probas realizadas e conclusión obtidas. Describir os probl
 3- Al guardar un diseño en svg se guarda como un Object SVG por lo que no se puede visualizar correctamente. Se solucionó transformado el SVG a string para posteriormente ser mandado en un input hidden y guardar el fichero en el directorio del servidor.
 
 4- Bug en la pantalla de dibujo. Si se desactiva el modo animación y el range no está en la posición 0, se bloquea en la posición en la que esté y el lienzo no se ve
+
+5-El svg se guarda aunque no se ponga un nombre
