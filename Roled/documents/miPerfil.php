@@ -4,19 +4,27 @@ initSession();
 
 if(!isset($_SESSION['login'])){
   header("Location: ../index.php");
-}
+  }
+  $user= $_SESSION['login'];
+  
 
-if(isset($_GET['subida'])){
+if(isset($_GET['subida']) && isset($_GET['avatar'])){
+  $nuevoAvatar = "../../docsUsuarios/$user/avatar/".$_GET['avatar'];
   echo "<script>window.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.img').style.backgroundImage = 'url($nuevoAvatar)';
     document.getElementById('save').showModal();
   });</script>";
 }
 
-$user= $_SESSION['login'];
 $conexionBBDD = new mysqli ('localhost','root','','roled');
 $rutaBase= "../src/img/avatarGen.png";
 $fichero = "../src/json/roled.json";
 $array = [];
+
+$avatarRuta = buscarRutaAvatar($user, $rutaBase, '../..');
+echo "<script>window.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('.img').style.backgroundImage = 'url(\"$avatarRuta\")';
+});</script>";
 /* Obtener los disenhos del usuario */
 if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$user'")){
   if(($resultado->num_rows>0)){
@@ -72,7 +80,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
             <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
             <li><a href='./comunity.php' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
             <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-            <li><a href="./miPerfil.php" aria-label="Enlace a Mi Perfil" class='activa'>Mi Perfil</a></li> 
+            <li><a href="#" aria-label="Enlace a Mi Perfil" class='activa'>Mi Perfil</a></li> 
             <li><a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a></li>
             <li><a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a></li>   
         </ul>
@@ -88,7 +96,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
                 <label for="cargar" class="labelAvatar">
                     <i class="fa fa-camera"></i>
                 </label>
-                <form action="../backend/avatar.php" enctype="multipart/form-data" method="POST">
+                <form id="formPerfil" action="../backend/avatar.php" enctype="multipart/form-data" method="POST">
                   <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
                   <input type="file" id="cargar" name="cargar">
                   <input class="boton" type="submit" value="Guardar">
@@ -159,6 +167,11 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     <?php
         if($_GET['subida'] == "ok"){
           echo "<p id='confSubida'>El avatar se ha subido correctamente</p>";
+          ?>
+              <script>
+
+              <script>
+          <?php
         }
         if($_GET['subida'] == "ko"){
           echo "<p id='confSubida'>Error al subir el avatar</p>";

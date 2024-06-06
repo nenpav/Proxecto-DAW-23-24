@@ -59,7 +59,7 @@ if($_POST){
         
         } else {
             throw new Exception("Error al guardar la imagen");
-            die();
+            
         }
         
         finfo_close($finfo);
@@ -79,7 +79,7 @@ if($_POST){
 
         $conexionBBDD->commit();
         //echo "Guardado bien";
-        header("Location: ../documents/miPerfil.php?subida=ok"); 
+        header("Location: ../documents/miPerfil.php?subida=ok&avatar=$nombre"); 
 
     }catch(Exception $e){
         //echo "guardado mal";

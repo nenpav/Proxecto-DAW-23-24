@@ -25,34 +25,34 @@
 
 .avatarImg{
     position: relative;
-    width: 200px;
-}
-
-#cargar{
-    visibility: hidden;
-}
-
-.avatarImg .img {
-    background-image: url("../img/avatarGen.png");
+    width: 200px; 
+    }
+    
+    #cargar{
+        visibility: hidden;
+        }
+        
+    .avatarImg .img {
+    background-image: url("../img/avatarGen.png"); 
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     width: 200px;
     height: 200px;
     border-radius: 50%;
+    overflow: hidden;
+    margin-top: 10px;
   }
 
-  .fa .fa-camera{
-    width: 80px;
-  }
+
 
  .labelAvatar i{
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     position: absolute;
-    top: 195px;
+    top: 60%;
     left:60%;
-    color: var(--clr-letra);
+    color: var(--clr-violeta);
     padding: 1rem;
     text-align: center;
     
@@ -82,6 +82,7 @@
 
 .disenos img{
     width: 100%;
+    
 }
 
 
@@ -99,13 +100,22 @@ height: max-content;
     color: var(--clr-letra);
     width: max-content;
 }
-
+#formPerfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*=============================================
 =            Estilos de las media queries            =
 =============================================*/
 
 @media screen and (max-width:425px) {
+
+    .content{
+        gap:0;
+    }
+
     h4.titulo{
         width: 100%;
     }
@@ -114,8 +124,59 @@ height: max-content;
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .disenos {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+        
+    .disenos img{
+        width: auto;
+        
+    }
+    .izq{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+  
+
+    .labelAvatar i{
+        top: 65%;
+    }
+
+    .btn2{
+        width: 90px;
+    }
+
 }
 
+@media screen and (max-width:1023px) {
+    .izq{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
+    .titulo{
+        width: 100%;
+        text-align: center;
+    }
+
+    .disenos{
+        margin: 0 auto;
+    }
+
+    .btn2{
+        width: 90px;
+    }
+
+   
+}
 /*=====  End of Estilos de las media queries  ======*/
 
