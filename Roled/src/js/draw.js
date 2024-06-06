@@ -209,8 +209,7 @@ $guardar.addEventListener("click",e=>{
 $animar.addEventListener("change",e=>{
     $rang.disabled = !e.target.checked
     $botonMas.disabled = !e.target.checked
-    $botonMeno
-    s.disabled = !e.target.checked
+    $botonMenos.disabled = !e.target.checked
     if($animar.checked){
         if(contadorFrames == 1) {
             crearFrames()

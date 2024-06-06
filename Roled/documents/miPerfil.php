@@ -100,9 +100,9 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
               <section class="disenhos">
                 <!-- Lista de diseños dinámica por ajax -->
               </section>
-              <button id="mas" class="boton">Ver más</button>
-          </section>
-
+            </section>
+            
+            <button id="mas" class="boton">Ver más</button>
         </section>
     </main>
     <footer>
