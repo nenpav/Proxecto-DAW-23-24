@@ -1,6 +1,7 @@
 const $d=document,
       $galeria= $d.querySelector("#galeria"),
       $galeriaUser = $d.querySelector(".disenhos"),
+      $galeriaTotalUser = $d.querySelector(".disenhosTodos"),
       $galeriaComun = $d.querySelector(".disenhosCom"),
       $botonBorrar = $d.querySelector(".borrar")
 
@@ -38,9 +39,12 @@ async function ajax(options){
     fError: error=>console.log(error)
 }) */
 
-function renderDisenos(disenos, element, addBorrar){
+function renderDisenos(disenos, element, addBorrar,addLimite){
     element.innerHTML=""
-    //console.log(addBorrar)
+    if(addLimite){
+        disenos = disenos.slice(0,6)
+    }
+    //console.log(disenos)
     if(disenos){
         element.innerHTML = disenos.map(el=>
             `
@@ -59,7 +63,7 @@ function renderDisenos(disenos, element, addBorrar){
 }
 
 
- function getDisenos(element, url, addBorrar){
+ function getDisenos(element, url, addBorrar, addLimite){
     disenos= []
     ajax({
         url: url,
@@ -67,13 +71,12 @@ function renderDisenos(disenos, element, addBorrar){
             
             if (Array.isArray(json)) {
                 disenos = json;
-               
             } 
             if (typeof json === 'object' && json !== null) {
                 disenos = [...json]
                 
             } 
-            renderDisenos(disenos, element, addBorrar)
+            renderDisenos(disenos, element, addBorrar, addLimite)
         },
         fError: error=>console.log(error)
     })
@@ -113,10 +116,13 @@ if($galeriaUser!=null){
  $d.addEventListener("DOMContentLoaded", e=>{
     e.preventDefault()
     if($galeriaUser != null){
-        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json', true)
-        
+        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json', true, true)
+    }
+    if($galeriaTotalUser != null){
+        getDisenos($galeriaTotalUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json',true, false)
+
     }
     if($galeriaComun != null){
-        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false)
+        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false, false)
     }
 }) 

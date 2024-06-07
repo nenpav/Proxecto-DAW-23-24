@@ -1,25 +1,39 @@
 @import url(./base.css);
 
-#listaDisenhos, #listaDisenhosCom{
-    margin: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.listaDisenhos, #listaDisenhosCom{
+         margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center; 
+       width: 75%;
+    
+    
+}
+    
+    .disenhos, .disenhosCom, .disenhosTodos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start; 
+        align-items: center;
+        gap: 10px; 
+        
 }
 
-.disenhos, .disenhosCom{
+
+.disenhos article, .disenhosCom article, .disenhosTodos article{
+    margin: 20px 0;
+    max-width: 220px;
+    height: auto;
+    border: 5px solid var(--clr-violeta);
+    border-radius: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
     justify-content: center;
-}
-
-
-.disenhos article, .disenhosCom article{
-    margin: 20px 0;
-    border: 5px solid var(--clr-violeta);
-    border-radius: 8px;
+    align-items: center;
 }
 .disenos{
     width: 200px;
@@ -58,6 +72,21 @@
 }
 
 main.gallery{
-    justify-content: space-between;
+  justify-content: space-between; 
     position: relative;
+}
+
+@media screen and (max-width:425px) {
+    .disenhos, .disenhosCom, .disenhosTodos{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .disenhos, .disenhosCom, .disenhosTodos{
+        justify-content: center;
+    }
+    .disenhos article, .disenhosCom article, .disenhosTodos article{
+        margin: 20px 15px;
+    }
 }

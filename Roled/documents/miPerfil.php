@@ -7,7 +7,6 @@ if(!isset($_SESSION['login'])){
   }
   $user= $_SESSION['login'];
   
-
 if(isset($_GET['subida']) && isset($_GET['avatar'])){
   $nuevoAvatar = "../../docsUsuarios/$user/avatar/".$_GET['avatar'];
   echo "<script>window.addEventListener('DOMContentLoaded', function() {
@@ -45,6 +44,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     <title>Mi Perfil</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../src/css/miPerfil.css">
+    <link rel="stylesheet" href="../src/css/galeria.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="../src/css/modales.css">
     <script src="../src/js/ajax.js" defer></script>
@@ -103,7 +103,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
                 </form>
             </div>
           </section>
-          <section id="ListaDisenhos">
+          <section class="listaDisenhos" id="galeriaPerfil">
               <h4 class="titulo">Mis Diseños</h4>
               <section class="disenhos">
                 <!-- Lista de diseños dinámica por ajax -->

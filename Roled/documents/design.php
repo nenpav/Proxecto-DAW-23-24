@@ -69,10 +69,10 @@ $array=[];
     </header>
     <main class="gallery">
         <h1>Mis diseños</h1>
-          <section id="ListaDisenhos">
-                <section class="disenhos">
-                  <!-- Lista de diseños dinámica por ajax -->
-                </section>
+          <section class="listaDisenhos">
+              <section class="disenhosTodos">
+                <!-- Lista de diseños dinámica por ajax -->
+              </section>
         </section>
         <nav class="pag" aria-label="Page navigation">
           <ul class="pagination">

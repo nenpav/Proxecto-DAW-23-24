@@ -70,7 +70,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
     </header>
     <main class="gallery">
         <h1 id="titComunity">Comunidad Roled</h1>
-        <section id="ListaDisenhosCom">
+        <section id="listaDisenhosCom">
                 <section class="disenhosCom">
                   <!-- Lista de diseños dinámica por ajax -->
                 </section>

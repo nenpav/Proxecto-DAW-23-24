@@ -1,7 +1,10 @@
 @import url(./base.css);
 @import url(./modales.css);
 
-
+h1{
+    width: 90%;
+    text-align: left;
+}
 .content{
     display: flex;
     flex-direction: row;
@@ -11,13 +14,14 @@
 }
 
 .izq{
-    width: 50%;
+    width: auto;
 }
 
-#listaDisenhos{
+#galeriaPerfil{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 100%;
 }
 /*=============================================
 =            Estilos del avatar            =
@@ -32,7 +36,7 @@
         visibility: hidden;
         }
         
-    .avatarImg .img {
+.avatarImg .img {
     background-image: url("../img/avatarGen.png"); 
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,9 +157,15 @@ height: max-content;
         width: 90px;
     }
 
+    h1{
+        text-align: center;
+    }
+
 }
 
 @media screen and (max-width:1023px) {
+
+    
     .izq{
         display: flex;
         flex-direction: column;
@@ -176,6 +186,11 @@ height: max-content;
         width: 90px;
     }
 
+    .labelAvatar i{
+        top: 65%;
+    }
+
+   
    
 }
 /*=====  End of Estilos de las media queries  ======*/
