@@ -18,8 +18,6 @@
 
 - Pendiente
   - Añadir paginación (si da tiempo)
-  
-  - Corrección de errores de maquetación
   - Configurar el despliegue
   - guardar las animaciones
 
@@ -38,6 +36,7 @@
   - Proceso de animación
   - Añadir el menú hamburguesa para móvil
   - Hacer el diseño responsive
+  - Corrección de errores de maquetación
 
 - Prototipar
   - Valorar diseño de un usuario (pendiente)
