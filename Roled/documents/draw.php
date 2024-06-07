@@ -165,10 +165,10 @@ $rutaBase= "../src/img/avatarGen.png";
         <button id="cerrarConfSave">X</button>
         <?php
             if($_GET['save'] == "ok"){
-              echo "<p id='confSave'>El diseño se ha correctamente</p>";
+              echo "<p id='confSaveP'>El diseño se ha guardado correctamente</p>";
             }
             if($_GET['save'] == "ko"){
-              echo "<p id='confSave'>Error al guardar el diseño</p>";
+              echo "<p id='confSaveP'>Error al guardar el diseño</p>";
             }
         ?>
     </dialog>

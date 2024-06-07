@@ -124,11 +124,11 @@ dialog button, dialog input[type='submit']{
 }
 
 #confReg, #confSave , #save{
-    width: 300px;
+    width: 22rem;
     height: 100px;
     background-color: var(--clr-violeta);
     color: var(--clr-letra);
-    margin: 0 auto;
+    margin: auto auto;
     border: none;
     border-radius: 8px;
     position: relative;
@@ -136,7 +136,8 @@ dialog button, dialog input[type='submit']{
 }
 
 #confReg p, #confSave p, #save p{
-    
+    padding: 30px;
+    width: 100%;
     margin: auto auto;
 }
 #cerrarConfReg, #cerrarConfSave, #cerrarSave{
