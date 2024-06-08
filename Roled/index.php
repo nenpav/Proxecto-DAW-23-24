@@ -95,9 +95,9 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
                   <span class="visually-hidden">Next</span>
                 </button>
             </section>
-            <section class="comenzar">
+            <!-- <section class="comenzar">
                 <button class="boton">comenzar</button>
-            </section>
+            </section> -->
         </section>
         <section class="portada">
           <h2>Pantalla POV</h2>
@@ -105,7 +105,7 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
             <img src="./src/img/molino.delfin.cuadrado.CWEB_-e1612817731327.jpg" alt="">
           </figure>
           <section class="comenzar">
-            <button class="boton">comprar</button>
+            <button class="boton deshabilitar">comprar</button>
         </section>
         </section>
     </main>
@@ -171,11 +171,11 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
           <form action="./backend/sesiones/iniciarSesion.php" method="POST">
             <p>
                 <label for="user">Usuario</label>
-                <input type="text" name="user">
+                <input type="text" name="user" id="user">
             </p>
             <p>
                 <label for="pwd">Contraseña</label>
-                <input type="password" name="pwd">
+                <input type="password" name="pwd" id="pwd">
             </p>
             <p id='errorS'></p>
             <input class="boton" id="loginForm" type="submit" value="Login">

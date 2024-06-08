@@ -138,11 +138,11 @@
       <form action="../backend/sesiones/iniciarSesion.php" method="POST">
         <p>
             <label for="user">Usuario</label>
-            <input type="text" name="user">
+            <input type="text" name="user" id="user">
         </p>
         <p>
             <label for="pwd">Contraseña</label>
-            <input type="password" name="pwd">
+            <input type="password" name="pwd" id="pwd">
         </p>
         <input class="boton" id="loginForm" type="submit" value="Login">
      </form>

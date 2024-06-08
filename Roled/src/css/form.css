@@ -36,6 +36,7 @@ section#der{
 p{
     display: flex;
     flex-direction: column;
+    color: var(--clr-letra);
 }
 
 
@@ -122,6 +123,7 @@ input#registroForm.boton{
 
     #formR p{
         width: 100%;
+
     }
     #formR label, #formR input{
         width: 90%;

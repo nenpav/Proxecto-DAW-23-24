@@ -54,7 +54,9 @@ dialog #left{
     justify-content: center;
     align-items: center;
 }
-
+#left p{
+    color: var(--clr-letra);
+}
 dialog #rigth{
     position: relative;
     width: 100%;
