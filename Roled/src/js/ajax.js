@@ -3,10 +3,12 @@ const $d=document,
       $galeriaUser = $d.querySelector(".disenhos"),
       $galeriaTotalUser = $d.querySelector(".disenhosTodos"),
       $galeriaComun = $d.querySelector(".disenhosCom"),
-      $botonBorrar = $d.querySelector(".borrar")
+      $botonBorrar = $d.querySelector(".borrar"),
+      $paginacion = $d.querySelector(".pagination")
 
     
-      //console.log($galeriaComun)
+//console.log($galeriaComun)
+
 let disenos = []
 
 async function ajax(options){
@@ -45,7 +47,7 @@ function renderDisenos(disenos, element, addBorrar,addLimite){
         disenos = disenos.slice(0,6)
     }
     //console.log(disenos)
-    if(disenos){
+    if(disenos.length>0){
         element.innerHTML = disenos.map(el=>
             `
             <article>
@@ -94,13 +96,13 @@ async function deleteDisenho(id) {
             })
         }
         const respuesta = await resp.text();
-       
         location.reload(); 
     }catch (error) {
-        console.error('Error:', error.message);
+        console.log(error);
     }
     
 }
+
 
 if($galeriaUser!=null){
     $galeriaUser.addEventListener("click",e=>{
@@ -126,3 +128,4 @@ if($galeriaUser!=null){
         getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false, false)
     }
 }) 
+
