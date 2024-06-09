@@ -10,14 +10,11 @@
 ## 2- Tarefas
 
 - Correcciones Alicia Anteproyecto
-
-
   - Repasar la redacción
   - Justificar con datos las cifras del mercado de China
   - Añadir las ventajas fiscales de la cooperativa.
 
 - Pendiente
-  - Añadir paginación (si da tiempo)
   - Configurar el despliegue
   - guardar las animaciones
 
@@ -37,6 +34,5 @@
   - Añadir el menú hamburguesa para móvil
   - Hacer el diseño responsive
   - Corrección de errores de maquetación
+  - Añadir paginación (si da tiempo)
 
-- Prototipar
-  - Valorar diseño de un usuario (pendiente)
