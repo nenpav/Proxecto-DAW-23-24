@@ -12,6 +12,11 @@ $conexionBBDD = new mysqli ('localhost','root','','roled');
 $rutaBase= "../src/img/avatarGen.png";
 $fichero = "../src/json/comunidad.json";
 $array = [];
+
+$limit = 10;
+$numPag = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$offset = ($numPag - 1)*$limit;
+
 /* Obtener los disenhos*/
 if($resultado = $conexionBBDD->query("SELECT * FROM design")){
   if(($resultado->num_rows>0)){
@@ -20,6 +25,14 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
     }
     //var_dump($array);
   }
+  if($resultado = $conexionBBDD->query("SELECT COUNT(*) as total FROM design WHERE id_usuario='$user'")){
+    $fila = $resultado->fetch_assoc()['total'];
+    $total = ($fila>0)?$fila:1;
+    //echo $total;
+    
+  }
+  $totalPag = ceil($total/$limit);
+  //echo $totalPag;
   convertirJson($array, $fichero);
 }
 ?>
@@ -76,24 +89,19 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
                 </section>
         </section>
         <nav class="pag" aria-label="Page navigation">
-          <ul class="pagination">
-            <li>
-              <a href="" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
-            <li><a href="">5</a></li>
-            <li>
-              <a href="" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
+      <ul class="pagination">
+        <?php 
+        for ($i = 1; $i <= $totalPag; $i++) {
+          $activeClass = $i === $numPag ? 'active' : '';
+          ?>
+          <li class="page <?= $activeClass ?>">
+            <a class="page-link" href="design.php?page=<?= $i ?>" data-page="<?= $i ?>"><?= $i ?></a>
+          </li>
+          <?php
+        }
+      ?>
+      </ul>
+    </nav>
     </main>
     <footer>
         <section id="rrss">
