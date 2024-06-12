@@ -36,3 +36,6 @@
   - Corrección de errores de maquetación
   - Añadir paginación (si da tiempo)
 
+Errores despliegue:
+-Error al guarar avatar -> problema de rutas, comprobar si se guarda bien en bbdd
+- Cambiar rutas del avatar en el menú
