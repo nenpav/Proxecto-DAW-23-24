@@ -58,11 +58,11 @@
                 </p>
                 <p>
                     <label for="pwd">Contraseña*</label>
-                    <input type="password" name="pwd" placeholder="Escribe la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito (.@$!%*?&). ">
+                    <input type="password" name="pwd" placeholder="Escribe la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula, al menos un dígito y al menos un símbolo (.@$!%*?&). ">
                 </p>
                 <p>
                     <label for="pwd2">Repetir Contraseña*</label>
-                    <input type="password" name="pwd2" placeholder="Repite la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito (.@$!%*?&). ">
+                    <input type="password" name="pwd2" placeholder="Repite la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula, al menos un dígito y al menos un símbolo(.@$!%*?&). ">
                 </p>
                 <p>
                   <label for="fnac">Fecha de Nacimiento*</label>
