@@ -25,7 +25,7 @@ function datosObligatorios(){
     const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     $error.innerHTML=""
     if(!regEmail.test($email.value)){
-        $error.innerHTML="La email no es válido"
+        $error.innerHTML="El email no es válido"
         $email.classList.add("error")
         return false
     }

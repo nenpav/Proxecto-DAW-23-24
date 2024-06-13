@@ -91,7 +91,8 @@ input#registroForm.boton{
     margin: 0 auto;
     }
     #error{
-    text-align: center;
+        color: red;
+        text-align: center;
     }
 
     section#der{
