@@ -1,6 +1,6 @@
 
 CREATE DATABASE IF NOT EXISTS roled;
-
+USE roled;
 CREATE TABLE IF NOT EXISTS usuarios (
     id_usuario INT AUTO_INCREMENT primary key,
     username VARCHAR(20) NOT NULL UNIQUE,

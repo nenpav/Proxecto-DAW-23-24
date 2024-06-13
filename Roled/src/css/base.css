@@ -31,14 +31,12 @@
 body{
     background-color: var(--clr-fondo-primario);
     background: linear-gradient(to bottom, var(--clr-fondo-primario), var(--clr-fondo-secundario) );
-    
     width: 100vw;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 3rem; 
     justify-content: center;
-    
 }
 
 main{
@@ -230,12 +228,12 @@ li{
 
 .boton:disabled{
     background-color: var(--clr-disabled);
-    color: #D9D9D9;
+    color: black;
 }
 
 .deshabilitar{
     background-color: var(--clr-disabled);
-    color: #D9D9D9;
+    color: black;
 }
 /*=====  End of Estilos del botón  ======*/
 

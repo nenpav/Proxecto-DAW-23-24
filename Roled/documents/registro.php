@@ -49,23 +49,23 @@
               
             <form action="../backend/doRegistro.php" id="formR" method="POST">
                 <p>
-                  <label for="email">Email</label>
+                  <label for="email">Email*</label>
                   <input type="email" name="email" id="email" placeholder="ejemplo@ejemplo.com" >
                 </p>
                 <p>
-                    <label for="user">Usuario</label>
+                    <label for="user">Usuario*</label>
                     <input type="text" name="user" placeholder="user123" title="Min 3-Max 10. Minúsculas, mayúsculas,dígitos, - o _">
                 </p>
                 <p>
-                    <label for="pwd">Contraseña</label>
-                    <input type="password" name="pwd" placeholder="Escribe la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito. ">
+                    <label for="pwd">Contraseña*</label>
+                    <input type="password" name="pwd" placeholder="Escribe la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito (.@$!%*?&). ">
                 </p>
                 <p>
-                    <label for="pwd2">Repetir Contraseña</label>
-                    <input type="password" name="pwd2" placeholder="Repite la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito. ">
+                    <label for="pwd2">Repetir Contraseña*</label>
+                    <input type="password" name="pwd2" placeholder="Repite la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula y al menos un dígito (.@$!%*?&). ">
                 </p>
                 <p>
-                  <label for="fnac">Fecha de Nacimiento</label>
+                  <label for="fnac">Fecha de Nacimiento*</label>
                   <input type="date" name="fnac" id="fnac">
                 </p>
                 <span><p id="error"></p></span>
