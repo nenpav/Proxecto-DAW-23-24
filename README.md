@@ -29,7 +29,8 @@ Para poder poner en marcha la aplicación en un entorno local se necesita:
 2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
 3. Acceder desde el navegador -> localhost/Roled
 
-Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: -------
+Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: https://144.91.105.157
+Aceptar el riesgo de seguridad ya que, aunque tiene acceso ssl, como no ha sido el certificado firmado por una entidad certificadora oficial, indica que el certificado no es válido.
 
 ## Uso
 
@@ -61,8 +62,6 @@ Para más información, ver el fichero de `LICENSE` en la raíz del repositorio.
 7. [Incidencias](./plantilla-proxecto/doc/templates/7_Incidencias.md)
 
 ## Guía de contribución
-
-> EXPLICACIÓN*: Tratándose dun proxecto de software libre, é moi importante que expoñas como se pode contribuír co teu proxecto. Algúns exemplos disto son realizar novas funcionalidades, corrección e/o optimización do código, realización de tests automatizados, novas interfaces de integración, desenvolvemento de plugins etc. Se o máis conciso que poidas.
 
 ## Links
 

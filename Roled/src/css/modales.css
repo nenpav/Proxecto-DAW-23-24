@@ -84,6 +84,11 @@ dialog h3{
     text-shadow: 4px 4px 4px var(--clr-hover);
     margin: 2rem;
     font-size: calc(var(--tam-h3) / 0.75);
+    text-align: center;
+}
+
+dialog input:not(input[type='submit']){
+    padding: 5px;
 }
 
 dialog button, dialog input[type='submit']{

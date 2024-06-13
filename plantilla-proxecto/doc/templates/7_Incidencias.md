@@ -5,7 +5,6 @@
 
 ## 1- Incidencias
 
--Si se elimina y se crea la bbdd de nuevo los json quedan con los datos anteriores. Comprobar que pasa si se borran todos los diseños.
 
 ## 2- Tarefas
 
@@ -15,7 +14,6 @@
   - Añadir las ventajas fiscales de la cooperativa.
 
 - Pendiente
-  - Configurar el despliegue
   - guardar las animaciones
 
 - Terminado
@@ -35,10 +33,8 @@
   - Hacer el diseño responsive
   - Corrección de errores de maquetación
   - Añadir paginación (si da tiempo)
-
-Errores despliegue:
--Error al guarar avatar -> problema de rutas, comprobar si se guarda bien en bbdd
-- Cambiar rutas del avatar en el menú
-
+  - Configurar el despliegue
 
 Correcciones Marina
+
+Falta ver bien lo del formato de la fecha en el registro

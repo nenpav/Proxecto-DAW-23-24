@@ -54,7 +54,7 @@ function renderDisenos(disenos, element, addBorrar,addLimite){
                 <figure class="disenos">
                     <img src="../../docsUsuarios/${el.id_usuario}/${el.nombre}" alt="">
                 </figure>
-                <button class="boton ${addBorrar ? 'btn2' : ''}" data-id="${el.id_design}">Proyectar</button>
+                <button class="boton ${addBorrar ? 'btn2' : ''} deshabilitar" data-id="${el.id_design}">Proyectar</button>
                 ${addBorrar ? `<button class="boton btn2 borrar" data-id="${el.id_design}">Borrar</button>` : ''}
             </article>
             `
@@ -103,7 +103,6 @@ async function deleteDisenho(id) {
     
 }
 
-
 if($galeriaUser!=null){
     $galeriaUser.addEventListener("click",e=>{
         e.preventDefault()
@@ -114,6 +113,15 @@ if($galeriaUser!=null){
     })
 }
 
+if($galeriaTotalUser!=null){
+    $galeriaTotalUser.addEventListener("click",e=>{
+        e.preventDefault()
+        if(e.target.dataset.id && e.target.classList.contains("borrar")){
+            deleteDisenho(e.target.dataset.id)
+    
+        }
+    })
+}
 
  $d.addEventListener("DOMContentLoaded", e=>{
     e.preventDefault()

@@ -12,7 +12,8 @@
       $animar = $d2.querySelector("#animar"),
       $contendorSlider = $d2.querySelector("#slider"), 
       $numFrames = $d2.querySelector("#numFrames"),
-      $frameActual = $d2.querySelector("#actual")
+      $frameActual = $d2.querySelector("#actual"),
+      $save = $d2.querySelector("#guardar")
 
  
     //console.log($error)
@@ -194,7 +195,7 @@ $guardar.addEventListener("click",e=>{
         }
     })
     svgContent += "</div>"
-    if (svgContent != "<div></div>") { // Asegúrate de que no esté vacío
+    if (svgContent != "<div></div>") { 
         $d2.querySelector("#datosSvg").value = svgContent;
         console.log($d2.querySelector("#datosSvg").value);
         $form.submit();
@@ -226,6 +227,8 @@ $animar.addEventListener("change",e=>{
         })
         $numFrames.innerHTML=""
         $numFrames.innerHTML=`Número de frames: ${parseInt($rang.max)+1}`
+        $save.disabled = true
+        $save.classList.add("deshabilitar")
     }else{
         while($contenedorLienzos.childElementCount>1){
             $contenedorLienzos.removeChild($contenedorLienzos.lastChild)
@@ -237,6 +240,8 @@ $animar.addEventListener("change",e=>{
         //console.log(contadorFrames)
         const lienzo = $d2.querySelector("svg")
         lienzo.style.display = "block"
+        $save.disabled=false
+        $save.classList.remove("deshabilitar")
     }
 })
 

@@ -42,6 +42,11 @@
    
 }
 
+.disenhosTodos h4, .disenhos h4, .disenhosCom h4{
+    text-align: center;
+    width: 100%;
+    color: white;
+}
 .disenos img{
     width: 100%;
 }
