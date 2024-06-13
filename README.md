@@ -24,9 +24,10 @@ Para realizar este proyecto se uso HTML5,CSS3 y JavaScript para la parte del fro
 ## Instalación / Posta en marcha
 
 Para poder poner en marcha la aplicación en un entorno local se necesita:
-  1 - Instalar XAMPP
-  2 - Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
-  3 - Acceder desde el navegador -> localhost/Roled
+
+1. Instalar XAMPP
+2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
+3. Acceder desde el navegador -> localhost/Roled
 
 Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: -------
 
@@ -37,11 +38,12 @@ Dibuja, comparte y proyecta tus diseños mediante una experiencia holográfica c
 ## Sobre o autor
 
 Este proyecto es creado como TFC para el ciclo de Desarrollo de Aplicaciones Web. Perfil rofesional junior con poca experiencia, enfocado tanto en el desarrollo frontend como backend de aplicaciones web. Conocimientos básicos en diferentes lenguajes de programación como Java, JS y PHP, así como otros lenguajes de marcas como XML, JSON, HTML, etc. 
-El proyecto nace con el objetivo de aumentar la oferta de aplicaciones que fomenten la creatividad y creen una comunidad de usuarios respetuosa, además de que puede tener numerosas aplicaciones comerciales en diferentes sectores como el de la publicidad, creadores de contenido, decoración en discotecas, etc., abriendo un nicho de mercado que no está siendo explotado en nuestro país. 
+El proyecto nace con el objetivo de aumentar la oferta de aplicaciones que fomenten la creatividad y creen una comunidad de usuarios respetuosa, además de que puede tener numerosas aplicaciones comerciales en diferentes sectores como el de la publicidad, creadores de contenido, decoración en discotecas, etc., abriendo un nicho de mercado que no está siendo explotado en nuestro país.
 
 ## Licenza
 
 El proyecto consta de Licencia propietaria o comercial personalizada donde está permitido el uso del softare pero quedan restringidas, salvo autorización, las siguientes acciones:
+
 - No se puede copiar ni distribuir el contenido del proyecto.
 - No se puede modificar, traducir o crear software derivado sin permiso.
 - No se puede realizar ingeniería inversa de software.
