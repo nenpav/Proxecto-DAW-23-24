@@ -35,7 +35,6 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 3rem; 
     justify-content: center;
 }
 
@@ -46,7 +45,7 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    padding: 15px;
 }
 
 .error{
