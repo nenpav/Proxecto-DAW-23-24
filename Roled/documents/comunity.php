@@ -71,7 +71,6 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
             </div>
         </ul>
         <ul id="menuMovil" class="navbar-nav d-none">
-            <li class="nav-item"><button class="cerrar-menuHam" type="button" aria-label="Cerrar menú">X</button></li>
             <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
             <li><a href='#' aria-label='Enlace a Explorar' class='activa'>Explorar<span></span></a></li>
             <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>

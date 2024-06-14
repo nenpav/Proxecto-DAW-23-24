@@ -1,22 +1,20 @@
  const $d4 = document, 
         $menuHamb = $d4.querySelector(".navbar-toggler"),
-        $menuMovil = $d4.querySelector("#menuMovil"),
-        $cerrarMenuHamb = $d4.querySelector(".cerrar-menuHam")
+        $menuMovil = $d4.querySelector("#menuMovil")
 
 
 
     $menuHamb.addEventListener("click",e=>{
         e.preventDefault()
-        $menuHamb.classList.add("d-none")
-        $menuMovil.classList.remove("d-none")
-        $menuMovil.classList.add("d-block")
+        $menuHamb.classList.toggle("abrirHamb")
+        if($menuHamb.classList.contains("abrirHamb")){
+            $menuMovil.classList.remove("d-none")
+            $menuMovil.classList.add("d-block")
+        }else{
+            $menuMovil.classList.add("d-none")
+            $menuMovil.classList.remove("d-block")
+        }
     }) 
 
-    $cerrarMenuHamb.addEventListener("click",e=>{
-        e.preventDefault()
-        $menuHamb.classList.remove("d-none")
-        $menuMovil.classList.add("d-none")
-        $menuMovil.classList.remove("d-block")
-    })
 
     

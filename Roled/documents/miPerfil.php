@@ -76,12 +76,11 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
               </div>
           </ul>
           <ul id="menuMovil" class="navbar-nav d-none">
-            <li class="nav-item"><button class="cerrar-menuHam" type="button" aria-label="Cerrar menú">X</button></li>
             <li><a href='../index.php' aria-label='Enlace a index'>Inicio<span></span></a></li>
             <li><a href='./comunity.php' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
             <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
-            <li><a href="#" aria-label="Enlace a Mi Perfil" class='activa'>Mi Perfil</a></li> 
-            <li><a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a></li>
+            <li><a href="#" aria-label="Enlace a Mi Perfil" class='activa'>Mi Perfil<span></span></a></li> 
+            <li><a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños<span></span></a></li>
             <li><a href="../backend/sesiones/cerrarSesion.php" aria-label="Cerrar sesión">Cerrar Sesión</a></li>   
         </ul>
       </nav>
