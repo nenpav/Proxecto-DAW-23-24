@@ -164,14 +164,18 @@ $guardar.addEventListener("click",e=>{
     if($nombre.value=="" || $nombre == 'undefined'){
         $error.innerHTML="El nombre no puede estar vacío"
     }else{
-        const svgLienzo = new XMLSerializer().serializeToString($contenedorLienzos.firstChild.nextSibling)
-        if(svgLienzo!=""){
-            //console.log($contenedorLienzos.firstChild.nextSibling)
-            $d2.querySelector("#datosSvg").value = svgLienzo
-            console.log($d2.querySelector("#datosSvg"));
-            $form.submit()
+        if($nombre.value.includes('ñ')){
+            $error.innerHTML="El nombre no puede contener la letra 'ñ'"
         }else{
-            $error.innerHTML="Error al guardar la imagen"
+            const svgLienzo = new XMLSerializer().serializeToString($contenedorLienzos.firstChild.nextSibling)
+            if(svgLienzo!=""){
+                //console.log($contenedorLienzos.firstChild.nextSibling)
+                $d2.querySelector("#datosSvg").value = svgLienzo
+                console.log($d2.querySelector("#datosSvg"));
+                $form.submit()
+            }else{
+                $error.innerHTML="Error al guardar la imagen"
+            }
         }
     }
 }) 
