@@ -29,7 +29,7 @@ if($_POST){
         ('$login', '$hash', '$email', 'U', NULL, '$fechaNac')");
 
         $conexionBBDD->commit();
-        header("Location: ../index.php?registro=ok"); 
+        header("Location: ../index.php?index=ok"); 
     }catch(Exception $e){
         $conexionBBDD->rollback();
         eliminarCarpetaUser($login);

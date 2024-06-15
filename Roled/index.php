@@ -16,14 +16,6 @@ $conexionBBDD = new mysqli('localhost','root','','roled');
       });</script>";
     }
    
-  if(isset($_GET['registro']) && $_GET['registro'] == "ok"){
-    /* echo "<script>window.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('confReg').showModal();
-    });</script>"; */
-    echo "<script>window.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('modalSesion').showModal();
-    });</script>";
-  }
 
   if(isset($_GET['index']) && $_GET['index']=='ok'){
     echo "<script>window.addEventListener('DOMContentLoaded', function() {
