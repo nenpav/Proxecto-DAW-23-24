@@ -153,7 +153,7 @@ $rutaBase= "../src/img/avatarGen.png";
           <form action="../backend/doSave.php" method="POST" id="guardarSvg">
             <label for="nombre">Nombre del diseño</label>
             <input type="text" name="nombre" placeholder="Nombre del diseño" id="nombre">
-            <p id="error"></p>
+            <p id="errorSave"></p>
             <input type="submit" value="Guardar" name="guardar" class="boton" id="guardarConf">
             <input type="hidden" name="datosSvg" id="datosSvg">
           </form> 

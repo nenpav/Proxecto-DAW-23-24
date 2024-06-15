@@ -4,7 +4,7 @@
       $borrar = $d2.querySelector("#borrar"),
       $nombre = $d2.querySelector("#nombre"),
       $guardar = $d2.querySelector("#guardarConf"),
-      $error = $d2.querySelector("#error"),
+      $error = $d2.querySelector("#errorSave"),
       $form = $d2.querySelector("#guardarSvg"),
       $rang = $d2.querySelector("#range"),
       $botonMas = $d2.querySelector("#mas"),
@@ -16,6 +16,7 @@
       $save = $d2.querySelector("#guardar")
 
  
+      console.log($nombre.value)
     //console.log($error)
     
 const lienzo = 600,
@@ -155,30 +156,23 @@ $contenedorLienzos.addEventListener("mouseover",e=>{
     }
 })
 
-/* Evento de validación del nombre */
-$nombre.addEventListener("blur",e=>{
-    e.preventDefault()
-    $error.innerHTML=""
-    if($nombre.value==""){
-        $error.innerHTML="El nombre no puede estar vacío"
-        $guardar.disabled=true
-    }else{
-        $guardar.disabled=false
-    }
-})
 
 /* Transformar el svg en una cadena */
 
 $guardar.addEventListener("click",e=>{
     e.preventDefault()
-    const svgLienzo = new XMLSerializer().serializeToString($contenedorLienzos.firstChild.nextSibling)
-    if(svgLienzo!=""){
-        //console.log($contenedorLienzos.firstChild.nextSibling)
-        $d2.querySelector("#datosSvg").value = svgLienzo
-        console.log($d2.querySelector("#datosSvg"));
-        $form.submit()
+    if($nombre.value=="" || $nombre == 'undefined'){
+        $error.innerHTML="El nombre no puede estar vacío"
     }else{
-        $error.innerHTML="Error al guardar la imagen"
+        const svgLienzo = new XMLSerializer().serializeToString($contenedorLienzos.firstChild.nextSibling)
+        if(svgLienzo!=""){
+            //console.log($contenedorLienzos.firstChild.nextSibling)
+            $d2.querySelector("#datosSvg").value = svgLienzo
+            console.log($d2.querySelector("#datosSvg"));
+            $form.submit()
+        }else{
+            $error.innerHTML="Error al guardar la imagen"
+        }
     }
 }) 
 

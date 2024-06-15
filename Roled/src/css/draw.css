@@ -38,10 +38,11 @@ main{
     margin-bottom: 1rem;
 }
 
-#errorN{
-    background-color: var(--clr-letra);
-    color: red;
+#errorSave{
+    color: var(--clr-letra);
 }
+
+
 
 /*=============================================
 =            Estilos del formulario            =
