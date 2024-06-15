@@ -5,7 +5,7 @@ if(!isset($_SESSION['login'])){
     header("Location: ../index.php");
 }
 $username= $_SESSION['login'];
-$ruta = "../../docsUsuarios/".$username."/avatar";
+$ruta = "../docsUsuarios/".$username."/avatar";
 $conexionBBDD = new mysqli ('localhost','root','','roled');
 //var_dump($_FILES);
 

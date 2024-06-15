@@ -52,7 +52,7 @@ function renderDisenos(disenos, element, addBorrar,addLimite){
             `
             <article>
                 <figure class="disenos">
-                    <img src="../../docsUsuarios/${el.id_usuario}/${el.nombre}" alt="">
+                    <img src="../docsUsuarios/${el.id_usuario}/${el.nombre}" alt="">
                 </figure>
                 <button class="boton ${addBorrar ? 'btn2' : ''} deshabilitar" data-id="${el.id_design}">Proyectar</button>
                 ${addBorrar ? `<button class="boton btn2 borrar" data-id="${el.id_design}">Borrar</button>` : ''}

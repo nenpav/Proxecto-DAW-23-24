@@ -18,7 +18,7 @@ echo "Hola";
         }
         $nombre = $resultado->fetch_assoc()['nombre'];
 
-        $ruta = "../../docsUsuarios/$user/$nombre";
+        $ruta = "../docsUsuarios/$user/$nombre";
 
         if (file_exists($ruta)) {
             if (!unlink($ruta)) {

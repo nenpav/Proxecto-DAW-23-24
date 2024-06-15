@@ -42,7 +42,7 @@ function endSession(){
 function renderMenu($sesion){
     global $conexionBBDD;
     $rutaBase = "./src/img/avatarGen.png";
-    $rutaAvatar="..";
+    $rutaAvatar=".";
     if($sesion){
         echo '<button class="navbar-toggler" type="button" aria-label="Toggle navigation">';
             echo '<span class="navbar-toggler-icon"></span>';
@@ -118,7 +118,7 @@ function formatoHash($pwd){
  * Crea una carpeta con el nombre de usuario
  */
 function crearCarpetaUser($username){
-    $rutaBase = "../../docsUsuarios/".$username;
+    $rutaBase = "../docsUsuarios/".$username;
 
     if(!file_exists($rutaBase) && mkdir($rutaBase,0777,false)){
         return true;
@@ -130,7 +130,7 @@ function crearCarpetaUser($username){
   * Elimina la carpeta en caso de error durante el registro
   */
   function eliminarCarpetaUser($username) {
-    $rutaBase = "../../docsUsuarios/".$username;
+    $rutaBase = "../docsUsuarios/".$username;
     if (is_dir($rutaBase)) {
         rmdir($rutaBase); 
     }

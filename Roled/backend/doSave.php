@@ -19,7 +19,7 @@ $svg = !empty($_POST['datosSvg'])?$_POST['datosSvg']:'';
 $nombre = $_POST['nombre'];
 //var_dump($svg);
 $login = $_SESSION['login'];
-$ruta = "../../docsUsuarios/$login/$nombre.svg";
+$ruta = "../docsUsuarios/$login/$nombre.svg";
 
 //var_dump($svg);
 $conexionBBDD = new mysqli("localhost","root","","roled");
