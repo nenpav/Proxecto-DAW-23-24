@@ -16,6 +16,10 @@ h1{
 
 .izq{
     width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #galeriaPerfil{
@@ -110,6 +114,7 @@ form{
 h4{
     color: var(--clr-letra);
 }
+
 .titulo{
     text-align: center;
     margin-top: 2rem;
@@ -121,6 +126,7 @@ h4{
     display: flex;
     flex-direction: column;
     align-items: center;
+  
 }
 
 #cambiarPwd{
@@ -131,11 +137,13 @@ h4{
     align-items: center;
     justify-content: center;
 }
+
 /*=============================================
 =            Estilos de las media queries            =
 =============================================*/
 
 @media screen and (max-width:425px) {
+
     #cambiarPwd{
         margin-left: 0;
     }
@@ -189,10 +197,10 @@ h4{
     
     .izq{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
-        gap:1rem;
+        gap: 1rem;
     }
 
     .titulo{
