@@ -28,7 +28,8 @@ Para poder poner en marcha la aplicación en un entorno local se necesita:
 1. Instalar XAMPP
 2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
 3. Acceder desde el navegador mediante localhost/Roled/
-Para un correcto funcionamiento, verificar que en la carpeta raíz está el directorio docsUsuarios.
+
+Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es el directorio Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/. En caso de no hacer esto correctamente, habrá errores a la hora de listar los diseños mediante ajax.
 
 
 Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: https://144.91.105.157

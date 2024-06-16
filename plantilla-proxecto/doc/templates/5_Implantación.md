@@ -19,7 +19,9 @@ Para poder poner en marcha la aplicación en un entorno local se necesita:
 
 1. Instalar XAMPP
 2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
-3. Acceder desde el navegador mediante localhost/Roled/ Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/.
+3. Acceder desde el navegador mediante localhost/Roled/. 
+
+Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/.
 
 ### 1.2- Administración do sistema
 
