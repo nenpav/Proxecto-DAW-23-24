@@ -15,10 +15,11 @@ Para acceder a la aplicación se debe poner en el navegador la siguiente url: [u
   - usernme: user123
   - contraseña: aA1.aaaa
 
-En caso, de querer realizar pruebas sin entrar en el entorno de desarrollo, se puede acceder de forma local descargando XAMP e importando el documento /Roled/src/scriptsBBDD/creacion.sql. Una vez hecho esto, hay que seguir los siguientes pasos:
-  1.Acceder a la web mediante localhost
-  2.Registrarse para crear un nuevo usuario.
-  3.Iniciar sesión
+Para poder poner en marcha la aplicación en un entorno local se necesita:
+
+1. Instalar XAMPP
+2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
+3. Acceder desde el navegador mediante localhost/Roled/ Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/.
 
 ### 1.2- Administración do sistema
 
@@ -30,7 +31,7 @@ Para un correcto mantenimiento de la aplicación será necesario realizar un man
 
 ## 2- Manual de usuario
 
-El uso de la aplicación web es muy sencillo e intuitivo. Lo que puede suponer un mayor problema es la configuración y el uso del dispositivo POV pero, como aún se esta prototipando y no se conoce cuál será su resultado ni la forma final de comunicarse con la web, este manual todavía no puede ser confeccionado. 
+El uso de la aplicación web es muy sencillo e intuitivo. Lo que puede suponer un mayor problema es la configuración y el uso del dispositivo POV pero, como aún se está prototipando y no se conoce cuál será su resultado ni la forma final de comunicarse con la web, este manual todavía no puede ser confeccionado. 
 
 ## 3- Melloras futuras
 
