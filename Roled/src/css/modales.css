@@ -130,7 +130,7 @@ dialog button, dialog input[type='submit']{
     background-color: var(--clr-fondo-primario);
 }
 
-#confReg, #confSave , #save{
+#confReg, #confSave , #save, #changePwd{
     width: 22rem;
     height: 100px;
     background-color: var(--clr-violeta);
@@ -142,12 +142,12 @@ dialog button, dialog input[type='submit']{
     
 }
 
-#confReg p, #confSave p, #save p{
+#confReg p, #confSave p, #save p, #changePwd p{
     padding: 30px;
     width: 100%;
     margin: auto auto;
 }
-#cerrarConfReg, #cerrarConfSave, #cerrarSave{
+#cerrarConfReg, #cerrarConfSave, #cerrarSave, #cerrarChange{
     color: var(--clr-letra);
     background-color: transparent;
     position: absolute;

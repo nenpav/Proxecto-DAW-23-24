@@ -15,6 +15,12 @@ if(isset($_GET['subida']) && isset($_GET['avatar'])){
   });</script>";
 }
 
+if(isset($_GET['change'])){
+  echo "<script>window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('changePwd').showModal();
+  });</script>";
+}
+
 $conexionBBDD = new mysqli ('localhost','root','','roled');
 $rutaBase= "../src/img/avatarGen.png";
 $fichero = "../src/json/roled.json";
@@ -101,6 +107,21 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
                   <input class="boton" type="submit" value="Guardar">
                 </form>
             </div>
+            <article id='cambiarPwd'>
+              <h4>Cambiar contraseña</h4>
+              <form id="formPwd" action="../backend/cambiarPwd.php" method="POST">
+                <p>
+                    <label for="pwd">Contraseña*</label>
+                    <input type="password" name="pwd" id="pwd" placeholder="Escribe la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula, al menos un dígito y al menos un símbolo (.@$!%*?&). ">
+                </p>
+                <p>
+                    <label for="pwd2">Repetir Contraseña*</label>
+                    <input type="password" name="pwd2" id='pwd2' placeholder="Repite la contraseña" title="Longitud entre de 8 caracteres. Al menos una mayúscula, al menos una minúscula, al menos un dígito y al menos un símbolo(.@$!%*?&). ">
+                </p>
+                <span><p id="errorPwd"></p></span>
+                <input class="boton" name="cambioPwd" id="cambioPwd" type="submit" value="Enviar">
+              </form>
+            </article>
           </section>
           <section class="listaDisenhos" id="galeriaPerfil">
               <h4 class="titulo">Mis Diseños</h4>
@@ -166,16 +187,22 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
     <?php
         if($_GET['subida'] == "ok"){
           echo "<p id='confSubida'>El avatar se ha subido correctamente</p>";
-          ?>
-              <script>
-
-              <script>
-          <?php
         }
         if($_GET['subida'] == "ko"){
           echo "<p id='confSubida'>Error al subir el avatar</p>";
         }
     ?>
+  </dialog>
+  <dialog id="changePwd">
+      <button id="cerrarChange">X</button>
+      <?php
+        if ($_GET['change'] == 'ok'){
+          echo "<p id='confChange'>La contraseña se ha guardado correctamente</p>";
+        }
+        if ($_GET['change'] == 'ko'){
+          echo "<p id='confChange'>Error al cambiar la contraseña</p>";
+        }
+      ?>
   </dialog>
 </body>
 <template id="disenhos">

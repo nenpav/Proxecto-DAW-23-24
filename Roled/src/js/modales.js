@@ -10,7 +10,9 @@ const $d1 = document
       $botonRegistro = $d1.querySelector("#registro"),
       $botonLoginDesdeRegistro = $d1.querySelector("#loginR"),
       $modalSubida = $d1.querySelector("#save"),
-      $cerrarConfSubida = $d1.querySelector("#cerrarSave")
+      $cerrarConfSubida = $d1.querySelector("#cerrarSave"),
+      $modalChangePwd = $d1.querySelector("#changePwd"),
+      $cerrarModalChange = $d1.querySelector("#cerrarChange")
 
 //console.log($botonLoginDesdeRegistro)
 
@@ -36,6 +38,7 @@ closeModal($cerrarModalSesion, $modalSesion)
 closeModal($cerrarConfReg, $modalConfReg)
 closeModal($cerrarConfSave,$modalConfSave)
 closeModal($cerrarConfSubida, $modalSubida)
+closeModal($cerrarModalChange, $modalChangePwd)
 
 if($botonRegistro != undefined){
     $botonRegistro.addEventListener("click",e=>{
