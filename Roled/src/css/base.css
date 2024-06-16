@@ -71,7 +71,6 @@ header{
     margin-bottom: 1rem;
     background-color: var(--clr-fondo-primario);
     z-index: 99;
-   /*  padding-left: 20px; */
 }
 
 #logo{
@@ -142,6 +141,7 @@ nav>ul>li>button{
     font-size: 1.2rem;
     transition: all .5s ease-in;
 }
+
 li{
     color: var(--clr-letra);
 }
@@ -149,8 +149,8 @@ li{
 #menuMovil{
     display: none;
 }
-/*=====  End of Estilos del menú  ======*/
 
+/*=====  End of Estilos del menú  ======*/
 
 
 /*=============================================
@@ -234,6 +234,7 @@ li{
     background-color: var(--clr-disabled);
     color: black;
 }
+
 /*=====  End of Estilos del botón  ======*/
 
 
@@ -254,12 +255,12 @@ li{
     position: relative;
   }
   
-  .dropdown {
+.dropdown {
     position: relative;
     display: inline-block;
-  }
+}
   
-  .dropdown-content {
+.dropdown-content {
     border-radius: 10px;
     display: none;
     position: absolute;
@@ -270,9 +271,9 @@ li{
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
+}
 
-  #avatar{
+#avatar{
     z-index: 99;
     width: 50px;
     height: 50px;
@@ -281,28 +282,28 @@ li{
     top: 0;
     right: 0px;
     border-radius: 50%;
-  }
+}
   
-  .dropdown-content a {
+.dropdown-content a {
     color:var(--clr-letra);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
-  }
+}
   
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
     color: var(--clr-letra);
     background-color: var(--clr-hover);
     border-radius: 10px;
 }
   
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
     display: block;
-  }
+}
   
-  .dropdown:hover .dropbtn {
+.dropdown:hover .dropbtn {
     background-color: var(--clr-hover);
-  }
+}
 
 /*=====  End of Estilos del dropdown  ======*/
 
@@ -391,8 +392,6 @@ li{
     } 
 
     footer{
-        /* grid-template-columns: 2;
-        grid-template-rows: repeat(3, 1fr); */
         padding: 10px;
     }
 
@@ -450,10 +449,7 @@ li{
         width: 30px;
         height: 30px;
     }
-    /* .navbar-collapse {
-        display: none; 
-        text-align: center;
-    } */
+   
     .dropdown .dropbtn {
         display: none;
     }
