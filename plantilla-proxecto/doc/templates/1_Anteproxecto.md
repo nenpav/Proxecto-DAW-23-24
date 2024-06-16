@@ -34,7 +34,7 @@ El producto central de Roled es un dispositivo POV que permite proyectar imágen
 Como valor añadido, Roled ofrece un contenido exclusivo de pago en la aplicación, que será gratuito para aquellos usuarios que realicen y compartan muchos diseños con la comunidad.
 Además, también de forma gratuita, todos los usuarios gozarán de un servicio de soporte de calidad y de formación para aprender a configurar y usar el dispositivo POV. Las empresas que adquieran el producto, podrán adquirir de forma económica el servicio de mantenimiento de los dispositivos. 
 
-|------------------------------------------------------------|
+|-------------------|-----------------------------------------|
 |Producto central   | Dispositivo POV                        |
 |Producto aumentado | Aplicación web                         |
 |Valor añadido      | Contenido exclusivo de pago, soporte   |
