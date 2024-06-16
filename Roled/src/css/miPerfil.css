@@ -98,6 +98,18 @@ form{
     height: max-content;
 }
 
+#formPwd{
+    height: 200px;
+}
+
+#formPwd p{
+    display: flex;
+    flex-direction: column;
+    color: var(--clr-letra);
+}
+h4{
+    color: var(--clr-letra);
+}
 .titulo{
     text-align: center;
     margin-top: 2rem;
@@ -111,12 +123,22 @@ form{
     align-items: center;
 }
 
+#cambiarPwd{
+    padding-top: 1rem;
+    margin-left: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 /*=============================================
 =            Estilos de las media queries            =
 =============================================*/
 
 @media screen and (max-width:425px) {
-
+    #cambiarPwd{
+        margin-left: 0;
+    }
     .content{
         gap:0;
     }
@@ -168,8 +190,9 @@ form{
     .izq{
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-evenly;
         align-items: center;
+        gap:1rem;
     }
 
     .titulo{
