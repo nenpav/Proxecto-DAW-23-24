@@ -29,7 +29,7 @@ Las pantallas POV son muy populares en algunos países asiáticos como China per
 
 ### 2.1- Idea de negocio
 
-El producto central de Roled es un dispositivo POV que permite proyectar imágenes holográficas gracias a la tecnología LED y el fenómeno de la "Persistencia de la Visión". Además, Roled ofrece una aplicación web gratuita que permite la creación de dibujos mediante la técnica del pixelart, con la posibilidad de animarlos, que podrán ser proyectados en el dispositivo POV.
+El producto central de Roled es un dispositivo POV que permite proyectar imágenes holográficas gracias a la tecnología LED y el fenómeno de la "Persistencia de la Visión". Además, ofrece una aplicación web gratuita que permite la creación de dibujos mediante la técnica del pixelart, con la posibilidad de animarlos, que pueden ser porteriormente proyectados en el dispositivo POV.
 
 Como valor añadido, Roled ofrece un contenido exclusivo de pago en la aplicación, que será gratuito para aquellos usuarios que realicen y compartan muchos diseños con la comunidad.
 Además, también de forma gratuita, todos los usuarios gozarán de un servicio de soporte de calidad y de formación para aprender a configurar y usar el dispositivo POV. Las empresas que adquieran el producto, podrán adquirir de forma económica el servicio de mantenimiento de los dispositivos. 
@@ -45,10 +45,10 @@ Las posibles aplicaciones del Dispositivo POV son muy extensas, desde el ámbito
 
 En internet existe una gran variedad de ofertas de aplicaciones de entretenimiento como videojuegos, redes sociales, etc. No obstante, no ofrecen ningún tipo de estimulación o experiencia más allá de acabar con el aburrimiento. Desde Roled, se apuesta por una aplicación que fomenta la creatividad y que permita a todos los usuarios formar parte de una comunidad de usuarios sana y tolerante, aspectos muy difíciles de encontrar en la red.
 
-En la actualidad existen dispositivos POV procedentes principalmente del mercado de China. No obstante, no es un producto que tenga presencia en el mercado nacional por lo que para poder adquirir un producto se debe recurrir a plataformas como Aliexpress y semejantes, con los riesgos que eso implica en cuanto a soporte, devolución de productos defectuosos, etc. 
-Roled ofrece las garantías de adquirir un producto nacional, que cumple con todos los requisitos de garantía y seguridad establecidos por la UE y España, a la vez que ofrece a todos los clientes un servicio de soporte e incidencias de calidad. 
+En el mercado de China y otros países asiáticos ya existen productos similares a la pantalla POV de Roled. No obstante, es un producto que no tiene presencia en el mercado nacional por lo que para poder adquirirlo se debe recurrir a plataformas como Aliexpress y semejantes, con los riesgos que eso implica en cuanto a soporte, devolución de productos defectuosos, etc. 
+Roled ofrece las garantías de adquirir un producto nacional, sin tiempos de entrega desorbitados, que cumple con todos los requisitos de garantía y seguridad establecidos por la UE y España, a la vez que ofrece a todos los clientes un servicio de soporte e incidencias de calidad. 
 
-En cuanto a la aplicación Web, existen otras aplicaciones de dibujo en el mercado pero la de Roled está diseñada específicamente para que estos sean posteriormente proyectados, por lo que se garantiza que los diseños no perderán calidad ni información a la hora de enviarse al dispositivo, ni implicarán que el usuario tenga que hacer cálculos para que los lienzos de dibujo se ajusten a la resolución del dispositivo POV, siendo un proceso mucho más cómodo y amigable para el usuario.
+En cuanto a la aplicación Web, existen diferentes ofertas de aplicaciones de dibujo en el mercado. Sin embargo, la de Roled está diseñada específicamente para que estos diseños sean posteriormente proyectados, por lo que se garantiza que no perderán calidad ni información a la hora de enviarse al dispositivo, ni implicarán que el usuario tenga que hacer cálculos para que los lienzos de dibujo se ajusten a la resolución del dispositivo POV, siendo un proceso mucho más cómodo y amigable para el usuario.
 
 ![Analisis DAFO](../img/grafico_dafo.png)
 
@@ -60,20 +60,19 @@ Roled tiene dos segmentos de clientes diferenciados y, dependiendo del segmento 
 
 - Usuarios 
 
-Hace referencia a personas que utilizan el producto de forma lúdica y buscando simplemente disfrutar de la experiencia del producto. Estos usuarios se espera que sean principalemente jóvenes de entre 10 a 35, ya que son los que presentan una relación más estrecha con la tecnología, las redes sociales y las plataformas de stream, tanto del ámbito de los videojuegos como de contenido más artístico. Debido a que algunos de estos usuarios no tienen ingresos propios, en ocasiones los clientes podrán ser familiares o personas adultas cercanas con un mayor poder adquisitivo.
+Hace referencia a personas que utilizan el producto de forma lúdica y buscan simplemente disfrutar de la experiencia del producto. Estos usuarios se espera que sean principalemente jóvenes de entre 10 a 35, ya que son los que presentan una relación más estrecha con la tecnología, las redes sociales y las plataformas de stream, tanto del ámbito de los videojuegos como de contenido más artístico. Debido a que algunos de estos usuarios no tienen ingresos propios, en ocasiones los clientes podrán ser familiares o personas adultas cercanas con un mayor poder adquisitivo.
 
 - Empresas
 
 Las aplicaciones empresariales de Roled también son extensas pero están más focalizadas en el dispositivo POV:
 -Puede usarse como decoración, para dar avisos o para diferentes performance en discotecas y pubs donde la tecnología led y el dispositivo POV encajan a la perfección. En este caso, los usuarios serán los clientes de la discoteca mientras que los clientes de Roled serán los dueños de estos locales.
--Tiene también cabida en empresas de publicidad y marketing, pudiendo ofrecer a otras empresas el dispositivo POV para realizar anuncios, reclamos publicitarios, ofertas, etc, de una forma sencilla, económica y llamativa para sus clientes. 
--Los creadores de contenido, mayormente autónomos, pueden verse atraidos por este productos para los anuncios de suscripciones a su canal, donaciones, etc. También puede ser un buen reclamo para los creadores de contenido del mundo artístico para dar a conocer su trabajo por redes sociales de una forma novedosa. 
+-Tiene también cabida en empresas de publicidad y marketing, pudiendo ofrecer a otras empresas el dispositivo POV para realizar anuncios, reclamos publicitarios u ofertas, de una forma sencilla, económica y llamativa para sus clientes. 
+-Los creadores de contenido, mayormente autónomos, pueden verse atraídos por este productos para los anuncios de suscripciones a su canal, donaciones, etc. También puede ser un buen reclamo para los creadores de contenido del mundo artístico para dar a conocer su trabajo por redes sociales de una forma novedosa. 
 
 ### 2.4- Competencia
 
 Se realizó una búsqueda de los productos que pudiesen ser semejantes al proyeto Roled. Se encontraron, como se esperaba, productos muy parecidos al periférico sobre todo procedentes del mercado chino en grandes plataformas online como Aliexpress. 
-También existen otras plataformas gratuitas y de pago para la elaboración de dibujos
-como Photoshop, Illustrator, etc.
+También existen otras plataformas gratuitas y de pago para la elaboración de dibujos como Photoshop, Illustrator, etc.
 
 Para poder representar la posición de Roled en el mercado con respecto a la competencia, se realizaron dos Mapas de posicionamiento, uno para el periférico POV y otro para la aplicación de dibujo.
 
@@ -93,15 +92,18 @@ Para representar en qué se diferencia el producto que ofrece Roled de otros pro
 
 ![Curva de valor](../img/curva_valor.PNG)
 
-Como se puede apreciar, Roled apuesta por un producto de mayor calidad, que genere una mayor confianza a los clientes dada su cercanía, apostando por una aplicación web asociada, permitiendo una personalización del dispositivo a gusto del cliente. Además, Roled usa materiales reciclados para la elaboración de partes del periférico, por lo que también ofrece una mayor Responsabilidad Social Corporativa.
+La imagen anterior, muestra que Roled apuesta por un producto de mayor calidad, que genere una mayor confianza a los clientes dada su cercanía, apostando por una aplicación web asociada, permitiendo una personalización del dispositivo a gusto del cliente. Además, usa materiales reciclados para la elaboración de partes del periférico, por lo que también ofrece una mayor Responsabilidad Social Corporativa.
 
-La estrecha relación y especificidad que existe entre la aplicación y el dispositivo POV de Roled, permite que los usuarios adquieran y usen el pack completo,  ya que usando dispositivos de la compentencia o usando otras aplicaciones de dibujo, los resultados tendrán una menor calidad y será más costoso realizarlos.
+La estrecha relación y especificidad que existe entre la aplicación y el dispositivo POV de Roled, permite que los usuarios adquieran y usen el pack completo, ya que con dispositivos de la compentencia u otras aplicaciones de dibujo, los resultados tendrán una menor calidad y será más costoso realizarlos.
 
-Por lo tanto, Roled se diferencia de la competencia ofreciendo una experiencia holográfica completa y personalizada, que va desde el diseño de los dibujos en la aplicación hasta la proyección de estos diseños en el dispositivo. Además, a diferencia del producto existente en el mercado asiático, Roled es un proyecto nacional lo cual implica  numerosas ventajas en caso de necesitar soporte técnico, en los plazos de envío y en la garantía de seguridad que ofrece un producto con la certificación europea CE.
+Por lo tanto, Roled se diferencia de la competencia ofreciendo una experiencia holográfica completa y personalizada, que va desde el diseño de los dibujos en la aplicación hasta la proyección de estos diseños en el dispositivo. Además, a diferencia del producto existente en el mercado asiático, Roled es un proyecto nacional lo cual implica numerosas ventajas en caso de necesitar soporte técnico, en los plazos de envío y en la garantía de seguridad que ofrece un producto con la certificación europea CE.
 
 ### 2.6- Forma xurídica
 
 La forma juridica de Roled es una cooperativa, debido a las numerosas ventajas fiscales y organizativas que presenta con respecto a otras formas jurídicas, ya que permite una toma de decisiones más democrática y un reparto de los beneficios más equitativo. 
+Algunas de las ventajas fiscales que ofrece una cooperativa son:
+  - Deducciones fiscales por la compra de nuevos activos y por creación de empleo.
+  - Exención del 100% de los beneficios en forma de retornos cooperativos, de forma que no están sujetos a impuestos.
 
 ### 2.7- Investimentos
 
@@ -115,7 +117,7 @@ Se realizó una estimación de la inversión de activo necesario para el proyect
 - Financiero: no se considera necesario pedir financiación externa como préstamos a corto o largo plazo. 
 - Corriente: hace referencia a las mercancías necesarias para realizar el periférico, las cuales se calcula que suponen un gasto inicial de 600€ incluyendo los motores (0€ ya que se cogerán en el punto limpio u otras tiendas de electrónica para reciclarlos), los controladores de los motores (5€), los microcontroladores(6€), el fin de carrera (0.5€) y la alimentación (10€). También hace referencia a las materias primas necesarias como el filamento de plástico (15€) o el estaño (10€), suponiento un gasto inicial de 200€. 
 
-La siguiente imagen muestra el resultado del total de inversiones necesarias para antes de iniciar el proyecto, asi como cada años hasta el año 2028.
+La siguiente imagen muestra el resultado del total de inversiones necesarias para antes de iniciar el proyecto, asi como cada año hasta el 2028.
 
 ![Inversiones de activo](../img/inversiones.PNG)
 
@@ -152,7 +154,7 @@ En la siguiente imagen se muestra el resultado total de gastos variables, de sal
 
 ![Ventas 2024](../img/ventas_2024.png)
 
-Suponiendo una variación de precios de entre el 3% y el 5%, así como un aumento de aproximadamente el 50% en número de ventas anual, para el año 2028 se estima que el total de ventas asciende a 37.445€ sin IVA, lo cual es un incremento significativo con respecto al año 2024 reflejado en la imagen anterior. 
+Suponiendo una variación de precios de entre el 3% y el 5%, así como un aumento de aproximadamente el 50% en número de ventas anual, para el año 2028 se estima que el total de ventas asciende a 37.445€ sin IVA (45.308€ con IVA), lo cual es un incremento significativo con respecto al año 2024 reflejado en la imagen anterior. 
 
 ### 2.8- Viabilidade
 
@@ -164,12 +166,11 @@ En cuanto a los recursos humanos, se necesitará poco personal para el mantenimi
 
 En cuanto a las instalaciones, es necesario disponer de espacio suficiente y adecuado para alojar la impresora (o impresoras) 3D, disponer de espacio de almacenaje suficiente así como de una mesa de trabajo para poder realizar el montaje del periférico. Para la elaboración del software se necesita un ordenador sobremesa, por lo menos de gama media, que permita el desarrollo y el mantenimiendo del software de Roled. Para minimizar gastos, durante el primer año se usará el domicilio como taller y almacén y se solicitará el uso del "Viveiro de empresas" del centro educativo IES Armando Cotarelo Valledor para reuniones con clientes, con proveedores, etc. 
 
-El despliegue de la aplicación web se hará mediante servicios de hosting. 
+El despliegue de la aplicación web se hará mediante servicios de hosting a través de un servidor de la empresa Contaboo. 
 
 #### 2.8.2 - Viabilidade económica
 
-> _EXPLICACIÓN_: Neste subapartado deberás defender con datos a viabilidade da realización do proyecto, para elo debes indicar os custos e investimentos:
-
+Tras analizar los gastos totales y la politica de precios aplicable, se comprueba que Roled es un proyecto rentabe y viable en términos económicos. Ver el apartado siguiente de conclusiones para una explicación más detallada de este punto. 
 
 #### 2.8.3- Conclusión
 
@@ -204,7 +205,7 @@ Estos datos indican que la situación financiera del proyecto Roled es estable, 
 - Rentabilidad económica: en el año 2024 la rentabilidad es negativa, llegando a un valor positivo del 24.46% en el año 2028.
 - Rentabilidad financiera: se inicia en 2024 con un valor negativo llegando al 27.29% en 2028.
 - Ratio de tesoreria: Los valores de este ratio para el año 2024 son muy elevados, demostrando una mala utilización de los recursos del proyecto. Para el año 2028 el ratio de tesoreria mejora notablemente a una valor de 9,48 siendo todavía un valor alto, ya que los valores óptimos se encuentran entre 0.75 y 1. 
-- Ratio de liquidez: para el año 2024, el ratio de liquidez es de 33,39, un valor excesivamente alto. Para el año 2028, el valor es de 9 siendo demasiado alto pero mejorando con respecto al año 2024. 
+- Ratio de liquidez: para el año 2024, el ratio de liquidez es de 33,39, un valor excesivamente alto. Para el año 2028, el valor es de 9 siendo demasiado alto pero mejorando con respecto al 2024. 
 
 Los ratios demuestran que existe un mayor margen para aumentar la deuda, por ejemplo con un préstamo a largo plazo que permita mejorar la infraestructura y la maquinaria, ya que no se están destinando correctamente los recursos de la empresa produciendo estos valores tan altos en algunos de los ratios como el de liquidez o el de tesorería.
 
@@ -215,7 +216,7 @@ El desarrollo del proyecto Roled, se puede separar en diferentes partes con unos
 **Infraetructura del proyecto**
 
 Para la infraestructura del proyecto se usará un servidor web de Contabo, en el cual se ha instalado un Debian para su manejo. Para la gestión de este servidor se usará el software Webmin que permite administrar un servidor web mediante una interfaz gráfica sencilla. 
-Dentro de este servidor web se tendrá, a su vez, un servidor Apache, un servido de BBDD MySQL y otro servidor para poder subir los archivos necesarios para la aplicación.
+Dentro de este servidor web se tendrá, a su vez, un servidor Apache y un servidor de BBDD MySQL.
 
 **Base de datos**
 
@@ -223,7 +224,7 @@ Se usará una base de datos relacional, con el SGBS MySQL. Se trata de una base 
 
 **API**
 
-Los datos de los clientes y los diseños se guardarán en ficheros JSON para poder realizar diferentes consultas utilizando AJAX. 
+Los datos de los usuarios y los diseños se guardarán en ficheros JSON para poder realizar diferentes consultas mediante AJAX. 
 
 **Periférico POV**
 
