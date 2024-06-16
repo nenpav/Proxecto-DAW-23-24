@@ -11,9 +11,9 @@
 
 ### 1.1- Instalación
 
-Para acceder a la aplicación se debe poner en el navegador la siguiente url: -------. Una vez se ha ingresado en la aplicación, hay que registrarse o iniciar sesión para poder usar la aplicación. También se puede usar el usuario de pruebas:
+Para acceder a la aplicación se debe poner en el navegador la siguiente url: [url de Roled](https://144.91.105.157). Una vez se ha ingresado en la aplicación, hay que registrarse o iniciar sesión para poder usar la aplicación. También se puede usar el usuario de pruebas:
   - usernme: user123
-  - contraseña: 1234567
+  - contraseña: aA1.aaaa
 
 En caso, de querer realizar pruebas sin entrar en el entorno de desarrollo, se puede acceder de forma local descargando XAMP e importando el documento /Roled/src/scriptsBBDD/creacion.sql. Una vez hecho esto, hay que seguir los siguientes pasos:
   1.Acceder a la web mediante localhost
