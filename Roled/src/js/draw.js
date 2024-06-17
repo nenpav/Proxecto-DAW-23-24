@@ -211,8 +211,7 @@ $animar.addEventListener("change",e=>{
     $botonMenos.disabled = !e.target.checked
     if($animar.checked){
         if(contadorFrames == 1) {
-            crearFrames()
-             contadorFrames++ 
+            crearFrames() 
             //console.log(contadorFrames)
         }
         const lienzos = $contenedorLienzos.querySelectorAll("svg")
