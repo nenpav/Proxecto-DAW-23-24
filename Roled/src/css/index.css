@@ -110,5 +110,10 @@ h1,h2{
 }
 
 
+@media screen and (min-width: 1024px) {
+    .portada{
+        width: 90%;
+    }
+}
 /*=====  End of Estilos de las mediaQueries  ======*/
 
