@@ -71,7 +71,7 @@ $rutaBase= "../src/img/avatarGen.png";
               </form>
             </article>
             <article id="herramientas">
-                <figure class="iconos" id="pintar">
+                <figure class="iconos activo" id="pintar">
                   <!--Iconos diseñados por <a href="https://www.flaticon.es/autores/mynamepong" title="mynamepong"> mynamepong </a> from <a href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es'</a>-->                    
                     <button><img src="../src/img/pintura.png" alt="iconoPintar" title="Herramienta de pintura"></button>
                 </figure>
