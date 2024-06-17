@@ -240,6 +240,8 @@ $animar.addEventListener("change",e=>{
         lienzo.style.display = "block"
         $save.disabled=false
         $save.classList.remove("deshabilitar")
+        $frameActual.innerHTML = ""
+        $frameActual.innerHTML = "Frame actual: 1"
     }
 })
 
