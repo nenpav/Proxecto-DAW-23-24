@@ -34,7 +34,12 @@ Para un correcto mantenimiento de la aplicación será necesario realizar un man
 ## 2- Manual de usuario
 
 El uso de la aplicación web es muy sencillo e intuitivo. Lo que puede suponer un mayor problema es la configuración y el uso del dispositivo POV pero, como aún se está prototipando y no se conoce cuál será su resultado ni la forma final de comunicarse con la web, este manual todavía no puede ser confeccionado. 
-
+Sin embargo, es necesario puntualizar ciertos aspectos:
+- Está deshabilitado el botón de comprar del index, así como todos los botones de proyectar. También está deshabilitada la opción de guardar animaciones ya que se incluirá como mejora futura (pero puede verse el proceso de creación de estas).
+- Seguir las indicaciones del title de los inputs de los formularios para ver los requisitos de cada uno de ellos.
+- Solamente se aceptan los formatos jpeg y png para los avatares de usuario.
+- No es necesario indicar la extensión al guardar los diseños ya que esta siempre será svg.
+- Si el registro de usuario se realizó correctamente, se redigirá automáticamente a la modal del login. En caso de error, lo indicará.
 
 ## 3- Melloras futuras
 
