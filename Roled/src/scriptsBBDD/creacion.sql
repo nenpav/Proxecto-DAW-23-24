@@ -15,7 +15,8 @@ CREATE TABLE IF NOT EXISTS design(
     id_design INT AUTO_INCREMENT primary key,
     fecha DATE DEFAULT CURDATE(),
     id_usuario VARCHAR(20) NOT NULL,
-    nombre VARCHAR(40) NOT NULL
+    nombre VARCHAR(40) NOT NULL,
+    valoraciones INT DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS dispositivo (

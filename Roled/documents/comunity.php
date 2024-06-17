@@ -94,7 +94,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design")){
           $activeClass = $i === $numPag ? 'active' : '';
           ?>
           <li class="page <?= $activeClass ?>">
-            <a class="page-link" href="design.php?page=<?= $i ?>" data-page="<?= $i ?>"><?= $i ?></a>
+            <a class="page-link" href="comunity.php?page=<?= $i ?>" data-page="<?= $i ?>"><?= $i ?></a>
           </li>
           <?php
         }

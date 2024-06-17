@@ -41,7 +41,7 @@ async function ajax(options){
     fError: error=>console.log(error)
 }) */
 
-function renderDisenos(disenos, element, addBorrar,addLimite){
+function renderDisenos(disenos, element, addBorrar,addLimite, addValoracion){
     element.innerHTML=""
     if(addLimite){
         disenos = disenos.slice(0,6)
@@ -54,6 +54,7 @@ function renderDisenos(disenos, element, addBorrar,addLimite){
                 <figure class="disenos">
                     <img src="../docsUsuarios/${el.id_usuario}/${el.nombre}" alt="">
                 </figure>
+                ${addValoracion ? `<p id='meGusta'><img data-valoracion="${el.id_design}" id="gustar" src="../src/img/megusta.svg" alt="botón me gusta">${el.valoraciones}</p>` : ''}
                 <button class="boton ${addBorrar ? 'btn2' : ''} deshabilitar" data-id="${el.id_design}">Proyectar</button>
                 ${addBorrar ? `<button class="boton btn2 borrar" data-id="${el.id_design}">Borrar</button>` : ''}
             </article>
@@ -65,7 +66,7 @@ function renderDisenos(disenos, element, addBorrar,addLimite){
 }
 
 
- function getDisenos(element, url, addBorrar, addLimite){
+ function getDisenos(element, url, addBorrar, addLimite, addValoracion){
     disenos= []
     ajax({
         url: url,
@@ -78,7 +79,7 @@ function renderDisenos(disenos, element, addBorrar,addLimite){
                 disenos = [...json]
                 
             } 
-            renderDisenos(disenos, element, addBorrar, addLimite)
+            renderDisenos(disenos, element, addBorrar, addLimite, addValoracion)
         },
         fError: error=>console.log(error)
     })
@@ -103,6 +104,24 @@ async function deleteDisenho(id) {
     
 }
 
+async function valorarDisenho(id) {
+    try {
+        const resp = await fetch(`../backend/valorarDis.php?id=${id}`, {
+            method: 'PUT',
+        })
+        if (!resp.ok) {
+            throw new Error({
+                status:resp.status,
+                statusText:resp.statusText
+            })
+        }
+        const respuesta = await resp.text()
+        location.reload(); 
+    }catch (error) {
+        console.log(error);
+    }  
+}
+
 if($galeriaUser!=null){
     $galeriaUser.addEventListener("click",e=>{
         e.preventDefault()
@@ -123,17 +142,28 @@ if($galeriaTotalUser!=null){
     })
 }
 
+if($galeriaComun!=null){
+    $galeriaComun.addEventListener("click",e=>{
+        e.preventDefault()
+        if(e.target.dataset.valoracion){
+            //console.log("Pulsado")
+            //window.location.href=`../backend/valorarDis.php?id=${e.target.dataset.valoracion}`
+            valorarDisenho(e.target.dataset.valoracion)
+        }
+    })
+}
+
  $d.addEventListener("DOMContentLoaded", e=>{
     e.preventDefault()
     if($galeriaUser != null){
-        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json', true, true)
+        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json', true, true, false)
     }
     if($galeriaTotalUser != null){
-        getDisenos($galeriaTotalUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json',true, false)
+        getDisenos($galeriaTotalUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json',true, false, false)
 
     }
     if($galeriaComun != null){
-        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false, false)
+        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false, false, true)
     }
 }) 
 
