@@ -68,6 +68,19 @@ function pwd2(){
     return true
 }
 
+function fechaNac(){
+    const hoy = new Date()
+    const fechaNac = new Date($date.value)
+    const edad = hoy.getFullYear() - fechaNac.getFullYear()
+    //console.log(edad)
+    if(edad<=10){
+        $date.classList.add("error")
+        $error.innerHTML="La edad mínima es de 10 años"
+        return false
+    }
+    $date.classList.remove("error")
+    return true
+}
 
 $formRegistro.addEventListener("submit",e=>{
     e.preventDefault() 
@@ -80,6 +93,8 @@ $formRegistro.addEventListener("submit",e=>{
     case !pwd():
         break; 
     case !pwd2():
+        break;
+    case !fechaNac():
         break;
     default:
         $formRegistro.submit()  

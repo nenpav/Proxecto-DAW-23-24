@@ -66,7 +66,7 @@
                 </p>
                 <p>
                   <label for="fnac">Fecha de Nacimiento*</label>
-                  <input type="date" name="fnac" id="fnac">
+                  <input type="date" name="fnac" id="fnac" max='2024-12-31' min='1910-01-01' required>
                 </p>
                 <span><p id="error"></p></span>
 
