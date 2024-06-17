@@ -54,6 +54,9 @@ h1,h2{
 
 
 #giro{
+    -webkit-animation: giro .1s 6 ease-in;
+    -o-animation: giro .1s 6 ease-in;
+    -moz-animation: giro .1s 6 ease-in;
     animation: giro .1s 6 ease-in;
     width: 300px;
 }
@@ -70,6 +73,23 @@ h1,h2{
 /*=============================================
 =            Estilos animacion imagen            =
 =============================================*/
+@-webkit-keyframes giro{
+    to{
+        rotate: 360deg;
+    }  
+}
+
+@-o-keyframes giro{
+    to{
+        rotate: 360deg;
+    }  
+}
+
+@-moz-keyframes giro{
+    to{
+        rotate: 360deg;
+    }  
+}
 
 @keyframes giro {
     to{
