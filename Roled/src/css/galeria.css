@@ -3,7 +3,9 @@
 
 #meGusta{
     color: var(--clr-letra);
+    cursor:pointer;
 }
+
 
 .listaDisenhos, #listaDisenhosCom{
          margin: 2rem auto;
