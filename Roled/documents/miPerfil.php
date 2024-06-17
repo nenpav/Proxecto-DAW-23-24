@@ -102,7 +102,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
                     <i class="fa fa-camera"></i>
                 </label>
                 <form id="formPerfil" action="../backend/avatar.php" enctype="multipart/form-data" method="POST">
-                  <input type="hidden" name="MAX_FILE_SIZE" value="1024000">
+                  <input type="hidden" name="MAX_FILE_SIZE" value="102400000">
                   <input type="file" id="cargar" name="cargar">
                   <input class="boton" type="submit" value="Guardar">
                 </form>
