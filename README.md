@@ -23,6 +23,8 @@ Para realizar este proyecto se uso HTML5,CSS3 y JavaScript para la parte del fro
 
 ## Instalación / Posta en marcha
 
+Todo el código fuente y directorios que son necesarios para el funcionamiento de la aplicación están en el directorio Roled.
+
 Para poder poner en marcha la aplicación en un entorno local se necesita:
 
 1. Instalar XAMPP
@@ -38,10 +40,11 @@ Aceptar el riesgo de seguridad ya que, aunque tiene acceso ssl, como no ha sido 
 
 Recomendaciones e indicaciones
 
+- En caso de entrar con el móvil, no aparecen los title de los input de contraseñas. Las restricciones son: al menos una mayúscula, al menos una minúscula, al menos un dígito y al menos un símbolo (.@$!%*?&). Longitud de 8 caracteres.
 - En el servidor web, en ocasiones no actualiza el avatar de usuario, aunque el guardado se haya realizado correctamente y se recargue la página. Cuando esto ocurre, es necesario cerrar sesión y volver a iniciarla, y se comprobará que el cambio se ha realizado. 
-- En caso de usar el entorno local, es importante seguir el orden indicado y no crear ningún usuario antes de importar el script de insercion.sql ya que el id del usuario es autoincremental y los datos que se importan para pruebas tienen en cuenta que el usuario123 es el primer usuario añadido.
--En la carpeta de docsUsuarios ya hay varios diseños creados que concuerdan con los datos del script de insercion.  
-
+- En caso de usar el entorno local, es importante seguir el orden indicado y no crear ningún usuario antes de importar el script de insercion.sql ya que el id del usuario es autoincremental y los datos que se importan para pruebas tienen en cuenta que el usuario123 es el primer usuario añadido y su id es 1.
+-En la carpeta de docsUsuarios ya hay varios diseños creados que concuerdan con los datos del script de insercion. Es importante no borrar el contenido de esa carpeta. 
+ 
 ## Uso
 
 Dibuja, comparte y proyecta tus diseños mediante una experiencia holográfica completa. 
