@@ -156,14 +156,14 @@ if($galeriaComun!=null){
  $d.addEventListener("DOMContentLoaded", e=>{
     e.preventDefault()
     if($galeriaUser != null){
-        getDisenos($galeriaUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json', true, true, false)
+        getDisenos($galeriaUser, 'http://localhost/Roled/src/json/roled.json', true, true, false)
     }
     if($galeriaTotalUser != null){
-        getDisenos($galeriaTotalUser, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/roled.json',true, false, false)
+        getDisenos($galeriaTotalUser, 'http://localhost/Roled/src/json/roled.json',true, false, false)
 
     }
     if($galeriaComun != null){
-        getDisenos($galeriaComun, 'http://localhost/Proxecto-DAW-23-24/Roled/src/json/comunidad.json',false, false, true)
+        getDisenos($galeriaComun, 'http://localhost/Roled/src/json/comunidad.json',false, false, true)
     }
 }) 
 
