@@ -35,6 +35,7 @@ Para un correcto mantenimiento de la aplicación será necesario realizar un man
 
 El uso de la aplicación web es muy sencillo e intuitivo. Lo que puede suponer un mayor problema es la configuración y el uso del dispositivo POV pero, como aún se está prototipando y no se conoce cuál será su resultado ni la forma final de comunicarse con la web, este manual todavía no puede ser confeccionado. 
 
+
 ## 3- Melloras futuras
 
 El proyecto Roled abre un abanico de posibilidades y de mejoras a medio y largo plazo que podrían mejorar notablemente el producto:
