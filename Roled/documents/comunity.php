@@ -18,7 +18,7 @@ $numPag = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 $offset = ($numPag - 1)*$limit;
 
 /* Obtener los disenhos*/
-if($resultado = $conexionBBDD->query("SELECT * FROM design")){
+if($resultado = $conexionBBDD->query("SELECT * FROM design LIMIT $limit OFFSET $offset")){
   if(($resultado->num_rows>0)){
     while($fila = $resultado->fetch_assoc()){
       $array[] = $fila;
