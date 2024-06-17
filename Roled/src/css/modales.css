@@ -111,6 +111,7 @@ dialog button, dialog input[type='submit']{
     background-color: var(--clr-letra);
     color: var(--clr-fondo-primario);
     transition: all .75s ease-in-out;
+    margin: 0 auto;
 }
 
 #registro:hover, #guardarConf:hover{
