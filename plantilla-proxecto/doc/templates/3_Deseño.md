@@ -46,3 +46,4 @@ Del diagrama anterior se realizó su correspondiente modelo relacional:
 ## 4- Diseño de interfaz de usuarios
 
 Dado que el diseño de la interfaz de usuario ya estaba más avanzado, se realizó un prototipo en vez de mockups. 
+En el directorio templates está el fichero del prototipo: Roled.fig
