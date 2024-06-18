@@ -25,7 +25,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design LIMIT $limit OFFSET $
     }
     //var_dump($array);
   }
-  if($resultado = $conexionBBDD->query("SELECT COUNT(*) as total FROM design WHERE id_usuario='$user'")){
+  if($resultado = $conexionBBDD->query("SELECT COUNT(*) as total FROM design")){
     $fila = $resultado->fetch_assoc()['total'];
     $total = ($fila>0)?$fila:1;
     //echo $total;
