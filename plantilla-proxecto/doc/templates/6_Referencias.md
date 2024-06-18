@@ -41,7 +41,6 @@ Algunos de los elementos de la aplicación son componentes de Bootstrap:
   1- El Carrusel de la pantalla de inicio
   2- Una parte del menú, el que contiene las diferentes secciones (el dropdown no es un componente de bootstrap).
   3- El ratio de la pantalla de dibujar
-  4- La paginación.
 
 - https://getbootstrap.com/docs/3.4/components/
 
