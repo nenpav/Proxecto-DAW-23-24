@@ -11,17 +11,20 @@
 
 ### 1.1- Instalación
 
-Para acceder a la aplicación se debe poner en el navegador la siguiente url: [url de Roled](https://144.91.105.157). Una vez se ha ingresado en la aplicación, hay que registrarse o iniciar sesión para poder usar la aplicación. También se puede usar el usuario de pruebas:
-  - usernme: user123
-  - contraseña: aA1.aaaa
+Todo el código fuente y directorios que son necesarios para el funcionamiento de la aplicación están en el directorio Roled.
 
 Para poder poner en marcha la aplicación en un entorno local se necesita:
 
 1. Instalar XAMPP
-2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql
-3. Acceder desde el navegador mediante localhost/Roled/. 
+2. Ejecutar el script Roled/src/scriptsBBDD/creacion.sql en el phpMyAdmin
+3. Ejecutar el script Roled/src/scriptsBBDD/insercion.sql en el phpMyAdmin
+4. Acceder desde el navegador mediante localhost/Roled/
+5. Iniciar sesión con el usuario de pruebas: user123 y contraseña: aA1.aaaa o bien crear un nuevo usuario.
 
-Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/.
+Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es el directorio Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/. En caso de no hacer esto correctamente, habrá errores a la hora de listar los diseños mediante ajax. 
+
+Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: https://144.91.105.157.
+Aceptar el riesgo de seguridad ya que, aunque tiene acceso ssl, como no ha sido el certificado firmado por una entidad certificadora oficial, indica que el certificado no es válido. En este caso no es necesario realizar ningún paso más ya que el servidor web contiene todo lo necesario para usar la aplicación.
 
 ### 1.2- Administración do sistema
 
