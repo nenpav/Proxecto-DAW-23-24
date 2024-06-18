@@ -73,7 +73,7 @@ if($resultado = $conexionBBDD->query("SELECT * FROM design WHERE id_usuario='$us
               <li><a href='./comunity.php' aria-label='Enlace a Explorar'>Explorar<span></span></a></li>
               <li><a href='./tienda.php' aria-label='Enlace a Tienda'>Tienda<span></span></a></li>
               <div class="dropdown">
-                <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'../'); ?>" alt=""></button>
+                <button class="dropbtn"><img id="avatar" src="<?php echo buscarRutaAvatar($user, $rutaBase,'..'); ?>" alt=""></button>
                 <div class="dropdown-content">
                   <a href="#" aria-label="Enlace a Mi Perfil">Mi Perfil</a>
                   <a href="./design.php" aria-label="Enlace a mis diseños">Mis Diseños</a>
