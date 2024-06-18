@@ -35,7 +35,7 @@ Para poder poner en marcha la aplicación en un entorno local se necesita:
 
 Para un correcto funcionamiento, verificar que la carpeta raíz del proyecto es el directorio Roled de forma que en el navegador al abrir el localhost, la url que aparezca sea esta: http://localhost/Roled/. En caso de no hacer esto correctamente, habrá errores a la hora de listar los diseños mediante ajax. 
 
-Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: https://144.91.105.157
+Para acceder a la aplicación en el servidor web, ingresar en el navegador esta url: https://144.91.105.157 o https://roled.ddns.net/.
 Aceptar el riesgo de seguridad ya que, aunque tiene acceso ssl, como no ha sido el certificado firmado por una entidad certificadora oficial, indica que el certificado no es válido. En este caso no es necesario realizar ningún paso más ya que el servidor web contiene todo lo necesario para usar la aplicación.
 
 Recomendaciones e indicaciones
